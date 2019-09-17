@@ -26,10 +26,10 @@ parser = argparse.ArgumentParser(description='Generate a new image by applying s
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 add_arg = parser.add_argument
 
-add_arg('--content',        default='samples/Seth.png', type=str,         help='Content image path as optimization target.')
+add_arg('--content',        default='samples/Landscape.png', type=str,         help='Content image path as optimization target.')
 add_arg('--content-weight', default=10.0, type=float,       help='Weight of content relative to style.')
 add_arg('--content-layers', default='4_2', type=str,        help='The layer with which to match content.')
-add_arg('--style',          default='samples/Gogh.jpg', type=str,         help='Style image path to extract patches.')
+add_arg('--style',          default='samples/Renoir.jpg', type=str,         help='Style image path to extract patches.')
 add_arg('--style-weight',   default=2.0, type=float,       help='Weight of style relative to content.')
 add_arg('--style-layers',   default='3_1,4_1', type=str,    help='The layers to match style patches.')
 add_arg('--semantic-ext',   default='_sem.png', type=str,   help='File extension for the semantic maps.')
