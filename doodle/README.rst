@@ -2,11 +2,6 @@
 =============
 
 
-Use a deep neural network to borrow the skills of real artists and turn your two-bit doodles into masterpieces! This project is an implementation of `Semantic Style Transfer <http://arxiv.org/abs/1603.01768>`_ (Champandard, 2016), based on the `Neural Patches <http://arxiv.org/abs/1601.04589>`_ algorithm (Li, 2016). Read more about the motivation in this `in-depth article <https://nucl.ai/blog/neural-doodles/>`_ and watch this `workflow video <https://www.youtube.com/watch?v=fu2fzx4w3mI>`_ for inspiration.
-
-The ``doodle.py`` script generates a new image by using one, two, three or four images as inputs depending what you're trying to do: the original style and its annotation, and a target content image (optional) with its annotation (a.k.a. your doodle). The algorithm extracts annotated patches from the style image, and incrementally transfers them over to the target image based on how closely they match.
-
-**NOTE**: Making a ``#NeuralDoodle`` is a skill. The parameters in the script were adjusted to work well by default and with the examples below. For new images, you may need to adjust values and modify on your input data too. It takes practice, but you can reach almost photo-realistic results if you iterate! (`Ask for advice here or see examples <https://github.com/alexjc/neural-doodle/issues?q=label%3Aadvice>`_.)
 
 
 1. Examples & Usage
@@ -54,7 +49,6 @@ If you want to transfer the style given a source style with annotations, and a t
 
 To perform regular style transfer without semantic annotations, simply delete or rename the files with the semantic maps.  The photo is originally by `Seth Johnson <http://sethjohnson.tumblr.com/post/655063019/this-was-a-project-for-an-art-history-class-turns>`_, and the concept for this style transfer by `Kyle McDonald <https://twitter.com/kcimc>`_.
 
-.. image:: docs/Portraits_example.jpg
 
 
 1.c) Texture Synthesis
@@ -74,12 +68,8 @@ For synthesizing bitmap textures, you only need an input style without anotation
 
 You can also control the output resolution using ``--output-size=512x512`` parameter—which also depends on the memory you have available. By default the size will be the same as the style image.
 
-.. image:: docs/Textures_example.jpg
-
-
 1.d) Script Parameters
 ----------------------
-
 You can configure the algorithm using the following parameters. Type ``python3 doodle.py --help`` for the full list of options, or see the source code.
 
 * ``--style-weight=50.0`` — Weight of style relative to content.
@@ -89,7 +79,6 @@ You can configure the algorithm using the following parameters. Type ``python3 d
 * ``--seed=noise`` — Seed image path, "noise" or "content".
 * ``--print-every=10`` — How often to log statistics to stdout.
 * ``--save-every=10`` — How frequently to save PNG into `frames`.
-
 
 2. Installation & Setup
 =======================
@@ -108,8 +97,7 @@ Afterward fetching the repository, you can run the following commands from your 
     #Lasagne安装下面版本
     pip3 install git+git://github.com/Lasagne/Lasagne.git@31ac7d2bbcb4777b9a500b
 
-After this, you should have ``scikit-image``, ``theano`` and ``lasagne`` installed in your virtual environment.  You'll also need to download this `pre-trained neural network <https://github.com/alexjc/neural-doodle/releases/download/v0.0/vgg19_conv.pkl.bz2>`_ (VGG19, 80Mb) and put it in the same folder as the script to run. Once you're done you can just delete the ``#/pyvenv/`` folder.
+After this, you should have ``scikit-image``, ``theano`` and ``lasagne`` installed in your virtual environment.  
 
-.. image:: docs/Coastline_example.png
 
 
