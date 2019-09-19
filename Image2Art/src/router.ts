@@ -1,12 +1,8 @@
-/**
- * Selfie2Anime <https://selfie2anime.com>
- * Copyright (c) 2019 by SilentByte <https://www.silentbyte.com/>
- */
 
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/views/Home.vue";
-
+import TransferStyle from "@/views/TransferStyle.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -17,6 +13,11 @@ export default new Router({
             path: "/",
             name: "home",
             component: Home,
+        },
+        {
+            path: "/",
+            name: "TransferStyle",
+            component: TransferStyle,
         },
     ],
 });
