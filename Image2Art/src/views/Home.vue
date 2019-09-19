@@ -63,52 +63,63 @@
                 </h2>
 
                 <div class="my-5 text-muted" style="line-height: 2em">
-                    网站介绍
-                    <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">
-                        Generative Adversarial Network (GAN)
-                    </a> makes it possible to generate <span class="text-primary font-weight-bold">anime-style</span>
-                   
-                    <span class="text-primary font-weight-bold">anime alter ego</span>!
-                   
+                    网站介绍<br>
+                     <span class="text-primary font-weight-bold">头像转换</span>基于<a href="https://arxiv.org/abs/1907.10830">
+                        生成对抗网络(GAN)
+                    </a>实现<br>
+                    <span class="text-primary font-weight-bold">艺术涂鸦</span>基于<a href="https://arxiv.org/abs/1603.01768">
+                    Semantic Style Transfer
+                </a>以及<a href="https://arxiv.org/abs/1601.04589">
+                    Neural Patches
+                </a>实现<br>
+                    <span class="text-primary font-weight-bold">风格融合</span>基于<a href="https://arxiv.org/abs/1603.01768">
+                    A Neural Algorithm of Artistic Style
+                </a>实现<br>
+                    <span class="text-primary font-weight-bold">人脸识别以及美颜</span>基于<a href="https://opencv.org/">
+                    OpenCV
+                </a>实现<br>
+                    <span class="text-primary font-weight-bold">客户端渲染框架</span>使用<a href="https://cn.vuejs.org/">
+                    Vue
+                </a><br>
+                    <span class="text-primary font-weight-bold">本网站</span>使用<a href="https://cn.vuejs.org/">
+                    某某云
+                </a>加速<br>
                 </div>
 
-
-                <div class="my-5 text-muted" style="line-height: 2em">
-                    <a href="#contact" class="js-scroll-trigger"></a>
-                    介绍
-                    <a href="https://github.com/SilentByte/selfie2anime-site" target="_blank"></a>
-                   
-                    <a href="https://github.com/t04glovern/selfie2anime" target="_blank"></a>.
-                     <a href="/blog/">g</a> 
-                </div>
                 <div class="mt-5">
                     <div class="large-caption text-primary">
-                        <div class="spinner-grow" style="width: 0.5em; height: 0.5em; margin-bottom: 0.25em;"></div>
+                        <div class="spinner-grow" style="width: 0.5em; height: 0.5em; margin-bottom: 0em;"></div>
                         {{ estimateCounter.toLocaleString() }}
-                        <div class="spinner-grow" style="width: 0.5em; height: 0.5em; margin-bottom: 0.25em;"></div>
+                        <div class="spinner-grow" style="width: 0.5em; height: 0.5em; margin-bottom: 0em;"></div>
                     </div>
                     <div class="text-primary text-uppercase mt-4">selfies &amp; counting</div>
                 </div>
-                <div class="my-5 text-muted" style="line-height: 2em">
-                    内容 <a href="https://github.com/taki0112/UGATIT"></a>.
-                </div>
+
             </div>
-            <div class="container pt-5 text-center">
-                <hr />
-                <h2 class="my-5 text-primary text-lowercase text-break">
-                    <a href="https://twitter.com/intent/tweet?url=https://selfie2anime.com&text=What do YOU look like in Anime?&hashtags=selfie2anime"
-                       target="_blank"
-                       rel="noopener">
-                        内容
-                    </a>
-                </h2>
-           
-              
+
+        </section>
+
+        <!-- Contect部分 -->
+        <section id="contact" class="page-section">
+            <div class="container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-0">Want to get in touch?</h2>
+                        <hr class="divider my-4">
+                        <p class="text-muted mb-5">
+                            到GitHub上来下载我们的项目源码，关注项目的最新进展。如果您有任何问题和建议，请尽管对我们留言！
+                        </p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 col-sm-6" style="margin: 0 auto">
+                        <i style="color: #211f1f" class="fa fa-github fa-5x mb-3"></i>
+                        <a class="d-block" href="https://github.com/BugApe" target="_blank">@BugApe</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-
-      
         <!-- Footer -->
         <footer class="bg-light py-5">
             <div class="container">
