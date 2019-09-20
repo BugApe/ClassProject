@@ -1,0 +1,1 @@
+﻿python evaluate.py --checkpoint E:\MyRead\fast-style-transfer\Fast_Style_Transfer_Models\wave.ckpt  --in-path E:\MyRead\fast-style-transfer\examples\content\stata.jpg  --out-path E:\MyRead\fast-style-transfer\examples\results  --device cpu:1
