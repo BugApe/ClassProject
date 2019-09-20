@@ -103,8 +103,8 @@
         <section id="contact" class="page-section">
             <div class="container">
                 <div class="row justify-content-center mb-4">
-                    <div class="col-lg-4 text-center">
-                        <h2 class="mt-0">Want to get in touch?</h2>
+                    <div class="col-lg-8 text-center">
+                        <h3 class="mt-0">Want to get in touch?</h3>
                         <hr class="divider my-4">
                         <p class="text-muted mb-5">
                             到GitHub上来下载我们的项目源码，关注项目的最新进展。如果您有任何问题和建议，请尽管对我们留言！
