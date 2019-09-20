@@ -48,7 +48,17 @@
                         <a href="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem">
-                            开始体验
+                            头像转换
+                        </a>
+                        <a href="/Doodle"
+                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
+                           style="font-size: 2rem">
+                            艺术涂鸦
+                        </a>
+                        <a href="/TransferStyle"
+                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
+                           style="font-size: 2rem">
+                            风格融合
                         </a>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <template>
-    <div id="home">
+    <div id="cartoon">
         <!-- 导航 -->
         <nav id="mainNav"
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
@@ -52,15 +52,6 @@
                     Here's a <span class="text-primary font-weight-bold">quick</span> overview
                 </h2>
 
-                <div class="my-5 text-muted" style="line-height: 2em">
-                    Using machine learning techniques combined with a
-                    <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">
-                        Generative Adversarial Network (GAN)
-                    </a> makes it possible to generate <span class="text-primary font-weight-bold">anime-style</span>
-                    characters based on real people. Using this website, you can generate your own
-                    <span class="text-primary font-weight-bold">anime alter ego</span>!
-                    Here are a few examples for you to check out.
-                </div>
 
               <!-- Carousel -->
                <div class="row justify-content-center m-0">
@@ -89,12 +80,12 @@
                                     <a class="carousel-control-prev" href="#carousel" role="button"
                                        data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
+                                        <span class="sr-only">放寒假放假</span>
                                     </a>
                                     <a class="carousel-control-next" href="#carousel" role="button"
                                        data-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
+                                        <span class="sr-only">华东师范</span>
                                     </a>
                                 </div>
                             </div>
@@ -104,87 +95,9 @@
 
                
 
-                <div class="my-5 text-muted" style="line-height: 2em">
-                    The GAN we are using is based on original work by Junho Kim, Minjae Kim, Hyeonwoo Kang, and
-                    Kwanghee Lee. Their repository is <a href="https://github.com/taki0112/UGATIT">available here</a>.
-                </div>
+             
             </div>
-            <div class="container pt-5 text-center">
-                <hr />
-                <h2 class="my-5 text-primary text-lowercase text-break">
-                    <a href="https://twitter.com/intent/tweet?url=https://selfie2anime.com&text=What do YOU look like in Anime?&hashtags=selfie2anime"
-                       target="_blank"
-                       rel="noopener">
-                        #selfie2anime
-                    </a>
-                </h2>
-                <div class="row mt-2 mb-5 social-container text-center justify-content-center">
-                    <div class="col-12 my-1 col-md-3">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://selfie2anime.com"
-                           class="btn btn-lg facebook"
-                           target="_blank"
-                           rel="noopener">
-                            <i class="fa fa-facebook-square"></i>
-                            Share
-                        </a>
-                    </div>
-
-                    <div class="col-12 my-1 col-md-3">
-                        <a href="https://twitter.com/intent/tweet?url=https://selfie2anime.com&text=What do YOU look like in Anime?&hashtags=selfie2anime"
-                           class="btn btn-lg twitter"
-                           target="_blank"
-                           rel="noopener">
-                            <i class="fa fa-twitter"></i>
-                            Tweet
-                        </a>
-                    </div>
-
-                    <div class="col-12 my-1 col-md-3">
-                        <a href="mailto:?subject=What do YOU look like in Anime?&body=Check out https://selfie2anime.com to find out!"
-                           class="btn btn-lg email"
-                           rel="noopener">
-                            <i class="fa fa-envelope"></i>
-                            Send
-                        </a>
-                    </div>
-                </div>
-                <div class="row pt-3">
-                    <div class="col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6">
-                        <a class="twitter-timeline"
-                           data-theme="light"
-                           data-link-color="#f06292"
-                           data-chrome="noheader nofooter noborders"
-                           data-tweet-limit="1"
-                           data-show-replies="true"
-                           href="https://twitter.com/RicoBeti/timelines/1163354787154259970?ref_src=twsrc%5Etfw">
-                            Selfie2Anime Tweets by @RicoBeti
-                        </a>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6">
-                        <iframe src="https://cards.producthunt.com/cards/posts/164770?v=1"
-                                allowfullscreen
-                                style="border: none;"
-                                width="100%"
-                                height="500"
-                                frameborder="0"
-                                scrolling="no">
-                        </iframe>
-                    </div>
-                    <!--
-                    <div class="col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6">
-                        <a class="twitter-timeline"
-                           data-theme="light"
-                           data-link-color="#f06292"
-                           data-chrome="noheader nofooter noborders"
-                           data-tweet-limit="1"
-                           data-show-replies="true"
-                           href="https://twitter.com/RicoBeti/timelines/1163362875022274560?ref_src=twsrc%5Etfw">
-                            Selfie2Anime Tweets by @RicoBeti
-                        </a>
-                    </div>
-                    -->
-                </div>
-            </div>
+     
         </section>
 
 
@@ -212,16 +125,16 @@
     import axios from "axios";
     import * as creative from "@/vendor/creative";
  
-   // import PhotoUploader from "@/components/PhotoUploader.vue";
+ /*   import PhotoUploader from "@/components/PhotoUploader.vue";
 
   
 
- /*    @Component({
+    @Component({
         components: {
             PhotoUploader,
         },
     })  */
-    export default class Home extends Vue {
+    export default class Cartoon extends Vue {
         carouselImageCount = 22;
         counter = 0;
         estimateCounter = 0;
