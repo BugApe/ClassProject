@@ -18,17 +18,17 @@
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
                             <a href="#home" class="nav-link js-scroll-trigger">
-                                {{ $t("home") }}
+                               首页
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#about" class="nav-link js-scroll-trigger">
-                                {{ $t("about") }}
+                               详情
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#contact" class="nav-link js-scroll-trigger">
-                                {{ $t("contact") }}
+                              联系我们
                             </a>
                         </li>
                     </ul>
@@ -45,7 +45,7 @@
                             Image <span class="text-primary font-weight-bold">2</span>
                             Art <span class="text-primary font-weight-bold">官方网站</span>
                         </h2>
-                        <a href="#home"
+                        <a href="/TransferStyle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem">
                             开始体验
@@ -135,23 +135,6 @@
     </div>
 </template>
 
-<i18n>
-    en:
-        home: Home
-        blog: Blog
-        about: About
-        portfolio: Portfolio
-        contact: Contact
-
-    zh:
-        home: 首页
-        blog: 博客
-        about: 我们
-        portfolio: 看看
-        contact: 联系
-
-</i18n>
-
 <!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, TypeScriptCheckImport -->
 <script lang="ts">
     import {
@@ -164,7 +147,7 @@
 
   //  import PhotoUploader from "@/components/PhotoUploader.vue";
 
-    //import PORTFOLIO_TREE from "@/gen/portfolio-tree.gen.json";
+
 
   /*   @Component({
         components: {
@@ -181,19 +164,7 @@
 
         transparent1x1 = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
-       /* get portfolio() {
-            // Number of images must be multiple of 12 for proper alignment.
-            const tree = PORTFOLIO_TREE.slice(0, Math.floor(PORTFOLIO_TREE.length / 12) * 12);
-
-            // Shuffle order of portfolio images.
-            for(let i = tree.length - 1; i > 0; i--) {
-                const swapIndex = Math.floor(Math.random() * (i + 1));
-                [tree[i], tree[swapIndex]] = [tree[swapIndex], tree[i]];
-            }
-
-            return tree;
-        }*/
-
+  
         $th(key: string, values: any | undefined) {
             return this.$t(key, values)
                 .toString()
@@ -250,12 +221,6 @@
         mounted() {
             this.fetchStats();
             creative.init(jQuery);
-
-            if(navigator.language === "zh"
-                || navigator.language === "zh-CN"
-                || (navigator.languages && navigator.languages.includes("zh"))) {
-                this.$root.$i18n.locale = "zh";
-            }
         }
 
         beforeDestroy() {
@@ -267,11 +232,10 @@
 </script>
 
 <style lang="scss" scoped>
-    $carousel-size: 100px;
 
     section h2, .large-caption {
         font-size: 2.8em;
-        line-height: 1.25;
+        line-height: 2.8;
 
         @media (max-width: 576px) {
             font-size: 2.0em;
@@ -311,12 +275,5 @@
         }
     }
 
-    #portfolio .container-fluid {
-        max-width: 12 * 160px;
-    }
-
-    .portfolio-box-caption {
-        -webkit-transition: opacity 0.75s ease !important;
-        transition: opacity 0.75s ease !important;;
-    }
+   
 </style>

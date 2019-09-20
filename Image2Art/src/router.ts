@@ -2,10 +2,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/views/Home.vue";
-import TransferStyle from "@/views/TransferStyle.vue";
 Vue.use(Router);
 
-export default new Router({
+export default new Router(
+    {
     mode: "history",
     base: process.env.BASE_URL,
     routes: [
@@ -13,7 +13,31 @@ export default new Router({
             path: "/",
             name: "home",
             component: Home,
+            children:
+            [{
+                path: "/TransferStyle",
+                name: "TransferStyle",
+                component: () => import('@/views/TransferStyle.vue'),
+            },{
+                path: "/Doodle",
+                name: "Doodle",
+                component: () => import('@/views/Doodle.vue'),
+            },{
+                path: "/Cartoon",
+                name: "Cartoon",
+                component: () => import('@/views/Cartoon.vue'),
+            },]
+            
+        }, 
+        {
+          
+                path: "/TransferStyle",
+                name: "TransferStyle",
+                component: () => import('@/views/TransferStyle.vue'),
+            
+            
         },
        
     ],
-});
+    },
+    );

@@ -1,11 +1,18 @@
+<!--
+    Selfie2Anime <https://selfie2anime.com>
+    Copyright (c) 2019 by SilentByte <https://www.silentbyte.com/>
+-->
+
+<!--suppress HtmlUnknownAnchorTarget, CheckEmptyScriptTag -->
 <template>
-    <div id="home">
-        <!-- 导航 -->
+    <div id="Home">
+        <!-- Navigation -->
         <nav id="mainNav"
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
                 <a href="#home" class="navbar-brand js-scroll-trigger">
-                    <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art</span>
+                    <span class="navbar-brand-inverted">Selfie</span>2<span class="navbar-brand-inverted">Anime</span>
+                    アニメ
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -16,17 +23,23 @@
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
                             <a href="#home" class="nav-link js-scroll-trigger">
-                                {{ $t("主页") }}
+                                {{ $t("home") }}
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link js-scroll-trigger">
+                                {{ $t("about") }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link js-scroll-trigger">
-                                {{ $t("简介") }}
+                            <a href="#portfolio" class="nav-link js-scroll-trigger">
+                                {{ $t("portfolio") }}
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#contact" class="nav-link js-scroll-trigger">
-                                {{ $t("关于我们") }}
+                                {{ $t("contact") }}
                             </a>
                         </li>
                     </ul>
@@ -34,7 +47,7 @@
             </div>
         </nav>
 
-        <!-- 头部 -->
+        <!-- Masthead -->
         <header class="masthead">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center">
@@ -45,7 +58,7 @@
             </div>
         </header>
 
-        <!-- 简介 -->
+        <!-- About Section -->
         <section id="about" class="page-section">
             <div class="container carousel-container text-center">
                 <h2 class="mt-0">
@@ -62,8 +75,8 @@
                     Here are a few examples for you to check out.
                 </div>
 
-              <!-- Carousel -->
-             <!--      <div class="row justify-content-center m-0">
+                <!-- Carousel -->
+                <div class="row justify-content-center m-0">
                     <div class="col col-sm-12 col-md-8 col-lg-6">
                         <div class="card shadow-lg">
                             <div class="card-body p-2">
@@ -101,16 +114,13 @@
                         </div>
                     </div>
                 </div>
- -->
+
                 <div class="my-5 text-muted" style="line-height: 2em">
                     Be sure to <a href="#contact" class="js-scroll-trigger">follow us on social media</a>
                     for further updates! If you are interested in how this works, we have made the source code
                     available on Github for both the
                     <a href="https://github.com/SilentByte/selfie2anime-site" target="_blank">front-end</a>
-                    and the
-                    <a href="https://github.com/t04glovern/selfie2anime" target="_blank">back-end</a>.
-                    Head over to <a href="/blog/">our blog</a> where we discuss the technical aspects
-                    of this website.
+                  
                 </div>
 
                 <div class="mt-5">
@@ -233,7 +243,7 @@
             </div>
         </section>
 
-        <!-- Portfolio Section
+        <!-- Portfolio Section -->
         <section id="portfolio" class="bg-dark">
             <div class="container-fluid portfolio-container p-0">
                 <div class="row no-gutters">
@@ -261,7 +271,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- Contact Section -->
         <section id="contact" class="page-section">
@@ -271,13 +281,20 @@
                         <h2 class="mt-0">Want to get in touch?</h2>
                         <hr class="divider my-4">
                         <p class="text-muted mb-5">
-                            Follow us on  Github to find out what other
+                            Follow us on Twitter and Github to find out what other
                             projects we're working and feel free to drop us a message
                             if you have any questions!
                         </p>
                     </div>
                 </div>
                 <div class="row text-center">
+                    <div class="col-12 col-sm-6">
+                        <i style="color: #38a1f3" class="fa fa-twitter fa-5x mb-3"></i>
+                        <a class="d-block" href="https://twitter.com/RicoBeti" target="_blank">@RicoBeti</a>
+                        <a class="d-block" href="https://twitter.com/nathangloverAUS"
+                           target="_blank">@nathangloverAUS</a>
+                    </div>
+
                     <div class="col-12 col-sm-6">
                         <i style="color: #211f1f" class="fa fa-github fa-5x mb-3"></i>
                         <a class="d-block" href="https://github.com/SilentByte" target="_blank">@SilentByte</a>
@@ -291,10 +308,7 @@
         <footer class="bg-light py-5">
             <div class="container">
                 <div class="small text-center text-muted">
-                    <a href="/blog/">
-                        Blog
-                    </a>
-                    &bull;
+                  
                     <a href="/terms/" target="_blank">
                         Terms of Service
                     </a>
@@ -317,6 +331,23 @@
     </div>
 </template>
 
+<i18n>
+    en:
+        home: Home
+     
+        about: About
+        portfolio: Portfolio
+        contact: Contact
+
+    zh:
+        home: 首页
+
+        about: 我们
+        portfolio: 看看
+        contact: 联系
+
+</i18n>
+
 <!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, TypeScriptCheckImport -->
 <script lang="ts">
     import {
@@ -326,16 +357,16 @@
 
     import axios from "axios";
     import * as creative from "@/vendor/creative";
-/* 
+
     import PhotoUploader from "@/components/PhotoUploader.vue";
 
-    //import PORTFOLIO_TREE from "@/gen/portfolio-tree.gen.json";
+  // import PORTFOLIO_TREE from "@/gen/portfolio-tree.gen.json";
 
     @Component({
         components: {
             PhotoUploader,
         },
-    }) */
+    })
     export default class Home extends Vue {
         carouselImageCount = 22;
         counter = 0;
@@ -345,10 +376,10 @@
         counterIntervalHandle = 0;
 
         transparent1x1 = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-
-       /* get portfolio() {
+/*
+       get portfolio() {
             // Number of images must be multiple of 12 for proper alignment.
-            const tree = PORTFOLIO_TREE.slice(0, Math.floor(PORTFOLIO_TREE.length / 12) * 12);
+           const tree = PORTFOLIO_TREE.slice(0, Math.floor(PORTFOLIO_TREE.length / 12) * 12);
 
             // Shuffle order of portfolio images.
             for(let i = tree.length - 1; i > 0; i--) {
@@ -357,8 +388,8 @@
             }
 
             return tree;
-        }*/
-
+        }  
+*/
         $th(key: string, values: any | undefined) {
             return this.$t(key, values)
                 .toString()
@@ -415,6 +446,12 @@
         mounted() {
             this.fetchStats();
             creative.init(jQuery);
+
+            if(navigator.language === "zh"
+                || navigator.language === "zh-CN"
+                || (navigator.languages && navigator.languages.includes("zh"))) {
+                this.$root.$i18n.locale = "zh";
+            }
         }
 
         beforeDestroy() {
