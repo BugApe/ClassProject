@@ -45,7 +45,7 @@
                             Image <span class="text-primary font-weight-bold">2</span>
                             Art <span class="text-primary font-weight-bold">官方网站</span>
                         </h2>
-                        <a href="/TransferStyle"
+                        <a href="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem">
                             开始体验

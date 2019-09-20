@@ -29,14 +29,7 @@ export default new Router(
             },]
             
         }, 
-        {
-          
-                path: "/TransferStyle",
-                name: "TransferStyle",
-                component: () => import('@/views/TransferStyle.vue'),
-            
-            
-        },
+    
        
     ],
     },
