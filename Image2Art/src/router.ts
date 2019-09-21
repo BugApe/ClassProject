@@ -13,6 +13,7 @@ export default new Router(
             path: "/",
             name: "home",
             component: Home,
+          //  component: () => import('@/views/Cartoon.vue'),
             children:
             [{
                 path: "/TransferStyle",
@@ -26,6 +27,14 @@ export default new Router(
                 path: "/Cartoon",
                 name: "Cartoon",
                 component: () => import('@/views/Cartoon.vue'),
+                children:
+                [
+                    {
+                        path: "/PhotoUploader",
+                        name: "PhotoUploader",
+                        component: () => import('@/components/PhotoUploader.vue'),
+                    }
+                ]
             },]
             
         }, 

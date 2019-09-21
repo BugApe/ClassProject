@@ -5,8 +5,7 @@
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
         <div class="row text-center small d-block py-1">
-            <a href="#" @click="$root.$i18n.locale = 'en'">English</a>
-            /
+         
             <a href="#" @click="$root.$i18n.locale = 'zh'">中文</a>
         </div>
         <div style="display: none">
@@ -320,16 +319,17 @@
 
         async onPhotoSelected(e: Event) {
             const file: File = (e.target as any).files[0];
-            loadImage(file, (canvas: HTMLCanvasElement) => {
+       /*      loadImage(file, (canvas: HTMLCanvasElement) => {
                     this.photoDataUrl = canvas.toDataURL("image/jpeg");
                     this.step = "crop";
-                }, {
+                },
+                 {
                     canvas: true,
                     orientation: true,
                     maxWidth: 3840,
                     maxHeight: 3840,
                 },
-            );
+            ); */
         }
 
         onPhotoCropped() {

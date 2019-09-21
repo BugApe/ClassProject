@@ -154,16 +154,6 @@
 
     import axios from "axios";
     import * as creative from "@/vendor/creative";
-
-  //  import PhotoUploader from "@/components/PhotoUploader.vue";
-
-
-
-  /*   @Component({
-        components: {
-            PhotoUploader,
-        },
-    }) */
     export default class Home extends Vue {
         carouselImageCount = 22;
         counter = 0;

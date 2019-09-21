@@ -4,7 +4,7 @@
         <nav id="mainNav"
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
-                <a href="#home" class="navbar-brand js-scroll-trigger">
+                <a href="#cartoon" class="navbar-brand js-scroll-trigger">
                     <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -15,18 +15,18 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link js-scroll-trigger">
-                                {{ $t("主页") }}
+                            <a href="/home" class="nav-link js-scroll-trigger">
+                                首页
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link js-scroll-trigger">
-                                {{ $t("简介") }}
+                            <a href="/home" class="nav-link js-scroll-trigger">
+                               简介
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link js-scroll-trigger">
-                                {{ $t("关于我们") }}
+                            <a href="/home" class="nav-link js-scroll-trigger">
+                               联系我们
                             </a>
                         </li>
                     </ul>
@@ -39,7 +39,12 @@
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-10 align-self-center">
-                        <PhotoUploader />
+                        <PhotoUploader >
+                         </PhotoUploader >
+
+                         <h2 class="mt-0">
+                    Here's a <span class="text-primary font-weight-bold">quick</span> overview
+                         </h2>
                     </div>
                 </div>
             </div>
@@ -52,50 +57,6 @@
                     Here's a <span class="text-primary font-weight-bold">quick</span> overview
                 </h2>
 
-
-              <!-- Carousel -->
-               <div class="row justify-content-center m-0">
-                    <div class="col col-sm-12 col-md-8 col-lg-6">
-                        <div class="card shadow-lg">
-                            <div class="card-body p-2">
-                                <div id="carousel"
-                                     class="carousel slide carousel-fade"
-                                     data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li v-for="i in carouselImageCount"
-                                            data-target="#carousel"
-                                            :data-slide-to="i"
-                                            class="active" />
-                                    </ol>
-                                    <div class="carousel-inner justify-content-center align-content-center text-center">
-                                        <div v-for="i in carouselImageCount"
-                                             :key="`carousel-image-${i}`"
-                                             :class="['carousel-item', i === 1? 'active':'']">
-                                            <img class="d-block w-100 lazyload"
-                                                 :src="i <= 2 ? `./img/carousel/${i}.jpg` : ''"
-                                                 :data-src="`./img/carousel/${i}.jpg`"
-                                                 :alt="`Example Image #${i}`">
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carousel" role="button"
-                                       data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">放寒假放假</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carousel" role="button"
-                                       data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">华东师范</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-               
-
-             
             </div>
      
         </section>
@@ -124,16 +85,13 @@
 
     import axios from "axios";
     import * as creative from "@/vendor/creative";
- 
- /*   import PhotoUploader from "@/components/PhotoUploader.vue";
-
-  
+    /* import photoUploader from "@/components/PhotoUploader.vue";
 
     @Component({
         components: {
-            PhotoUploader,
+           PhotoUploader: photoUploader
         },
-    })  */
+    }) */
     export default class Cartoon extends Vue {
         carouselImageCount = 22;
         counter = 0;
