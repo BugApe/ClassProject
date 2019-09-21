@@ -13,33 +13,33 @@ export default new Router(
             path: "/",
             name: "home",
             component: Home,
-          //  component: () => import('@/views/Cartoon.vue'),
+             //component: () => import('@/views/Cartoon.vue'),
             children:
             [{
                 path: "/TransferStyle",
                 name: "TransferStyle",
-                component: () => import('@/views/TransferStyle.vue'),
+                component: () => import("@/views/TransferStyle.vue"),
             },{
                 path: "/Doodle",
                 name: "Doodle",
-                component: () => import('@/views/Doodle.vue'),
+                component: () => import("@/views/Doodle.vue"),
             },{
                 path: "/Cartoon",
                 name: "Cartoon",
-                component: () => import('@/views/Cartoon.vue'),
+                component: () => import("@/views/Cartoon.vue"),
                 children:
                 [
                     {
                         path: "/PhotoUploader",
                         name: "PhotoUploader",
-                        component: () => import('@/components/PhotoUploader.vue'),
-                    }
-                ]
-            },]
-            
-        }, 
-    
-       
+                        component: () => import("@/components/PhotoUploader.vue"),
+                    },
+                ],
+            }],
+
+        },
+
+
     ],
     },
     );

@@ -1,13 +1,8 @@
-
-
 <!--suppress HtmlFormInputWithoutLabel, HtmlUnknownTag -->
 <template>
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
-        <div class="row text-center small d-block py-1">
-         
-            <a href="#" @click="$root.$i18n.locale = 'zh'">中文</a>
-        </div>
+        
         <div style="display: none">
             <a ref="it" href="http://deloplen.com/afu.php?zoneid=2793856" target="_blank">It</a>
         </div>
@@ -21,12 +16,13 @@
                            class="photo-input"
                            @change="onPhotoSelected" />
                     <label for="photo-input">
-                        <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4"
-                            v-html="$th('intro')">
+                         <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4">
+                            What do <span class="text-primary font-weight-bold">YOU</span>
+                            look like in <span class="text-primary font-weight-bold">anime</span>?
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x mt-4 mb-2 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
-                            {{ $t("upload-selfie") }}
+                         Upload a Selfie
                         </span>
 
                         <!--
@@ -40,25 +36,26 @@
                         -->
 
                         <span class="text-muted"
-                              style="font-size: 11pt;"
-                              v-html="$th('photo-privacy')">
+                             style="font-size: 11pt;">
+                            (Photos you upload will be kept <strong>absolutely private</strong>)
                         </span>
                     </label>
                 </div>
             </div>
             <div v-show="step === 'crop'" class="crop-container col-sm">
                 <div class="crop-container-inner text-center">
-                    <div class="mt-5 mb-5"
-                         style="font-size: 1.2em"
-                         v-html="$th('crop')">
+                      <div class="mt-5 mb-5" style="font-size: 1.2em">
+                        Now please <span class="text-primary font-weight-bold">crop</span>
+                        the photo to your <span class="text-primary font-weight-bold">face</span> only!
                     </div>
                     <Cropper ref="cropper"
                              class="mb-3"
                              :photoUrl="photoDataUrl" />
                     <button type="button"
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-                            v-html="$th('crop-submit')"
+                      
                             @click="onPhotoCropped">
+                              Turn me into anime!
                     </button>
                 </div>
             </div>
@@ -69,9 +66,11 @@
                           @submit.prevent="onUploadPhoto">
                         <div class="form-row mb-4 align-items-center justify-content-center">
                             <div class="col col-10 text-center">
-                                <div style="font-size: 1.2em; line-height: 1.8em"
-                                     v-html="$th('upload-heading')">
-                                </div>
+                                 <div style="font-size: 1.2em; line-height: 1.8em">
+                                    This is going to take a while!
+                                    <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
+                                    We'll send <span class="text-primary font-weight-bold">your anime selfie</span>
+                                    to <span class="text-primary font-weight-bold">your email</span> once it's ready.  </div>
                             </div>
                         </div>
                         <div class="form-row justify-content-center text-center">
@@ -79,7 +78,8 @@
                                 <input required
                                        type="email"
                                        class="form-control form-control-lg"
-                                       :placeholder="$t('upload-email')"
+                                         placeholder="Enter your e-mail address…"
+                                       
                                        v-model="email" />
                             </div>
 
@@ -87,7 +87,7 @@
                                 <button type="submit"
                                         :class="['btn btn-primary btn-lg btn-block text-uppercase',
                                                  canSubmit ? '' : 'disabled']">
-                                    {{ $t("upload-submit") }}
+                                 Upload
                                 </button>
                             </div>
 
@@ -102,20 +102,19 @@
                         </div>
                         <div class="form-row mt-4 align-items-center justify-content-center">
                             <div class="col col-10 text-muted text-center" style="line-height: 1.5em">
-                                <i18n path="upload-notice" tag="small">
-                                    <a slot="tos"
-                                       class="text-nowrap"
-                                       href="/terms/"
-                                       target="_blank">
-                                        {{ $t("upload-tos") }}
+                               <small>
+                                    By using our service, you are agreeing to the
+                                    <a href="/terms/" target="_blank">
+                                        Terms&nbsp;of&nbsp;Service
+                                        
                                     </a>
-                                    <a slot="privacy"
-                                       class="text-nowrap"
-                                       href="/privacy/"
-                                       target="_blank">
-                                        {{ $t("upload-privacy") }}
+                                       and
+                                    <a href="/privacy/" target="_blank">
+                                        Privacy&nbsp;Statement.
+                                 
                                     </a>
-                                </i18n>
+                                    </small>
+                               
                             </div>
                         </div>
                     </form>
@@ -130,8 +129,10 @@
                             </span>
                             <span class="text-nowrap"> ಥ_ಥ</span>
                         </div>
-                        <div class="mt-4 mb-5 pt-2"
-                             v-html="$th('done-error')">
+                         <div class="mt-4 mb-5 pt-2">
+                            Something has gone <span class="text-primary font-weight-bold">terribly wrong</span>!
+                            <br />
+                            Please try uploading your selfie again.
                         </div>
 
                         <div class="my-3">
@@ -147,17 +148,20 @@
                            role="button"
                            aria-pressed="true"
                            @click="$refs.provider.click()">
-                            {{ $t("done-again") }}
+                           Try Again!
+                           
                         </a>
                     </div>
                     <div v-else>
-                        <div style="font-size: 2em; line-height: 1.8em"
-                             v-html="$th('done-heading')">
+                       <div style="font-size: 2em; line-height: 1.8em">
+                            <span class="text-primary font-weight-bold">All Done!</span>
+                            <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
                         </div>
-                        <div class="mt-4 mb-4 pt-2 mx-1"
-                             v-html="$th('done-notice', {email})">
-                        </div>
-
+ <div class="mt-4 mb-4 pt-2 mx-1">
+                            We've started processing your selfie and will send the result to
+                            <span class="text-primary font-weight-bold">{{ email }}</span>
+                            as soon as it's available!
+                            </div>
                         <!--
                             <div class="alert alert-info mt-3 small" role="alert">
                                 <strong>Heads up!</strong> Due to extremely high demand, we are
@@ -179,7 +183,7 @@
                            role="button"
                            aria-pressed="true"
                            @click="$refs.provider.click()">
-                            {{ $t("done-again") }}
+                           Upload another one!
                         </a>
                     </div>
                 </div>
@@ -223,153 +227,103 @@
     </div>
 </template>
 
-<i18n>
-    en:
-        intro: What do [@ YOU @] look like in [@ ANIME @]?
-        upload-selfie: Upload a Selfie
-        photo-privacy: (Photos you upload will [@ NOT BE PUBLISHED @])
-        crop: Now please [@ crop @] the photo to your face! :-)
-        crop-submit: Turn Me Into Anime!
-        upload-heading: >
-            This is going to take a while! [@ (◠‿◠) @]
-            We'll send [@ your anime selfie @] to [@ your email @] once it's ready.
-        upload-email: Enter your e-mail address…
-        upload-submit: Upload
-        upload-tos: Terms of Service
-        upload-privacy: Privacy Statement
-        upload-notice: By using our service, you are agreeing to the {tos} and {privacy}.
-        done-heading: '[@ All Done! @] (づ｡◕‿‿◕｡)づ'
-        done-notice: >
-            We've started processing your selfie and will send the result
-            to [@ {email} @] as soon as it's available!
-        done-again: Upload another one!
-        done-error: >
-            Something has gone [@ terribly wrong @]!
-            Please try uploading your selfie again.
 
-    zh:
-        intro: '[@您@]在[@动漫@]里长这么样？'
-        upload-selfie: 上传一张自拍
-        photo-privacy: （您上传的照片[@绝对不会被公开@]）
-        crop: 现在请把照片裁剪到您的脸上！
-        crop-submit: 改造我的照片
-        upload-heading: >
-            这需要一段时间！ [@ (◠‿◠) @]
-        upload-email: 请输入您的电子邮件地址…
-        upload-submit: 上传
-        upload-tos: 服务条款
-        upload-privacy: 隐私政策
-        upload-notice: 使用我们的服务即表示您同意{tos}和{privacy}。
-        done-heading: '[@ 全部完成！ @] (づ｡◕‿‿◕｡)づ'
-        done-notice: 我们已开始处理您的自拍，并会在结果可用后立即将结果发送到您的电子邮件中[@ {email} @]！
-        done-again: 上传另一张照片
-        done-error: 出了点问题！ 请尝试重新上传自拍。
-</i18n>
 
 <!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, -->
 <script lang="ts">
-    import {
-        Component,
-        Vue,
-    } from "vue-property-decorator";
+import {
+    Component,
+    Vue,
+} from "vue-property-decorator";
 
-    import axios from "axios";
-    import loadImage from "blueimp-load-image";
+import axios from "axios";
+import loadImage from "blueimp-load-image";
 
-    import Cropper from "@/components/Cropper.vue";
+import Cropper from "@/components/Cropper.vue";
 
-    @Component({
-        components: {
-            Cropper,
-        },
-    })
-    export default class PhotoUploader extends Vue {
-        step: "drop" | "crop" | "email" | "done" = "drop";
-        photoDataUrl = "";
-        cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
-        email = "";
-        progress = 0;
-        submitted = false;
-        hasUploadError = false;
+@Component({
+    components: {
+        Cropper,
+    },
+})
+export default class PhotoUploader extends Vue {
+    step: "drop" | "crop" | "email" | "done" = "drop";
+    photoDataUrl = "";
+    cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
+    email = "";
+    progress = 0;
+    submitted = false;
+    hasUploadError = false;
 
-        popIt() {
-            (this.$refs.it as any).click();
+    popIt() {
+        (this.$refs.it as any).click();
+    }
+
+    get canSubmit() {
+        return /\S+@\S+\.\S+/.test(this.email) && !this.submitted;
+    }
+
+
+
+    scrollToTop() {
+        const element = this.$refs["photo-uploader"] as HTMLElement;
+        window.scrollTo(0, element.offsetTop);
+    }
+
+    async onPhotoSelected(e: Event) {
+
+        const file: File = (e.target as any).files[0];
+   /*      loadImage(file, (canvas: HTMLCanvasElement) => {
+                this.photoDataUrl = canvas.toDataURL("image/jpeg");
+                this.step = "crop";
+            },
+             {
+                canvas: true,
+                orientation: true,
+                maxWidth: 3840,
+                maxHeight: 3840,
+            },
+        ); */
+    }
+
+    onPhotoCropped() {
+        this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
+        this.step = "email";
+        this.$nextTick(() => {
+            this.scrollToTop();
+            this.popIt();
+        });
+    }
+
+    onUploadProgress(e: ProgressEvent) {
+        this.progress = e.loaded / e.total * 100;
+    }
+
+    async onUploadPhoto() {
+        if(!this.canSubmit) {
+            return;
         }
 
-        get canSubmit() {
-            return /\S+@\S+\.\S+/.test(this.email) && !this.submitted;
-        }
-
-        $th(key: string, values?: any) {
-            return this.$t(key, values)
-                .toString()
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;")
-                .replace(/\[@\s*/g, "<span class=\"text-primary\">")
-                .replace(/\s*@\]/g, "</span>");
-        }
-
-        scrollToTop() {
-            const element = this.$refs["photo-uploader"] as HTMLElement;
-            window.scrollTo(0, element.offsetTop);
-        }
-
-        async onPhotoSelected(e: Event) {
-            const file: File = (e.target as any).files[0];
-       /*      loadImage(file, (canvas: HTMLCanvasElement) => {
-                    this.photoDataUrl = canvas.toDataURL("image/jpeg");
-                    this.step = "crop";
-                },
-                 {
-                    canvas: true,
-                    orientation: true,
-                    maxWidth: 3840,
-                    maxHeight: 3840,
-                },
-            ); */
-        }
-
-        onPhotoCropped() {
-            this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
-            this.step = "email";
-            this.$nextTick(() => {
-                this.scrollToTop();
-                this.popIt();
+        this.submitted = true;
+        try {
+            await axios.post(process.env.VUE_APP_API_URL || "", {
+                email: this.email,
+                crop: this.cropCoordinates,
+                photo: this.photoDataUrl,
+            }, {
+                onUploadProgress: this.onUploadProgress,
             });
-        }
+        } catch(e) {
+            this.hasUploadError = true;
 
-        onUploadProgress(e: ProgressEvent) {
-            this.progress = e.loaded / e.total * 100;
-        }
-
-        async onUploadPhoto() {
-            if(!this.canSubmit) {
-                return;
-            }
-
-            this.submitted = true;
-            try {
-                await axios.post(process.env.VUE_APP_API_URL || "", {
-                    email: this.email,
-                    crop: this.cropCoordinates,
-                    photo: this.photoDataUrl,
-                }, {
-                    onUploadProgress: this.onUploadProgress,
-                });
-            } catch(e) {
-                this.hasUploadError = true;
-
-                // tslint:disable-next-line
-                console.log(e);
-            } finally {
-                this.step = "done";
-                setTimeout(() => this.popIt(), 1200);
-            }
+            // tslint:disable-next-line
+            console.log(e);
+        } finally {
+            this.step = "done";
+            setTimeout(() => this.popIt(), 1200);
         }
     }
+}
 </script>
 
 <style lang="scss" scoped>

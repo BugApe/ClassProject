@@ -1,4 +1,3 @@
-
 <!--suppress HtmlUnknownAnchorTarget, CheckEmptyScriptTag -->
 <template>
     <div id="home">
@@ -121,6 +120,14 @@
                         </p>
                     </div>
                 </div>
+                 <div class="col-lg-10 align-self-center">
+                        <PhotoUploader >
+                         </PhotoUploader >
+
+                         <h2 class="mt-0">
+                    Here's a <span class="text-primary font-weight-bold">quick</span> overview
+                         </h2>
+                         </div>
                 <div class="row text-center">
                     <div class="col-12 col-sm-6" style="margin: 0 auto">
                         <i style="color: #211f1f" class="fa fa-github fa-5x mb-3"></i>
@@ -154,6 +161,7 @@
 
     import axios from "axios";
     import * as creative from "@/vendor/creative";
+
     export default class Home extends Vue {
         carouselImageCount = 22;
         counter = 0;
@@ -163,19 +171,6 @@
         counterIntervalHandle = 0;
 
         transparent1x1 = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-
-  
-        $th(key: string, values: any | undefined) {
-            return this.$t(key, values)
-                .toString()
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;")
-                .replace(/\[@\s*/g, "<span class=\"text-primary font-weight-bold\">")
-                .replace(/\s*@\]/g, "</span>");
-        }
 
         onUpdateCounter() {
             this.estimateCounter = Math.ceil(

@@ -25,6 +25,7 @@
     import Croppr from "croppr";
 
     @Component
+    
     export default class Cropper extends Vue {
         @Prop(String) readonly photoUrl: string | undefined;
         cropper!: Croppr;
