@@ -92,10 +92,12 @@ Afterward fetching the repository, you can run the following commands from your 
 .. code:: bash
 
     # Setup the required dependencies simply using the PIP module.
-    python3 -m pip install --ignore-installed -r requirements.txt
+    直接用Pycharm打开doodle.py 安装标红的包即可
 
     #Lasagne安装下面版本
     pip3 install git+git://github.com/Lasagne/Lasagne.git@31ac7d2bbcb4777b9a500b
+    （这个命令不行的话，换用pip install git+git://github.com/Lasagne/Lasagne.git@31ac7d2bbcb4777b9a500b）
+    目前CPU GPU都亲测可用
 
 After this, you should have ``scikit-image``, ``theano`` and ``lasagne`` installed in your virtual environment.  
 
