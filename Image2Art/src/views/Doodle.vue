@@ -5,7 +5,7 @@
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
                 <a href="#doodle" class="navbar-brand js-scroll-trigger">
-                    <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art</span>
+                    <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art | </span><span class="small text-center navbar-brand-inverted">涂鸦风格化</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -226,7 +226,7 @@ export default class Doodle extends Vue {
     }
 
     #mainNav .navbar-brand-inverted {
-        color: #f06292;
+        color: #657350;
     }
 
     #mainNav {
@@ -237,7 +237,7 @@ export default class Doodle extends Vue {
         background: #fff;
 
         .navbar-brand {
-            color: #f06292;
+            color: #657350;
         }
 
         .navbar-brand-inverted {

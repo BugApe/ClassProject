@@ -4,8 +4,8 @@
         <nav id="mainNav"
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
-                <a href="#transferStyle" class="navbar-brand js-scroll-trigger">
-                    <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art</span>
+                <a href="#doodle" class="navbar-brand js-scroll-trigger">
+                    <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art | </span><span class="small text-center navbar-brand-inverted">照片风格化</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -85,13 +85,13 @@ import {
 
 import axios from "axios";
 import * as creative from "@/vendor/creative";
-import photoUploader from "@/components/PhotoUploader.vue";
+/* import photoUploader from "@/components/PhotoUploader.vue";
 
 @Component({
     components: {
        PhotoUploader: photoUploader,
     },
-})
+}) */
 export default class TransferStyle extends Vue {
     carouselImageCount = 22;
     counter = 0;
@@ -185,7 +185,7 @@ export default class TransferStyle extends Vue {
     }
 
     #mainNav .navbar-brand-inverted {
-        color: #f06292;
+        color: #3498DB;
     }
 
     #mainNav {
@@ -196,7 +196,7 @@ export default class TransferStyle extends Vue {
         background: #fff;
 
         .navbar-brand {
-            color: #f06292;
+            color: #3498DB;
         }
 
         .navbar-brand-inverted {

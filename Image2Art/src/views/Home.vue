@@ -6,7 +6,7 @@
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
                 <a href="#home" class="navbar-brand js-scroll-trigger">
-                    <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art</span>
+                    <span class="navbar-brand-inverted-pink">I</span><span class="navbar-brand-inverted-blue">m</span><span class="navbar-brand-inverted-green">a</span><span class="navbar-brand-inverted-yellow">g</span><span class="navbar-brand-inverted-pink">e</span>2<span class="navbar-brand-inverted-blue">A</span><span class="navbar-brand-inverted-green">r</span><span class="navbar-brand-inverted-yellow">t</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -51,7 +51,7 @@
                         </a>
                         <a href="/Doodle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem">
+                           style="font-size: 2rem ">
                             艺术涂鸦
                         </a>
                         <a href="/TransferStyle"
@@ -252,6 +252,18 @@
 
     #mainNav .navbar-brand-inverted {
         color: #f06292;
+    }
+     #mainNav .navbar-brand-inverted-pink {
+        color: #f06292;
+    }
+     #mainNav .navbar-brand-inverted-blue {
+        color: #3498DB;
+    }
+     #mainNav .navbar-brand-inverted-green {
+        color: #657350;
+    }
+       #mainNav .navbar-brand-inverted-yellow {
+        color: #A2745D;
     }
 
     #mainNav {
