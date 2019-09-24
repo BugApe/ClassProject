@@ -40,31 +40,31 @@
                 <div class="row h-100 align-items-center justify-content-center">
                    <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center text-light py-5">                       
+                    <div class="col-lg-12 text-center text-light py-5">
                        <br/><br/><br/><br/><br/><br/><br/>
                         <a href="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem">
+                           style="font-size: 2rem;">
                             头像转换
                         </a>&nbsp;&nbsp;
                         <a href="/TransferStyle"
                            class="mt-5 btn btn-info px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem">
+                           style="font-size: 2rem;background-color:#3498DB ">
                             风格融合
                         </a>&nbsp;&nbsp;
                           <a href="/Doodle"
                            class="mt-5 btn btn-success px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem ">
+                           style="font-size: 2rem;background-color:#657350 ">
                             艺术涂鸦
                         </a>&nbsp;&nbsp;
                           <a href="/"
                            class="mt-5 btn btn-warning px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem ">
-                            美颜滤镜
+                           style="font-size: 2rem ;background-color:#68BEDE">
+                            美颜&滤镜
                         </a>
                     </div>
                 </div>
-                </div>  
+                </div>
                 </div>
 
             </div>
@@ -154,7 +154,7 @@
                         </p>
                     </div>
                 </div>
-              
+
                 <div class="row text-center">
                     <div class="col-12 col-sm-6" style="margin: 0 auto">
                         <i style="color: #211f1f" class="fa fa-github fa-5x mb-3"></i>
@@ -309,5 +309,5 @@
         }
     }
 
-   
+
 </style>
