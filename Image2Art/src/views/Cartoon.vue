@@ -213,4 +213,6 @@ export default class Cartoon extends Vue {
         -webkit-transition: opacity 0.75s ease !important;
         transition: opacity 0.75s ease !important;;
     }
+
+ 
 </style>

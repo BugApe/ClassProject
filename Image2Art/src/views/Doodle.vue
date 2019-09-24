@@ -35,7 +35,7 @@
         </nav>
 
         <!-- 头部 -->
-        <header class="masthead">
+        <header class="masthead_D">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-10 align-self-center">
