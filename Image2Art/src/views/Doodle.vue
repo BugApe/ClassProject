@@ -44,63 +44,6 @@
                 </div>
             </div>
         </header>
-
-        <!-- 简介 -->
-        <section id="about" class="page-section">
-            <div class="container carousel-container text-center">
-                <h2 class="mt-0">
-                    Here's a <span class="text-primary font-weight-bold">quick</span> overview
-                </h2>
-
-
-              <!-- Carousel -->
-               <div class="row justify-content-center m-0">
-                    <div class="col col-sm-12 col-md-8 col-lg-6">
-                        <div class="card shadow-lg">
-                            <div class="card-body p-2">
-                                <div id="carousel"
-                                     class="carousel slide carousel-fade"
-                                     data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li v-for="i in carouselImageCount"
-                                            data-target="#carousel"
-                                            :data-slide-to="i"
-                                            class="active" />
-                                    </ol>
-                                    <div class="carousel-inner justify-content-center align-content-center text-center">
-                                        <div v-for="i in carouselImageCount"
-                                             :key="`carousel-image-${i}`"
-                                             :class="['carousel-item', i === 1? 'active':'']">
-                                            <img class="d-block w-100 lazyload"
-                                                 :src="i <= 2 ? `./img/carousel/${i}.jpg` : ''"
-                                                 :data-src="`./img/carousel/${i}.jpg`"
-                                                 :alt="`Example Image #${i}`">
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carousel" role="button"
-                                       data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">放寒假放假</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carousel" role="button"
-                                       data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">华东师范</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-               
-
-             
-            </div>
-     
-        </section>
-
-
         <!-- Footer -->
         <footer class="bg-light py-5">
             <div class="container">

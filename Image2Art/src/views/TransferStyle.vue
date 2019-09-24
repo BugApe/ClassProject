@@ -15,17 +15,17 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
-                            <a href="/home" class="nav-link js-scroll-trigger">
+                            <a href="/" class="nav-link js-scroll-trigger">
                                 首页
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/home" class="nav-link js-scroll-trigger">
+                            <a href="/#about" class="nav-link js-scroll-trigger">
                                简介
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/home" class="nav-link js-scroll-trigger">
+                            <a href="/#contact" class="nav-link js-scroll-trigger">
                                联系我们
                             </a>
                         </li>
@@ -49,18 +49,6 @@
                 </div>
             </div>
         </header>
-
-        <!-- 简介 -->
-        <section id="about" class="page-section">
-            <div class="container carousel-container text-center">
-                <h2 class="mt-0">
-                    Here's a <span class="text-primary font-weight-bold">quick</span> overview
-                </h2>
-
-            </div>
-     
-        </section>
-
 
         <!-- Footer -->
         <footer class="bg-light py-5">

@@ -15,17 +15,17 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
-                            <a href="/home" class="nav-link js-scroll-trigger">
+                            <a href="/" class="nav-link js-scroll-trigger">
                                 首页
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/home" class="nav-link js-scroll-trigger">
+                            <a href="/#about" class="nav-link js-scroll-trigger">
                                简介
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/home" class="nav-link js-scroll-trigger">
+                            <a href="/#contact" class="nav-link js-scroll-trigger">
                                联系我们
                             </a>
                         </li>
