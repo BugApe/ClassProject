@@ -40,23 +40,27 @@
                 <div class="row h-100 align-items-center justify-content-center">
                    <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center text-light py-5">
-                        
+                    <div class="col-lg-12 text-center text-light py-5">                       
                        <br/><br/><br/><br/><br/><br/><br/>
                         <a href="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem">
                             头像转换
                         </a>&nbsp;&nbsp;
-                        <a href="/Doodle"
-                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
+                        <a href="/TransferStyle"
+                           class="mt-5 btn btn-info px-5 btn-xl js-scroll-trigger"
+                           style="font-size: 2rem">
+                            风格融合
+                        </a>&nbsp;&nbsp;
+                          <a href="/Doodle"
+                           class="mt-5 btn btn-success px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem ">
                             艺术涂鸦
                         </a>&nbsp;&nbsp;
-                        <a href="/TransferStyle"
-                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem">
-                            风格融合
+                          <a href="/"
+                           class="mt-5 btn btn-warning px-5 btn-xl js-scroll-trigger"
+                           style="font-size: 2rem ">
+                            美颜滤镜
                         </a>
                     </div>
                 </div>
