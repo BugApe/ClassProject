@@ -157,7 +157,7 @@
                             <span class="text-primary font-weight-bold">All Done!</span>
                             <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
                         </div>
- <div class="mt-4 mb-4 pt-2 mx-1">
+                        <div class="mt-4 mb-4 pt-2 mx-1">
                             We've started processing your selfie and will send the result to
                             <span class="text-primary font-weight-bold">{{ email }}</span>
                             as soon as it's available!
@@ -189,41 +189,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Social Links -->
-        <div v-if="step === 'drop'"
-             class="row justify-content-center">
-            <div class="row mt-2 mb-3 social-container text-center">
-                <div class="col-12 my-1 col-md-4">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selfie2anime.com"
-                       class="btn btn-lg facebook"
-                       target="_blank"
-                       rel="noopener">
-                        <i class="fa fa-facebook-square"></i>
-                        Share
-                    </a>
-                </div>
-
-                <div class="col-12 my-1 col-md-4">
-                    <a href="https://twitter.com/intent/tweet?url=https://selfie2anime.com&text=What do YOU look like in Anime?&hashtags=selfie2anime"
-                       class="btn btn-lg twitter"
-                       target="_blank"
-                       rel="noopener">
-                        <i class="fa fa-twitter"></i>
-                        Tweet
-                    </a>
-                </div>
-
-                <div class="col-12 my-1 col-md-4">
-                    <a href="mailto:?subject=What do YOU look like in Anime?&body=Check out https://selfie2anime.com to find out!"
-                       class="btn btn-lg email"
-                       rel="noopener">
-                        <i class="fa fa-envelope"></i>
-                        Send
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -238,9 +203,7 @@ import {
 
 import axios from "axios";
 import loadImage from "blueimp-load-image";
-
 import Cropper from "@/components/Cropper.vue";
-
 @Component({
     components: {
         Cropper,
@@ -273,7 +236,7 @@ export default class PhotoUploader extends Vue {
     async onPhotoSelected(e: Event) {
 
         const file: File = (e.target as any).files[0];
-   /*      loadImage(file, (canvas: HTMLCanvasElement) => {
+      loadImage(file, (canvas: HTMLCanvasElement) => {
                 this.photoDataUrl = canvas.toDataURL("image/jpeg");
                 this.step = "crop";
             },
@@ -283,7 +246,7 @@ export default class PhotoUploader extends Vue {
                 maxWidth: 3840,
                 maxHeight: 3840,
             },
-        ); */
+        ); 
     }
 
     onPhotoCropped() {
@@ -354,7 +317,7 @@ export default class PhotoUploader extends Vue {
         padding: 100px 0 60px 0;
         font-size: 1.25em;
         text-align: center;
-        border: 2px dotted #f06292;
+        border: 2px dotted #252527;
         border-radius: $border-radius;
         cursor: pointer;
     }
@@ -365,7 +328,7 @@ export default class PhotoUploader extends Vue {
     }
 
     .photo-input:focus + label {
-        border: 2px solid #f06292;
+        border: 2px solid #181717;
     }
 
     .crop-container {

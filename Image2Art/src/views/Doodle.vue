@@ -68,7 +68,7 @@ import {
 import axios from "axios";
 import * as creative from "@/vendor/creative";
 
-/*   import PhotoUploader from "@/components/PhotoUploader.vue";
+import PhotoUploader from "@/components/PhotoUploader.vue";
 
 
 
@@ -76,7 +76,7 @@ import * as creative from "@/vendor/creative";
        components: {
            PhotoUploader,
        },
-   })  */
+   })  
 export default class Doodle extends Vue {
        carouselImageCount = 22;
        counter = 0;
