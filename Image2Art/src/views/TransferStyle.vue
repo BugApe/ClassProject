@@ -19,14 +19,26 @@
                                 首页
                             </a>
                         </li>
+                       <li class="nav-item">
+                            <a href="/Cartoon " class="nav-link js-scroll-trigger">头像转换</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/TransferStyle" class="nav-link js-scroll-trigger">风格融合</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Doodle" class="nav-link js-scroll-trigger">艺术涂鸦</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link js-scroll-trigger">美颜滤镜</a>
+                        </li>
                         <li class="nav-item">
                             <a href="/#about" class="nav-link js-scroll-trigger">
-                               简介
+                               详情
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/#contact" class="nav-link js-scroll-trigger">
-                               联系我们
+                              联系我们
                             </a>
                         </li>
                     </ul>
@@ -87,12 +99,7 @@ export default class TransferStyle extends Vue {
     counterTimestamp = 0;
     selfiesPerSecond = 0;
     counterIntervalHandle = 0;
-
     transparent1x1 = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-
-
-
-
     onUpdateCounter() {
         this.estimateCounter = Math.ceil(
             this.counter
