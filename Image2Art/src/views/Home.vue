@@ -59,7 +59,7 @@
                         </a>&nbsp;&nbsp;
                           <a href="/"
                            class="mt-5 btn btn-warning px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem ;background-color:#68BEDE">
+                           style="font-size: 2rem ;background-color:#a77f5c">
                             美颜&滤镜
                         </a>
                     </div>
