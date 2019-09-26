@@ -85,7 +85,7 @@ import {
 
 import axios from "axios";
 import * as creative from "@/vendor/creative";
- import photoUploader from "@/components/PhotoUploader.vue";
+ import photoUploader from "@/components/StyleUploader.vue";
 
 @Component({
     components: {
@@ -165,7 +165,7 @@ export default class TransferStyle extends Vue {
             font-size: 2.0em;
         }
     }
-
+    
     .nav-item, .page-section h2 {
         text-transform: uppercase;
     }

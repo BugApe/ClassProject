@@ -2,11 +2,21 @@
 <template>
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
-        
-        <div style="display: none">
-            <a ref="it" href="http://deloplen.com/afu.php?zoneid=2793856" target="_blank">It</a>
-        </div>
+       
+      
         <div class="row">
+             <div class="left"> 
+                 
+                 <div class="row pre-scrollable">
+                    <img src="../../public/img/style/wave.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/udnie.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/the_shipwreck_of_the_minotaur.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/the_scream.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/rain_princess.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/la_muse.jpg"  class="img-thumbnail" alt="Cinque Terre">
+            </div>
+             </div>
+            <div  class="tab-content right">
             <div v-show="step === 'drop'"
                  class="drop-container col-sm">
                 <div class="drop-container-inner">
@@ -22,7 +32,7 @@
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x mt-4 mb-2 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
-                         Upload a Selfie
+                         风格转换
                         </span>
 
                         <!--
@@ -37,7 +47,7 @@
 
                         <span class="text-muted"
                              style="font-size: 11pt;">
-                            (Photos you upload will be kept <strong>absolutely private</strong>)
+                            (您的隐私将会得到 <strong>绝对保护</strong>)
                         </span>
                     </label>
                 </div>
@@ -82,6 +92,7 @@
                                        
                                        v-model="email" />
                             </div>
+
                             <div class="col-12 col-md-2">
                                 <button type="submit"
                                         :class="['btn btn-primary btn-lg btn-block text-uppercase',
@@ -187,7 +198,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div></div>
     </div>
 </template>
 
@@ -291,7 +302,29 @@ export default class PhotoUploader extends Vue {
 <style lang="scss" scoped>
     $border-radius: 20px;
     $background-color: rgba(255, 255, 255, 0.9);
-
+    .left{
+            margin-left:30px;
+                position: absolute;
+                box-sizing: border-box;
+                width: 200px;
+                height: 100%;
+              
+    }
+    .right{
+                box-sizing: border-box;
+                float: left;
+                box-sizing: border-box;
+                padding-left: 200px;
+                overflow-y: overlay;
+                overflow-x: hidden;
+                clear: both;
+                min-width: 100%;
+                min-height: 500px;
+    }
+    .pre-scrollable {
+max-height: 90%;
+overflow-y: scroll;
+}
     .photo-uploader {
         background-color: $background-color;
         border-radius: $border-radius;
