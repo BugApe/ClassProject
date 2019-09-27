@@ -32,7 +32,7 @@
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x mt-4 mb-2 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
-                         风格转换
+                    上传涂鸦
                         </span>
 
                         <!--
@@ -368,5 +368,5 @@ overflow-y: scroll;
         margin: 0;
     }
   
-    .text-primary{color:#3498DB !important}
+    .text-primary{color:#657350 !important}
 </style>

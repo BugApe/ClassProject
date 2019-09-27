@@ -47,7 +47,7 @@
         </nav>
 
         <!-- 头部 -->
-        <header class="masthead_D">
+        <header class="masthead">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-10 align-self-center">
@@ -79,7 +79,7 @@ import {
 
 import axios from "axios";
 import * as creative from "@/vendor/creative";
-import PhotoUploader from "@/components/PhotoUploader.vue";
+import PhotoUploader from "@/components/DoodleUploader.vue";
 
    @Component({
        components: {
@@ -163,6 +163,13 @@ export default class Doodle extends Vue {
             font-size: 2.0em;
         }
     }
+    
+     header.masthead{
+    background:-webkit-gradient(linear,left top,left bottom,from(rgba(16, 68, 29, 0.6)),to(rgba(27, 63, 38, 0.4))),
+    url("../../public/img/bg-masthead_D.jpg");
+    background:linear-gradient(to bottom,rgba(16, 68, 32, 0.6) 0,rgba(27, 67, 37, 0.4) 100%),
+    url("../../public/img/bg-masthead_D.jpg");
+    } 
 
     .nav-item, .page-section h2 {
         text-transform: uppercase;
@@ -205,4 +212,7 @@ export default class Doodle extends Vue {
         -webkit-transition: opacity 0.75s ease !important;
         transition: opacity 0.75s ease !important;;
     }
+    
+     .text-primary{color:#657350 !important}
 </style>
+

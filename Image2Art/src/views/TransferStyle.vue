@@ -166,6 +166,13 @@ export default class TransferStyle extends Vue {
         }
     }
     
+     header.masthead{
+    background:-webkit-gradient(linear,left top,left bottom,from(rgba(16, 30, 68, 0.6)),to(rgba(27,41,63,0.4))),
+    url("../../public/img/bg-masthead_D.jpg");
+    background:linear-gradient(to bottom,rgba(16, 30, 68, 0.6) 0,rgba(27, 36, 67, 0.4) 100%),
+    url("../../public/img/bg-masthead_D.jpg");
+    } 
+
     .nav-item, .page-section h2 {
         text-transform: uppercase;
     }
@@ -207,4 +214,6 @@ export default class TransferStyle extends Vue {
         -webkit-transition: opacity 0.75s ease !important;
         transition: opacity 0.75s ease !important;;
     }
+    
+     .text-primary{color:#3498DB !important}
 </style>
