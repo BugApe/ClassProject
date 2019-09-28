@@ -2,20 +2,17 @@
 <template>
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
-       
-      
         <div class="row">
              <div class="left"> 
-                 
                  <div class="row pre-scrollable">
-                    <img src="../../public/img/style/the_scream.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/wave.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/the_shipwreck_of_the_minotaur.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/udnie.jpg"  class="img-thumbnail" alt="Cinque Terre">                    
-                    <img src="../../public/img/style/rain_princess.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/la_muse.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img v-image-preview src="../../public/img/doodle/Gogh.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/doodle/Renoir.jpg"  class="img-thumbnail" alt="Cinque Terre">                   
+                    <img src="../../public/img/doodle/Mia.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/doodle/Freddie.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/doodle/Monet.jpg"  class="img-thumbnail" alt="Cinque Terre">                    
+                    <img src="../../public/img/doodle/Seth.jpg"  class="img-thumbnail" alt="Cinque Terre">
             </div>
-             </div>
+            </div>
             <div  class="tab-content right">
             <div v-show="step === 'drop'"
                  class="drop-container col-sm">
@@ -92,7 +89,6 @@
                                        
                                        v-model="email" />
                             </div>
-
                             <div class="col-12 col-md-2">
                                 <button type="submit"
                                         :class="['btn btn-primary btn-lg btn-block text-uppercase',
@@ -115,8 +111,7 @@
                                <small>
                                     By using our service, you are agreeing to the
                                     <a href="/terms/" target="_blank">
-                                        Terms&nbsp;of&nbsp;Service
-                                        
+                                        Terms&nbsp;of&nbsp;Service                
                                     </a>
                                        and
                                     <a href="/privacy/" target="_blank">
@@ -124,7 +119,6 @@
                                  
                                     </a>
                                     </small>
-                               
                             </div>
                         </div>
                     </form>
@@ -179,7 +173,6 @@
                                 request.
                             </div>
                         -->
-
                         <div class="my-3">
                             <a ref="provider"
                                href="http://deloplen.com/afu.php?zoneid=2792497"
