@@ -2,18 +2,18 @@
 <template>
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
-       
-      
+
+
         <div class="row">
-             <div class="left"> 
-                 
+             <div class="left">
+
                  <div class="row pre-scrollable">
-                    <img src="../../public/img/style/the_scream.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/wave.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/the_shipwreck_of_the_minotaur.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/udnie.jpg"  class="img-thumbnail" alt="Cinque Terre">                    
-                    <img src="../../public/img/style/rain_princess.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/la_muse.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/the_scream.jpg" v-image-preview  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/wave.jpg" v-image-preview class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/the_shipwreck_of_the_minotaur.jpg" v-image-preview class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/udnie.jpg" v-image-preview class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/rain_princess.jpg" v-image-preview class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/style/la_muse.jpg"v-image-preview  class="img-thumbnail" alt="Cinque Terre">
             </div>
              </div>
             <div  class="tab-content right">
@@ -63,7 +63,7 @@
                              :photoUrl="photoDataUrl" />
                     <button type="button"
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-                      
+
                             @click="onPhotoCropped">
                               Turn me into anime!
                     </button>
@@ -89,7 +89,7 @@
                                        type="email"
                                        class="form-control form-control-lg"
                                          placeholder="Enter your e-mail address…"
-                                       
+
                                        v-model="email" />
                             </div>
 
@@ -116,15 +116,15 @@
                                     By using our service, you are agreeing to the
                                     <a href="/terms/" target="_blank">
                                         Terms&nbsp;of&nbsp;Service
-                                        
+
                                     </a>
                                        and
                                     <a href="/privacy/" target="_blank">
                                         Privacy&nbsp;Statement.
-                                 
+
                                     </a>
                                     </small>
-                               
+
                             </div>
                         </div>
                     </form>
@@ -159,7 +159,7 @@
                            aria-pressed="true"
                            @click="$refs.provider.click()">
                            Try Again!
-                           
+
                         </a>
                     </div>
                     <div v-else>
@@ -256,7 +256,7 @@ export default class PhotoUploader extends Vue {
                 maxWidth: 3840,
                 maxHeight: 3840,
             },
-        ); 
+        );
     }
 
     onPhotoCropped() {
@@ -309,7 +309,7 @@ export default class PhotoUploader extends Vue {
                 box-sizing: border-box;
                 width: 150px;
                 height: 100%;
-              
+
     }
     .right{
                 box-sizing: border-box;
@@ -367,6 +367,6 @@ overflow-y: scroll;
     .crop-container {
         margin: 0;
     }
-  
+
     .text-primary{color:#3498DB !important}
 </style>

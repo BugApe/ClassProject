@@ -5,12 +5,12 @@
         <div class="row">
              <div class="left">
                  <div class="row pre-scrollable">
-                    <img v-image-preview ="{src:'/img/Seth.c48b0ed4.jpg' }" src="../../public/img/doodle/Gogh.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/doodle/Renoir.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/doodle/Mia.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/doodle/Freddie.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/doodle/Monet.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/doodle/Seth.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img v-image-preview ="{src:'/img/doodle/Gogh_sem.png' }" src="img/doodle/Gogh.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="img/doodle/Renoir.jpg" v-image-preview ="{src:'/img/doodle/Renoir_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
+                    <img src="img/doodle/Mia.jpg" v-image-preview ="{src:'/img/doodle/Mia_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
+                    <img src="img/doodle/Freddie.jpg" v-image-preview ="{src:'/img/doodle/Freddie_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
+                    <img src="img/doodle/Monet.jpg" v-image-preview ="{src:'/img/doodle/Monet_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
+                    <img src="img/doodle/Seth.jpg" v-image-preview ="{src:'/img/doodle/Seth_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
             </div>
             </div>
             <div  class="tab-content right">
