@@ -5,7 +5,7 @@
         <div class="row">
              <div class="left">
                  <div class="row pre-scrollable">
-                    <img v-image-preview="{src: 'E:\\My_projects\\ClassProject\\Image2Art\\public\\img\\doodle\\Gogh.jpg'}" src="../../public/img/doodle/Gogh.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img v-image-preview ="{src:'/img/Seth.c48b0ed4.jpg' }" src="../../public/img/doodle/Gogh.jpg"  class="img-thumbnail" alt="Cinque Terre">
                     <img src="../../public/img/doodle/Renoir.jpg"  class="img-thumbnail" alt="Cinque Terre">
                     <img src="../../public/img/doodle/Mia.jpg"  class="img-thumbnail" alt="Cinque Terre">
                     <img src="../../public/img/doodle/Freddie.jpg"  class="img-thumbnail" alt="Cinque Terre">
