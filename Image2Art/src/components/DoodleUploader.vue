@@ -3,13 +3,13 @@
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
         <div class="row">
-             <div class="left"> 
+             <div class="left">
                  <div class="row pre-scrollable">
-                    <img v-image-preview src="../../public/img/doodle/Gogh.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/doodle/Renoir.jpg"  class="img-thumbnail" alt="Cinque Terre">                   
+                    <img v-image-preview="{src: 'E:\\My_projects\\ClassProject\\Image2Art\\public\\img\\doodle\\Gogh.jpg'}" src="../../public/img/doodle/Gogh.jpg"  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="../../public/img/doodle/Renoir.jpg"  class="img-thumbnail" alt="Cinque Terre">
                     <img src="../../public/img/doodle/Mia.jpg"  class="img-thumbnail" alt="Cinque Terre">
                     <img src="../../public/img/doodle/Freddie.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/doodle/Monet.jpg"  class="img-thumbnail" alt="Cinque Terre">                    
+                    <img src="../../public/img/doodle/Monet.jpg"  class="img-thumbnail" alt="Cinque Terre">
                     <img src="../../public/img/doodle/Seth.jpg"  class="img-thumbnail" alt="Cinque Terre">
             </div>
             </div>
@@ -60,7 +60,7 @@
                              :photoUrl="photoDataUrl" />
                     <button type="button"
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-                      
+
                             @click="onPhotoCropped">
                               Turn me into anime!
                     </button>
@@ -86,7 +86,7 @@
                                        type="email"
                                        class="form-control form-control-lg"
                                          placeholder="Enter your e-mail address…"
-                                       
+
                                        v-model="email" />
                             </div>
                             <div class="col-12 col-md-2">
@@ -111,12 +111,12 @@
                                <small>
                                     By using our service, you are agreeing to the
                                     <a href="/terms/" target="_blank">
-                                        Terms&nbsp;of&nbsp;Service                
+                                        Terms&nbsp;of&nbsp;Service
                                     </a>
                                        and
                                     <a href="/privacy/" target="_blank">
                                         Privacy&nbsp;Statement.
-                                 
+
                                     </a>
                                     </small>
                             </div>
@@ -153,7 +153,7 @@
                            aria-pressed="true"
                            @click="$refs.provider.click()">
                            Try Again!
-                           
+
                         </a>
                     </div>
                     <div v-else>
@@ -249,7 +249,7 @@ export default class PhotoUploader extends Vue {
                 maxWidth: 3840,
                 maxHeight: 3840,
             },
-        ); 
+        );
     }
 
     onPhotoCropped() {
@@ -302,7 +302,7 @@ export default class PhotoUploader extends Vue {
                 box-sizing: border-box;
                 width: 150px;
                 height: 100%;
-              
+
     }
     .right{
                 box-sizing: border-box;
@@ -360,6 +360,6 @@ overflow-y: scroll;
     .crop-container {
         margin: 0;
     }
-  
+
     .text-primary{color:#657350 !important}
 </style>
