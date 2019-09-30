@@ -8,12 +8,12 @@
              <div class="left">
 
                  <div class="row pre-scrollable">
-                    <img src="../../public/img/style/the_scream.jpg" v-image-preview  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/wave.jpg" v-image-preview class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/the_shipwreck_of_the_minotaur.jpg" v-image-preview class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/udnie.jpg" v-image-preview class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/rain_princess.jpg" v-image-preview class="img-thumbnail" alt="Cinque Terre">
-                    <img src="../../public/img/style/la_muse.jpg"v-image-preview  class="img-thumbnail" alt="Cinque Terre">
+                    <img src="img/style/the_scream.jpg" preview="0"  class="img-thumbnail">
+                    <img src="img/style/wave.jpg" preview="0" class="img-thumbnail" >
+                    <img src="img/style/the_shipwreck_of_the_minotaur.jpg" preview="0" class="img-thumbnail" >
+                    <img src="img/style/udnie.jpg" preview="0" class="img-thumbnail" >
+                    <img src="img/style/rain_princess.jpg" preview="0" class="img-thumbnail" >
+                    <img src="img/style/la_muse.jpg" preview="0"  class="img-thumbnail" >
             </div>
              </div>
             <div  class="tab-content right">
