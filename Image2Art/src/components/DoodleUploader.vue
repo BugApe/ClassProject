@@ -5,12 +5,13 @@
         <div class="row">
              <div class="left">
                  <div class="row pre-scrollable">
-                    <img v-image-preview ="{src:'/img/doodle/Gogh_sem.png' }" src="img/doodle/Gogh.jpg"  class="img-thumbnail" alt="Cinque Terre">
-                    <img src="img/doodle/Renoir.jpg" v-image-preview ="{src:'/img/doodle/Renoir_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
-                    <img src="img/doodle/Mia.jpg" v-image-preview ="{src:'/img/doodle/Mia_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
-                    <img src="img/doodle/Freddie.jpg" v-image-preview ="{src:'/img/doodle/Freddie_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
-                    <img src="img/doodle/Monet.jpg" v-image-preview ="{src:'/img/doodle/Monet_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
-                    <img src="img/doodle/Seth.jpg" v-image-preview ="{src:'/img/doodle/Seth_sem.png' }" class="img-thumbnail" alt="Cinque Terre">
+                     <img src="img/doodle/Gogh.jpg" large="/img/doodle/Gogh_sem.jpg" preview="0" preview-text="描述文字"  class="img-thumbnail">
+                     <img src="img/doodle/Renoir.jpg" large="/img/doodle/Renoir_sem.jpg" preview="1" preview-text="描述文字"  class="img-thumbnail">
+                     <img src="img/doodle/Mia.jpg" large="/img/doodle/Mia_sem.jpg" preview="2" preview-text="描述文字"  class="img-thumbnail">
+                     <img src="img/doodle/Freddie.jpg" large="/img/doodle/Freddie_sem.jpg" preview="3" preview-text="描述文字"  class="img-thumbnail">
+                     <img src="img/doodle/Monet.jpg" large="/img/doodle/Monet_sem.jpg" preview="4" preview-text="描述文字"  class="img-thumbnail">
+                     <img src="img/doodle/Seth.jpg" large="/img/doodle/Seth_sem.jpg" preview="5" preview-text="描述文字"  class="img-thumbnail">
+            
             </div>
             </div>
             <div  class="tab-content right">

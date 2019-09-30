@@ -166,9 +166,9 @@ export default class Doodle extends Vue {
     
      header.masthead{
     background:-webkit-gradient(linear,left top,left bottom,from(rgba(16, 68, 29, 0.6)),to(rgba(27, 63, 38, 0.4))),
-    url("../../public/img/bg-masthead_D.jpg");
+    url("../../public/img/bg-masthead_Do.jpg");
     background:linear-gradient(to bottom,rgba(16, 68, 32, 0.6) 0,rgba(27, 67, 37, 0.4) 100%),
-    url("../../public/img/bg-masthead_D.jpg");
+    url("../../public/img/bg-masthead_Do.jpg");
     } 
 
     .nav-item, .page-section h2 {
