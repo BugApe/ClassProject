@@ -70,18 +70,18 @@
                 </h2>
 
             </div>
-     
+
         </section>
 
 
         <!-- Footer -->
         <footer class="bg-light py-5">
             <div class="container">
+                <hr />
                 <div class="small text-center text-muted">
                     Copyright &copy; 2019 by
-                    <a href="https://twitter.com/RicoBeti">Rico Beti</a>
-                    &amp;
-                    <a href="https://twitter.com/nathangloverAUS">Nathan Glover</a>
+                    <a href="https://github.com/BugApe">BugApe</a>&amp;<a href="https://github.com/longyunyun">longyunyun</a>
+                    &amp;<a href="https://github.com/tcheng02">tcheng02</a>&amp;<a href="https://github.com/longyunyun">longyunyun</a>
                 </div>
             </div>
         </footer>
@@ -103,7 +103,7 @@ import photoUploader from "@/components/PhotoUploader.vue";
     components: {
        PhotoUploader: photoUploader
     },
-}) 
+})
 export default class Cartoon extends Vue {
     carouselImageCount = 22;
     counter = 0;
@@ -226,5 +226,5 @@ export default class Cartoon extends Vue {
         transition: opacity 0.75s ease !important;;
     }
 
- 
+
 </style>

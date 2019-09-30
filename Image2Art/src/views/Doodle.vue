@@ -59,11 +59,11 @@
         <!-- Footer -->
         <footer class="bg-light py-5">
             <div class="container">
+                <hr />
                 <div class="small text-center text-muted">
                     Copyright &copy; 2019 by
-                    <a href="https://twitter.com/RicoBeti">Rico Beti</a>
-                    &amp;
-                    <a href="https://twitter.com/nathangloverAUS">Nathan Glover</a>
+                    <a href="https://github.com/BugApe">BugApe</a>&amp;<a href="https://github.com/longyunyun">longyunyun</a>
+                    &amp;<a href="https://github.com/tcheng02">tcheng02</a>&amp;<a href="https://github.com/longyunyun">longyunyun</a>
                 </div>
             </div>
         </footer>
@@ -85,7 +85,7 @@ import PhotoUploader from "@/components/DoodleUploader.vue";
        components: {
            PhotoUploader,
        },
-   })  
+   })
 export default class Doodle extends Vue {
        carouselImageCount = 22;
        counter = 0;
@@ -163,13 +163,13 @@ export default class Doodle extends Vue {
             font-size: 2.0em;
         }
     }
-    
+
      header.masthead{
     background:-webkit-gradient(linear,left top,left bottom,from(rgba(16, 68, 29, 0.6)),to(rgba(27, 63, 38, 0.4))),
     url("../../public/img/bg-masthead_Do.jpg");
     background:linear-gradient(to bottom,rgba(16, 68, 32, 0.6) 0,rgba(27, 67, 37, 0.4) 100%),
     url("../../public/img/bg-masthead_Do.jpg");
-    } 
+    }
 
     .nav-item, .page-section h2 {
         text-transform: uppercase;
@@ -212,7 +212,7 @@ export default class Doodle extends Vue {
         -webkit-transition: opacity 0.75s ease !important;
         transition: opacity 0.75s ease !important;;
     }
-    
+
      .text-primary{color:#657350 !important}
 </style>
 

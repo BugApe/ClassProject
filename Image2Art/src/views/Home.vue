@@ -52,24 +52,24 @@
                    <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12 text-center text-light py-5">
-                       <br/><br/><br/><br/><br/><br/><br/>
+                       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                         <a href="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem;">
+                           style="font-size: 2rem;background-color:#f06292">
                             头像转换
                         </a>&nbsp;&nbsp;
                         <a href="/TransferStyle"
-                           class="mt-5 btn btn-info px-5 btn-xl js-scroll-trigger"
+                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#3498DB ">
                             风格融合
                         </a>&nbsp;&nbsp;
                           <a href="/Doodle"
-                           class="mt-5 btn btn-success px-5 btn-xl js-scroll-trigger"
+                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#657350 ">
                             艺术涂鸦
                         </a>&nbsp;&nbsp;
                           <a href="/"
-                           class="mt-5 btn btn-warning px-5 btn-xl js-scroll-trigger"
+                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem ;background-color:#a77f5c;color:#fff">
                             美颜滤镜
                         </a>
@@ -79,42 +79,16 @@
                 </div>
             </div>
         </header>
-      <!-- Action Section -->
-        <section id="action" class="page-section bg-dark">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center text-light py-5">
-                        <h2 class="mt-0">
-                            Image <span class="text-primary font-weight-bold">2</span>
-                            Art <span class="text-primary font-weight-bold">官方网站</span>
-                        </h2>
-                        <a href="/Cartoon"
-                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem">
-                            头像转换
-                        </a>
-                        <a href="/Doodle"
-                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem ">
-                            艺术涂鸦
-                        </a>
-                        <a href="/TransferStyle"
-                           class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem">
-                            风格融合
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
         <!-- About 部分 -->
         <section id="about" class="page-section">
             <div class="container carousel-container text-center">
                 <h2 class="mt-0">
                      <span class="text-primary font-weight-bold">Image</span>2<span class="text-primary font-weight-bold">Art</span>官方网站
                 </h2>
-                <div class="my-5 text-muted" style="line-height: 2em">
-                    网站介绍<br>
+                <div class="my-5 text-muted" style="line-height: 2em;font-size: 1.1em">
+                   <p style="font-size: 1.3em">网站介绍</p>
                      <span class="text-primary font-weight-bold">头像转换</span>基于<a href="https://arxiv.org/abs/1907.10830">
                         生成对抗网络(GAN)
                     </a>实现<br>
@@ -149,11 +123,11 @@
         <!-- Contect部分 -->
         <section id="contact" class="page-section">
             <div class="container">
-                <div class="row justify-content-center mb-4">
+                <div class="row justify-content-center mb-5">
                     <div class="col-lg-8 text-center">
                         <h3 class="mt-0">Want to get in touch?</h3>
-                        <hr class="divider my-4">
-                        <p class="text-muted mb-5">
+                        <hr class="divider my-5">
+                        <p class="text-muted mb-4">
                             到GitHub上来下载我们的项目源码，关注项目的最新进展。如果您有任何问题和建议，请尽管对我们留言！
                         </p>
                     </div>
@@ -172,9 +146,8 @@
                 <hr />
                 <div class="small text-center text-muted">
                     Copyright &copy; 2019 by
-                    <a href="https://twitter.com/RicoBeti">Rico Beti</a>
-                    &amp;
-                    <a href="https://twitter.com/nathangloverAUS">Nathan Glover</a>
+                    <a href="https://github.com/BugApe">BugApe</a>&amp;<a href="https://github.com/longyunyun">longyunyun</a>
+                    &amp;<a href="https://github.com/tcheng02">tcheng02</a>&amp;<a href="https://github.com/longyunyun">longyunyun</a>
                 </div>
             </div>
         </footer>
