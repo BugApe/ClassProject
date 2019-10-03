@@ -52,7 +52,7 @@
                    <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12 text-center text-light py-5">
-                       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                       <br/><br/><br/><br/><br/><br/><br/><br/>
                         <a href="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#f06292">

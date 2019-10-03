@@ -367,8 +367,6 @@ overflow-y: scroll;
     .crop-container {
         margin: 0;
     }
-    .img-thumbnail{
-        height: 200px ;
-    }
+  
     .text-primary{color:#3498DB !important}
 </style>
