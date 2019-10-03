@@ -316,6 +316,9 @@ export default class PhotoUploader extends Vue {
                 min-width: 100%;
                 min-height: 500px;
     }
+     .img-thumbnail{
+        height: 230px ;
+    }
     .pre-scrollable {
 max-height: 90%;
 overflow-y: scroll;

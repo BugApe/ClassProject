@@ -8,7 +8,7 @@
              <div class="left">
 
                  <div class="row pre-scrollable">
-                    <img src="img/style/the_scream.jpg" preview="0"  class="img-thumbnail">
+                    <img src="img/style/the_scream.jpg" preview="0"  class="img-thumbnail" >
                     <img src="img/style/wave.jpg" preview="0" class="img-thumbnail" >
                     <img src="img/style/the_shipwreck_of_the_minotaur.jpg" preview="0" class="img-thumbnail" >
                     <img src="img/style/udnie.jpg" preview="0" class="img-thumbnail" >
@@ -367,6 +367,8 @@ overflow-y: scroll;
     .crop-container {
         margin: 0;
     }
-
+    .img-thumbnail{
+        height: 200px ;
+    }
     .text-primary{color:#3498DB !important}
 </style>
