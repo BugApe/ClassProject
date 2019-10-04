@@ -243,7 +243,7 @@ export default class PhotoUploader extends Vue {
         window.scrollTo(0, element.offsetTop);
     }
 
-    async onPhotoSelected(e: Event) {
+   /*  async onPhotoSelected(e: Event) {
 
         const file: File = (e.target as any).files[0];
       loadImage(file, (canvas: HTMLCanvasElement) => {
@@ -257,7 +257,7 @@ export default class PhotoUploader extends Vue {
                 maxHeight: 3840,
             },
         );
-    }
+    } */
 
     onPhotoCropped() {
         this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
