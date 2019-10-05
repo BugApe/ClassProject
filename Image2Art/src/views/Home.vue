@@ -13,7 +13,7 @@
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive" style="position: absolute;right:6%;top: 20%" >
+                <div class="collapse navbar-collapse" id="navbarResponsive" style="position: absolute;right:6%;top: 15%" >
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
                               <router-link to="/" class="nav-link js-scroll-trigger">
