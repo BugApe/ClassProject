@@ -35,7 +35,7 @@
                         <li class="nav-item">
                              <a href="#about" class="nav-link js-scroll-trigger">
                                详情
-                            </a>!
+                            </a>
                         </li>
                         <li class="nav-item">
                              <a href="#contact" class="nav-link js-scroll-trigger">
@@ -51,23 +51,22 @@
                 <div class="row h-100 align-items-center justify-content-center">
                    <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center text-light py-5">
-                       <br/><br/><br/><br/><br/><br/><br/><br/>
+                    <div class="col-lg-12 text-center text-light" style="position:absolute;bottom:9%">
                         <router-link to="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#f06292">
                             头像转换
-                       </router-link>&nbsp;&nbsp;
+                       </router-link>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
                         <router-link to="/TransferStyle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#3498DB ">
                             风格融合
-                          </router-link>&nbsp;&nbsp;
+                          </router-link>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                          <router-link to="/Doodle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#657350 ">
                             艺术涂鸦
-                         </router-link>&nbsp;&nbsp;
+                         </router-link>&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                          <router-link to="/"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem ;background-color:#a77f5c;color:#fff">

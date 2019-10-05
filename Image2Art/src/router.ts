@@ -31,16 +31,6 @@ export default new Router(
             name: "Doodle",
             component: () => import("@/views/Doodle.vue"),
         },
-        {
-            path: "/#about",
-
-
-        },
-        {
-            path: "/#contact",
-
-
-        }
 
     ],
     },
