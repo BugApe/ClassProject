@@ -6,11 +6,11 @@ Vue.use(Router);
 
 export default new Router(
     {
-    //mode: "hash",
-    mode: "history",
+    mode: "hash",
+    //mode: "history",
 
-    base: process.env.BASE_URL,
-    //base: '/Image2Art/frontImage2Art/dist/index.html#/',
+    //base: process.env.BASE_URL,
+    //base: '/MyRead/ClassProject/Image2Art/',
     routes: [
         {
             path: "/",

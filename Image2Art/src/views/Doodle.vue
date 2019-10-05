@@ -19,27 +19,27 @@
                               首页
                             </a>
                         </li>
-                      <li class="nav-item">
-                            <a href="/Cartoon " class="nav-link js-scroll-trigger">头像转换</a>
+                       <li class="nav-item">
+                           <router-link to="/Cartoon " class="nav-link js-scroll-trigger">头像转换</router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/TransferStyle" class="nav-link js-scroll-trigger">风格融合</a>
+                           <router-link to="/TransferStyle" class="nav-link js-scroll-trigger">风格融合</router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/Doodle" class="nav-link js-scroll-trigger">艺术涂鸦</a>
+                           <router-link to="/Doodle" class="nav-link js-scroll-trigger">艺术涂鸦</router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link js-scroll-trigger">美颜滤镜</a>
+                           <router-link to="/" class="nav-link js-scroll-trigger">美颜滤镜</router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/#about" class="nav-link js-scroll-trigger">
+                        <router-link to="/#about" class="nav-link js-scroll-trigger">
                                详情
-                            </a>
+                           </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/#contact" class="nav-link js-scroll-trigger">
+                           <router-link to="/#contact" class="nav-link js-scroll-trigger">
                               联系我们
-                            </a>
+                            </router-link>
                         </li>
                     </ul>
                 </div>

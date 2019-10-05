@@ -16,21 +16,21 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link js-scroll-trigger">
-                               首页
-                            </a>
+                              <router-link to="/" class="nav-link js-scroll-trigger">
+                                首页
+                          </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/Cartoon " class="nav-link js-scroll-trigger">头像转换</a>
+                           <router-link to="/Cartoon " class="nav-link js-scroll-trigger">头像转换</router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/TransferStyle" class="nav-link js-scroll-trigger">风格融合</a>
+                           <router-link to="/TransferStyle" class="nav-link js-scroll-trigger">风格融合</router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/Doodle" class="nav-link js-scroll-trigger">艺术涂鸦</a>
+                           <router-link to="/Doodle" class="nav-link js-scroll-trigger">艺术涂鸦</router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link js-scroll-trigger">美颜滤镜</a>
+                           <router-link to="/" class="nav-link js-scroll-trigger">美颜滤镜</router-link>
                         </li>
                         <li class="nav-item">
                             <a href="#about" class="nav-link js-scroll-trigger">
@@ -53,26 +53,26 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12 text-center text-light py-5">
                        <br/><br/><br/><br/><br/><br/><br/><br/>
-                        <a href="/Cartoon"
+                        <router-link to="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#f06292">
                             头像转换
-                        </a>&nbsp;&nbsp;
-                        <a href="/TransferStyle"
+                       </router-link>&nbsp;&nbsp;
+                        <router-link to="/TransferStyle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#3498DB ">
                             风格融合
-                        </a>&nbsp;&nbsp;
-                          <a href="/Doodle"
+                          </router-link>&nbsp;&nbsp;
+                         <router-link to="/Doodle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem;background-color:#657350 ">
                             艺术涂鸦
-                        </a>&nbsp;&nbsp;
-                          <a href="/"
+                         </router-link>&nbsp;&nbsp;
+                         <router-link to="/"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem ;background-color:#a77f5c;color:#fff">
                             美颜滤镜
-                        </a>
+                         </router-link>
                     </div>
                 </div>
                 </div>
