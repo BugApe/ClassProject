@@ -5,12 +5,12 @@
         <div class="row">
              <div class="left">
                  <div class="row pre-scrollable">
-                     <img src="img/doodle/Gogh.jpg" large="/img/doodle/Gogh_sem.jpg" preview="0" preview-text="描述文字"  class="img-thumbnail">
-                     <img src="img/doodle/Renoir.jpg" large="/img/doodle/Renoir_sem.jpg" preview="1" preview-text="描述文字"  class="img-thumbnail">
-                     <img src="img/doodle/Mia.jpg" large="/img/doodle/Mia_sem.jpg" preview="2" preview-text="描述文字"  class="img-thumbnail">
-                     <img src="img/doodle/Freddie.jpg" large="/img/doodle/Freddie_sem.jpg" preview="3" preview-text="描述文字"  class="img-thumbnail">
-                     <img src="img/doodle/Monet.jpg" large="/img/doodle/Monet_sem.jpg" preview="4" preview-text="描述文字"  class="img-thumbnail">
-                     <img src="img/doodle/Seth.jpg" large="/img/doodle/Seth_sem.jpg" preview="5" preview-text="描述文字"  class="img-thumbnail">
+                     <img src="img/doodle/Gogh.jpg" large="img/doodle/Gogh_sem.jpg" preview="0" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                     <img src="img/doodle/Renoir.jpg" large="img/doodle/Renoir_sem.jpg" preview="1" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                     <img src="img/doodle/Mia.jpg" large="img/doodle/Mia_sem.jpg" preview="2" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                     <img src="img/doodle/Freddie.jpg" large="img/doodle/Freddie_sem.jpg" preview="3" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                     <img src="img/doodle/Monet.jpg" large="img/doodle/Monet_sem.jpg" preview="4" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                     <img src="img/doodle/Seth.jpg" large="img/doodle/Seth_sem.jpg" preview="5" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
 
             </div>
             </div>
@@ -26,7 +26,7 @@
                     <label for="photo-input">
                          <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4">
                                     点击上传图片，体验 <span class="text-primary font-weight-bold">艺术涂鸦</span>
-                            吧！ 
+                            吧！
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x mt-4 mb-2 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
@@ -53,7 +53,7 @@
             <div v-show="step === 'crop'" class="crop-container col-sm">
                 <div class="crop-container-inner text-center">
                       <div class="mt-5 mb-5" style="font-size: 1.2em">
-                    请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小 
+                    请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小
                     </div>
                     <Cropper ref="cropper"
                              class="mb-3"
@@ -138,7 +138,7 @@
                         </div>
                          <div class="mt-4 mb-5 pt-2">
                             出了一点小问题，<span class="text-primary font-weight-bold">请重试</span>!
-                            
+
                         </div>
 
                         <div class="my-3">
