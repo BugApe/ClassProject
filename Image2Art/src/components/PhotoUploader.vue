@@ -2,7 +2,7 @@
 <template>
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
-        
+
         <div style="display: none">
             <a ref="it" href="http://deloplen.com/afu.php?zoneid=2793856" target="_blank">It</a>
         </div>
@@ -53,7 +53,7 @@
                              :photoUrl="photoDataUrl" />
                     <button type="button"
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-                      
+
                             @click="onPhotoCropped">
                               Turn me into anime!
                     </button>
@@ -79,7 +79,7 @@
                                        type="email"
                                        class="form-control form-control-lg"
                                          placeholder="Enter your e-mail address…"
-                                       
+
                                        v-model="email" />
                             </div>
                             <div class="col-12 col-md-2">
@@ -105,15 +105,15 @@
                                     By using our service, you are agreeing to the
                                     <a href="/terms/" target="_blank">
                                         Terms&nbsp;of&nbsp;Service
-                                        
+
                                     </a>
                                        and
                                     <a href="/privacy/" target="_blank">
                                         Privacy&nbsp;Statement.
-                                 
+
                                     </a>
                                     </small>
-                               
+
                             </div>
                         </div>
                     </form>
@@ -148,7 +148,7 @@
                            aria-pressed="true"
                            @click="$refs.provider.click()">
                            Try Again!
-                           
+
                         </a>
                     </div>
                     <div v-else>
@@ -232,7 +232,7 @@ export default class PhotoUploader extends Vue {
         window.scrollTo(0, element.offsetTop);
     }
 
-/*     async onPhotoSelected(e: Event) {
+     async onPhotoSelected(e: Event) {
 
         const file: File = (e.target as any).files[0];
       loadImage(file, (canvas: HTMLCanvasElement) => {
@@ -245,8 +245,8 @@ export default class PhotoUploader extends Vue {
                 maxWidth: 3840,
                 maxHeight: 3840,
             },
-        ); 
-    } */
+        );
+    }
 
     onPhotoCropped() {
         this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();

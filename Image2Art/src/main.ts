@@ -1,9 +1,11 @@
 
 
 import "croppr/dist/croppr.min.css";
-/* import preview from 'vue-photo-preview'
+
+// @ts-ignore
+import preview from 'vue-photo-preview'
 import 'vue-photo-preview/dist/skin.css'
-Vue.use(preview) */
+Vue.use(preview)
 import Vue from "vue";
 import App from "@/App.vue";
 import router from "@/router";

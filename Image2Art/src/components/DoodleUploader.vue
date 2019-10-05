@@ -11,7 +11,7 @@
                      <img src="img/doodle/Freddie.jpg" large="/img/doodle/Freddie_sem.jpg" preview="3" preview-text="描述文字"  class="img-thumbnail">
                      <img src="img/doodle/Monet.jpg" large="/img/doodle/Monet_sem.jpg" preview="4" preview-text="描述文字"  class="img-thumbnail">
                      <img src="img/doodle/Seth.jpg" large="/img/doodle/Seth_sem.jpg" preview="5" preview-text="描述文字"  class="img-thumbnail">
-            
+
             </div>
             </div>
             <div  class="tab-content right">
@@ -237,21 +237,21 @@ export default class PhotoUploader extends Vue {
         window.scrollTo(0, element.offsetTop);
     }
 
-/*     async onPhotoSelected(e: Event) {
+    async onPhotoSelected(e: Event) {
 
         const file: File = (e.target as any).files[0];
-      loadImage(file, (canvas: HTMLCanvasElement) => {
-                this.photoDataUrl = canvas.toDataURL("image/jpeg");
-                this.step = "crop";
-            },
-             {
-                canvas: true,
-                orientation: true,
-                maxWidth: 3840,
-                maxHeight: 3840,
-            },
+
+      loadImage(file,(canvas:HTMLCanvasElement) => {
+              this.photoDataUrl = canvas.toDataURL("image/jpeg");
+              this.step = "crop";
+          }, {
+              canvas: true,
+              orientation: true,
+              maxWidth: 3840,
+              maxHeight: 3840,
+          },
         );
-    } */
+    }
 
     onPhotoCropped() {
         this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
@@ -316,7 +316,7 @@ export default class PhotoUploader extends Vue {
                 min-width: 100%;
                 min-height: 500px;
     }
-  
+
     .pre-scrollable {
 max-height: 90%;
 overflow-y: scroll;
