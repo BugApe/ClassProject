@@ -3,9 +3,9 @@
     <div id="home">
         <!-- 导航 -->
         <nav id="mainNav"
-             class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+             class="navbar navbar-expand-lg navbar-light fixed-top py-4">
             <div class="container">
-                <a href="#home" class="navbar-brand js-scroll-trigger" style="position: absolute;left: 6%;top: 40%">
+                <a href="#home" class="navbar-brand js-scroll-trigger" style="position: absolute;left: 6%;top: 5%">
                     <span class="navbar-brand-inverted-pink">I</span><span class="navbar-brand-inverted-blue">m</span><span class="navbar-brand-inverted-green">a</span><span class="navbar-brand-inverted-yellow">g</span><span class="navbar-brand-inverted-pink">e</span>2<span class="navbar-brand-inverted-blue">A</span><span class="navbar-brand-inverted-green">r</span><span class="navbar-brand-inverted-yellow">t</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -13,7 +13,7 @@
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive" style="position: absolute;right:6%;top: 40%" >
+                <div class="collapse navbar-collapse" id="navbarResponsive" style="position: absolute;right:6%;top: 20%" >
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
                               <router-link to="/" class="nav-link js-scroll-trigger">
@@ -64,7 +64,7 @@
                           </router-link>
                          <router-link to="/Doodle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem;background-color:#657350;margin-right: 3.3%">
+                           style="font-size: 2rem;background-color:#657350;margin-right: 3.2%">
                             艺术涂鸦
                          </router-link>&nbsp;
                          <router-link to="/"

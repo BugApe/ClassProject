@@ -2,9 +2,9 @@
     <div id="transferStyle">
         <!-- 导航 -->
         <nav id="mainNav"
-             class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+             class="navbar navbar-expand-lg navbar-light fixed-top py-4">
             <div class="container">
-                <a href="#doodle" class="navbar-brand js-scroll-trigger">
+                <a href="#doodle" class="navbar-brand js-scroll-trigger"  style="position: absolute;left: 6%">
                     <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art | </span><span class="small text-center navbar-brand-inverted">照片风格化</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -13,14 +13,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0" style="position: absolute;right:6%">
                         <li class="nav-item">
                              <router-link to="/" class="nav-link js-scroll-trigger">
                                 首页
                           </router-link>
                         </li>
                      <li class="nav-item">
-                           <router-link to="/Cartoon " class="nav-link js-scroll-trigger">头像转换</router-link>
+                           <router-link to="/Cartoon" class="nav-link js-scroll-trigger">头像转换</router-link>
                         </li>
                         <li class="nav-item">
                            <router-link to="/TransferStyle" class="nav-link js-scroll-trigger">风格融合</router-link>
