@@ -5,7 +5,7 @@
         <nav id="mainNav"
              class="navbar navbar-expand-lg navbar-light fixed-top py-3">
             <div class="container">
-                <a href="#home" class="navbar-brand js-scroll-trigger">
+                <a href="#home" class="navbar-brand js-scroll-trigger" style="position: absolute;left: 6%;top: 40%">
                     <span class="navbar-brand-inverted-pink">I</span><span class="navbar-brand-inverted-blue">m</span><span class="navbar-brand-inverted-green">a</span><span class="navbar-brand-inverted-yellow">g</span><span class="navbar-brand-inverted-pink">e</span>2<span class="navbar-brand-inverted-blue">A</span><span class="navbar-brand-inverted-green">r</span><span class="navbar-brand-inverted-yellow">t</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -13,7 +13,7 @@
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="collapse navbar-collapse" id="navbarResponsive" style="position: absolute;right:6%;top: 40%" >
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item">
                               <router-link to="/" class="nav-link js-scroll-trigger">
@@ -21,7 +21,7 @@
                           </router-link>
                         </li>
                         <li class="nav-item">
-                           <router-link to="/Cartoon " class="nav-link js-scroll-trigger">头像转换</router-link>
+                           <router-link to="/Cartoon" class="nav-link js-scroll-trigger">头像转换</router-link>
                         </li>
                         <li class="nav-item">
                            <router-link to="/TransferStyle" class="nav-link js-scroll-trigger">风格融合</router-link>
@@ -54,19 +54,19 @@
                     <div class="col-lg-12 text-center text-light" style="position:absolute;bottom:9%">
                         <router-link to="/Cartoon"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem;background-color:#f06292">
+                           style="font-size: 2rem;background-color:#f06292;margin-right: 4%">
                             头像转换
-                       </router-link>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+                       </router-link>
                         <router-link to="/TransferStyle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem;background-color:#3498DB ">
+                           style="font-size: 2rem;background-color:#3498DB;margin-right: 4% ">
                             风格融合
-                          </router-link>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                          </router-link>
                          <router-link to="/Doodle"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
-                           style="font-size: 2rem;background-color:#657350 ">
+                           style="font-size: 2rem;background-color:#657350;margin-right: 3.3%">
                             艺术涂鸦
-                         </router-link>&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                         </router-link>&nbsp;
                          <router-link to="/"
                            class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
                            style="font-size: 2rem ;background-color:#a77f5c;color:#fff">

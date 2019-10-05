@@ -30,7 +30,7 @@ export default new Router(
             path: "/Doodle",
             name: "Doodle",
             component: () => import("@/views/Doodle.vue"),
-        },
+        }
 
     ],
     },
