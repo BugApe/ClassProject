@@ -6,9 +6,10 @@ Vue.use(Router);
 
 export default new Router(
     {
+        //build必须用hash
     mode: "hash",
     //mode: "history",
-
+    //base可以不用
     //base: process.env.BASE_URL,
     //base: '/MyRead/ClassProject/Image2Art/',
     routes: [
@@ -30,7 +31,16 @@ export default new Router(
             name: "Doodle",
             component: () => import("@/views/Doodle.vue"),
         },
+        {
+            path: "/#about",
 
+
+        },
+        {
+            path: "/#contact",
+
+
+        }
 
     ],
     },

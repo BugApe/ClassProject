@@ -33,12 +33,12 @@
                            <router-link to="/" class="nav-link js-scroll-trigger">美颜滤镜</router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link js-scroll-trigger">
+                             <a href="#about" class="nav-link js-scroll-trigger">
                                详情
-                            </a>
+                            </a>!
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link js-scroll-trigger">
+                             <a href="#contact" class="nav-link js-scroll-trigger">
                               联系我们
                             </a>
                         </li>
