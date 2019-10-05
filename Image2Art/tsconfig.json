@@ -5,6 +5,7 @@
     "resolveJsonModule": true,
     "strict": true,
     "jsx": "preserve",
+    "noImplicitAny": false,
     "allowJs": true,
     "importHelpers": true,
     "moduleResolution": "node",

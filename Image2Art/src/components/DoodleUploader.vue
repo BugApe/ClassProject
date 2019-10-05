@@ -25,12 +25,12 @@
                            @change="onPhotoSelected" />
                     <label for="photo-input">
                          <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4">
-                            What do <span class="text-primary font-weight-bold">YOU</span>
-                            look like in <span class="text-primary font-weight-bold">anime</span>?
+                                    点击上传图片，体验 <span class="text-primary font-weight-bold">艺术涂鸦</span>
+                            吧！ 
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x mt-4 mb-2 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
-                    上传涂鸦
+                         艺术涂鸦
                         </span>
 
                         <!--
@@ -53,8 +53,7 @@
             <div v-show="step === 'crop'" class="crop-container col-sm">
                 <div class="crop-container-inner text-center">
                       <div class="mt-5 mb-5" style="font-size: 1.2em">
-                        Now please <span class="text-primary font-weight-bold">crop</span>
-                        the photo to your <span class="text-primary font-weight-bold">face</span> only!
+                    请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小 
                     </div>
                     <Cropper ref="cropper"
                              class="mb-3"
@@ -63,7 +62,7 @@
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
 
                             @click="onPhotoCropped">
-                              Turn me into anime!
+                             确认
                     </button>
                 </div>
             </div>
@@ -75,10 +74,10 @@
                         <div class="form-row mb-4 align-items-center justify-content-center">
                             <div class="col col-10 text-center">
                                  <div style="font-size: 1.2em; line-height: 1.8em">
-                                    This is going to take a while!
+                                    正在处理，请稍后
                                     <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
-                                    We'll send <span class="text-primary font-weight-bold">your anime selfie</span>
-                                    to <span class="text-primary font-weight-bold">your email</span> once it's ready.  </div>
+                                   我们将发送<span class="text-primary font-weight-bold">处理好的图片</span>
+                                    到您的<span class="text-primary font-weight-bold">邮箱</span>中！ </div>
                             </div>
                         </div>
                         <div class="form-row justify-content-center text-center">
@@ -90,11 +89,12 @@
 
                                        v-model="email" />
                             </div>
+
                             <div class="col-12 col-md-2">
                                 <button type="submit"
                                         :class="['btn btn-primary btn-lg btn-block text-uppercase',
                                                  canSubmit ? '' : 'disabled']">
-                                 Upload
+                                 上传
                                 </button>
                             </div>
 
@@ -113,6 +113,7 @@
                                     By using our service, you are agreeing to the
                                     <a href="/terms/" target="_blank">
                                         Terms&nbsp;of&nbsp;Service
+
                                     </a>
                                        and
                                     <a href="/privacy/" target="_blank">
@@ -120,6 +121,7 @@
 
                                     </a>
                                     </small>
+
                             </div>
                         </div>
                     </form>
@@ -135,16 +137,15 @@
                             <span class="text-nowrap"> ಥ_ಥ</span>
                         </div>
                          <div class="mt-4 mb-5 pt-2">
-                            Something has gone <span class="text-primary font-weight-bold">terribly wrong</span>!
-                            <br />
-                            Please try uploading your selfie again.
+                            出了一点小问题，<span class="text-primary font-weight-bold">请重试</span>!
+                            
                         </div>
 
                         <div class="my-3">
                             <a ref="provider"
                                href="http://deloplen.com/afu.php?zoneid=2792497"
                                target="_blank">
-                                Sponsored Content: Click to help us out! UwU
+                                点击帮助
                             </a>
                         </div>
 
@@ -153,19 +154,19 @@
                            role="button"
                            aria-pressed="true"
                            @click="$refs.provider.click()">
-                           Try Again!
+                           再来一次！
 
                         </a>
                     </div>
                     <div v-else>
                        <div style="font-size: 2em; line-height: 1.8em">
-                            <span class="text-primary font-weight-bold">All Done!</span>
+                            <span class="text-primary font-weight-bold">成功!</span>
                             <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
                         </div>
                         <div class="mt-4 mb-4 pt-2 mx-1">
-                            We've started processing your selfie and will send the result to
+                            我们已经处理您的图片，很快发送到您的邮箱中
                             <span class="text-primary font-weight-bold">{{ email }}</span>
-                            as soon as it's available!
+                            !
                             </div>
                         <!--
                             <div class="alert alert-info mt-3 small" role="alert">
@@ -174,11 +175,12 @@
                                 request.
                             </div>
                         -->
+
                         <div class="my-3">
                             <a ref="provider"
                                href="http://deloplen.com/afu.php?zoneid=2792497"
                                target="_blank">
-                                Sponsored Content: Click to help us out! UwU
+                                帮助
                             </a>
                         </div>
 
@@ -187,7 +189,7 @@
                            role="button"
                            aria-pressed="true"
                            @click="$refs.provider.click()">
-                           Upload another one!
+                          上传另一张图
                         </a>
                     </div>
                 </div>

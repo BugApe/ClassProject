@@ -2,7 +2,7 @@
 
 import "croppr/dist/croppr.min.css";
 
-// @ts-ignore
+
 import preview from 'vue-photo-preview'
 import 'vue-photo-preview/dist/skin.css'
 Vue.use(preview)
