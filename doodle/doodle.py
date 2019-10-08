@@ -44,7 +44,7 @@ add_arg('--variety',        default=0.5, type=float,        help='Bias toward se
 add_arg('--seed',           default='noise', type=str,      help='Seed image path, "noise" or "content".')
 add_arg('--seed-range',     default='0:255', type=str,     help='Random colors chosen in range, e.g. 0:255.')
 add_arg('--iterations',     default=40, type=int,          help='Number of iterations to run each resolution.')
-add_arg('--device',         default='cpu', type=str,        help='Index of the GPU number to use, for theano.')
+add_arg('--device',         default='cuda*', type=str,        help='Index of the GPU number to use, for theano.')
 add_arg('--print-every',    default=10, type=int,           help='How often to log statistics to stdout.')
 add_arg('--save-every',     default=10, type=int,           help='How frequently to save PNG into `frames`.')
 args = parser.parse_args()

@@ -14,6 +14,7 @@ import numpy
 from moviepy.video.io.VideoFileClip import VideoFileClip
 import moviepy.video.io.ffmpeg_writer as ffmpeg_writer
 import imageio
+#在这里调整样本数量和硬件
 BATCH_SIZE = 4
 DEVICE = '/gpu:0'
 
@@ -148,17 +149,17 @@ def ffwd_different_dimensions(in_path, out_path, checkpoint_dir,
 
 def build_parser():
     parser = ArgumentParser()
-    parser.add_argument('--checkpoint', type=str,
+    parser.add_argument('--checkpoint', type=str,default="E:\MyRead\fast-style-transfer\Fast_Style_Transfer_Models\wave.ckpt",
                         dest='checkpoint_dir',
                         help='dir or .ckpt file to load checkpoint from',
                         metavar='CHECKPOINT', required=True)
 
-    parser.add_argument('--in-path', type=str,
+    parser.add_argument('--in-path', type=str,default="E:\MyRead\fast-style-transfer\examples\content\stata.jpg",
                         dest='in_path',help='dir or file to transform',
                         metavar='IN_PATH', required=True)
 
     help_out = 'destination (dir or file) of transformed file or files'
-    parser.add_argument('--out-path', type=str,
+    parser.add_argument('--out-path', type=str,default="E:\MyRead\fast-style-transfer\examples\results",
                         dest='out_path', help=help_out, metavar='OUT_PATH',
                         required=True)
 
