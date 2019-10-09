@@ -47,11 +47,12 @@ def parse_args():
                         help='Directory name to save training logs')
     parser.add_argument('--sample_dir', type=str, default='samples',
                         help='Directory name to save the samples on training')
-
-    return check_args(parser.parse_args())
+    args=parser.parse_args()
+    return check_args(args)
 
 """checking arguments"""
 def check_args(args):
+
     # --checkpoint_dir
     check_folder(args.checkpoint_dir)
 
