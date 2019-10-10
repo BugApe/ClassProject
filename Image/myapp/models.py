@@ -4,7 +4,7 @@ from django.template.loader import  render_to_string
 # Create your models here.
 
 class Image(models.Model):
-        image = models.ImageField(upload_to='images/')
+        image = models.ImageField(upload_to='dataset/selfie2anime/testA/')
         name= models.CharField(max_length=30)
 
         def __unicode__(self):
