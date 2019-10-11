@@ -2,53 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1fa2985-eb30-4c25-82b3-993d3a591113" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/.idea/UGATIT.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/.idea/libraries/R_User_Library.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/UGATIT.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/assets/ablation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/assets/discriminator.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/assets/generator.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/assets/kid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/assets/teaser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/assets/user_study.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/ops.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/results/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avatar/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Image.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Image.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Image/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/10197997_003647426000_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Freddie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Freddie_UbL7d3P.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Freddie_rAzn23t.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Freddie_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Gogh_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Img350129585.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Mia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Mia_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Mia_sem_rL8QaCa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_NRMcfpl.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_lVgXCVA.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_sem_gE5hcMd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_sem_mnLQHtf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_sem_sQvxqeQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Renoir_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
+            <state relative-caret-position="342">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -76,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
+            <state relative-caret-position="285">
               <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
             </state>
           </provider>
@@ -85,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Image/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="127" selection-start-line="127" selection-end-line="127" />
+            <state relative-caret-position="-196">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -130,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
+            <state relative-caret-position="209">
               <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
               <folding>
                 <element signature="e#84#93#0" expanded="true" />
@@ -175,10 +131,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="948" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="949" />
+    <option name="width" value="980" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -186,6 +142,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,21 +160,10 @@
               <item name="Image" type="462c0819:PsiDirectoryNode" />
               <item name="myapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Image" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Image" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Image" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Image" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -417,11 +363,12 @@
       <workItem from="1570681549715" duration="3940000" />
       <workItem from="1570685748555" duration="12131000" />
       <workItem from="1570698356824" duration="1736000" />
+      <workItem from="1570791772838" duration="2196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41826000" />
+    <option name="totallyTimeSpent" value="44022000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,15 +380,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="632" y="0" width="654" height="688" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3489933" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1738076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49312854" weight="0.3147482" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49312854" weight="0.3143872" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.497979" weight="0.5133215" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -733,6 +679,23 @@
     <entry file="file://$PROJECT_DIR$/results/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/u33577862433135716437fm26gp0_DjeZbO1.jpg" />
     <entry file="file://$PROJECT_DIR$/results/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/u33577862433135716437fm26gp0_epGY71j.jpg" />
     <entry file="file://$PROJECT_DIR$/results/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/u33577862433135716437fm26gp0_jKxfHB5.jpg" />
+    <entry file="file://$PROJECT_DIR$/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Avatar/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
@@ -765,7 +728,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="209">
           <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
           <folding>
             <element signature="e#84#93#0" expanded="true" />
@@ -773,27 +736,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Image/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Image/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        <state relative-caret-position="-196">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
