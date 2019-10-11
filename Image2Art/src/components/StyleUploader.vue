@@ -28,7 +28,7 @@
                     <label for="photo-input">
                          <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4">
                             点击上传图片，体验 <span class="text-primary font-weight-bold">风格融合</span>
-                            吧！ 
+                            吧！
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x mt-4 mb-2 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
@@ -55,14 +55,13 @@
             <div v-show="step === 'crop'" class="crop-container col-sm">
                 <div class="crop-container-inner text-center">
                       <div class="mt-5 mb-5" style="font-size: 1.2em">
-                    请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小 
+                    请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小
                     </div>
                     <Cropper ref="cropper"
                              class="mb-3"
                              :photoUrl="photoDataUrl" />
                     <button type="button"
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-
                             @click="onPhotoCropped">
                              确认
                     </button>
@@ -88,7 +87,6 @@
                                        type="email"
                                        class="form-control form-control-lg"
                                          placeholder="Enter your e-mail address…"
-
                                        v-model="email" />
                             </div>
 
@@ -123,7 +121,6 @@
 
                                     </a>
                                     </small>
-
                             </div>
                         </div>
                     </form>
@@ -140,7 +137,7 @@
                         </div>
                          <div class="mt-4 mb-5 pt-2">
                             出了一点小问题，<span class="text-primary font-weight-bold">请重试</span>!
-                            
+
                         </div>
 
                         <div class="my-3">

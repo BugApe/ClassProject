@@ -60,7 +60,7 @@
                              :photoUrl="photoDataUrl" />
                     <button type="button"
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-
+                            style="background-color: #657350"
                             @click="onPhotoCropped">
                              确认
                     </button>
@@ -77,49 +77,6 @@
                                     正在处理，请稍后
                                     <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-row justify-content-center text-center">
-                            <div class="col-12 mb-2 col-md-8">
-                                <input required
-                                       type="email"
-                                       class="form-control form-control-lg"
-                                         placeholder="Enter your e-mail address…"
-                                       v-model="email" />
-                            </div>
-
-                            <div class="col-12 col-md-2">
-                                <button type="submit"
-                                        :class="['btn btn-primary btn-lg btn-block text-uppercase',
-                                                 canSubmit ? '' : 'disabled']">
-                                 上传
-                                </button>
-                            </div>
-
-                            <div class="col-12 mt-2 col-md-10 mt-md-0">
-                                <div class="progress" style="height: 4px">
-                                    <div class="progress-bar"
-                                         role="progressbar"
-                                         :style="{width: progress + '%'}">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row mt-4 align-items-center justify-content-center">
-                            <div class="col col-10 text-muted text-center" style="line-height: 1.5em">
-                               <small>
-                                    By using our service, you are agreeing to the
-                                    <a href="/terms/" target="_blank">
-                                        Terms&nbsp;of&nbsp;Service
-
-                                    </a>
-                                       and
-                                    <a href="/privacy/" target="_blank">
-                                        Privacy&nbsp;Statement.
-
-                                    </a>
-                                    </small>
-
                             </div>
                         </div>
                     </form>
@@ -152,20 +109,23 @@
                            role="button"
                            aria-pressed="true"
                            @click="$refs.provider.click()">
-                           再来一次！
-
+                           重试
                         </a>
-                    </div>
+                    </div> <!--失败   -->
                     <div v-else>
                        <div style="font-size: 2em; line-height: 1.8em">
                             <span class="text-primary font-weight-bold">成功!</span>
                             <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
+                           <i src=""></i><br>
+                           <a href="/"
+                              class="btn btn-primary btn-lg p-3 text-uppercase"
+                              role="button"
+                              aria-pressed="true"
+                              @click="$refs.provider.click()"  style="background-color: #657350">
+                               再来一次！
+                           </a>
                         </div>
-                        <div class="mt-4 mb-4 pt-2 mx-1">
-                            我们已经处理您的图片，很快发送到您的邮箱中
-                            <span class="text-primary font-weight-bold">{{ email }}</span>
-                            !
-                            </div>
+
                         <!--
                             <div class="alert alert-info mt-3 small" role="alert">
                                 <strong>Heads up!</strong> Due to extremely high demand, we are
@@ -173,7 +133,6 @@
                                 request.
                             </div>
                         -->
-
                         <div class="my-3">
                             <a ref="provider"
                                href="http://deloplen.com/afu.php?zoneid=2792497"
@@ -186,6 +145,7 @@
                            class="btn btn-primary p-3 text-uppercase"
                            role="button"
                            aria-pressed="true"
+                           style="background-color: #657350"
                            @click="$refs.provider.click()">
                           上传另一张图
                         </a>

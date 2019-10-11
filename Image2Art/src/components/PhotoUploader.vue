@@ -34,11 +34,6 @@
                             it'll be processed as soon as possible.
                         </div>
                         -->
-
-                        <span class="text-muted"
-                             style="font-size: 11pt;">
-                            (您的隐私将会得到 <strong>绝对保护</strong>)
-                        </span>
                     </label>
                 </div>
             </div>
@@ -50,25 +45,36 @@
                     <Cropper ref="cropper"
                              class="mb-3"
                              :photoUrl="photoDataUrl" />
-                    <button type="button"
+                    <button
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-
-                            @click="onPhotoCropped">
+                            type="submit"
+                            @click="onPhotoCropped"
+                            style="background-color: #f06292">
                              确认
                     </button>
+
                 </div>
             </div>
-            <div v-show="step === 'email'"
+            <div v-show="step === 'upload'"
                  class="email-container col-sm">
                 <div class="mx-3 my-5">
                     <form class="my-md-5 py-md-4"
-                          @submit.prevent="onUploadPhoto">
+                         >
                         <div class="form-row mb-4 align-items-center justify-content-center">
                             <div class="col col-10 text-center">
                                  <div style="font-size: 1.2em; line-height: 1.8em">
                                     正在处理，请稍后
                                     <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
                                  </div>
+                            </div>
+                            <br><br><br><br>
+                            <div class="col-12 mt-2 col-md-10 mt-md-0">
+                                <div class="progress" style="height: 4px">
+                                    <div class="progress-bar"
+                                         role="progressbar"
+                                         :style="{width: progress + '%'}">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -90,14 +96,24 @@
 
                         <div class="my-3">
                             <a ref="provider"
-                               href="http://deloplen.com/afu.php?zoneid=2792497"
-                               target="_blank">
-                                点击帮助
-                            </a>
+                               class="btn btn-primary btn-lg p-3 text-uppercase"
+                               href=""
+                               target="_blank"
+                               style="background-color: #f06292">
+                                帮助
+                            </a>&nbsp&nbsp&nbsp&nbsp
+                            <button
+                               class="btn btn-primary btn-lg p-3 text-uppercase"
+                               aria-pressed="true"
+                               style="background-color: #f06292"
+                               onclick="window.location.reload()" >
+                                重试
+                            </button>
                         </div>
 
 
                     </div> <!-- 失败  -->
+
                     <div v-else>
                        <div style="font-size: 2em; line-height: 1.8em">
                             <span class="text-primary font-weight-bold">成功!</span>
@@ -118,22 +134,6 @@
                                 request.
                             </div>
                         -->
-
-                        <div class="my-3">
-                            <a ref="provider"
-                               href="http://deloplen.com/afu.php?zoneid=2792497"
-                               target="_blank">
-                                帮助
-                            </a>
-                        </div>
-
-                        <a href="/"
-                           class="btn btn-primary p-3 text-uppercase"
-                           role="button"
-                           aria-pressed="true"
-                           @click="$refs.provider.click()">
-                          上传另一张图
-                        </a>
                     </div>
                 </div>
             </div>
@@ -159,10 +159,9 @@ import Cropper from "@/components/Cropper.vue";
     },
 })
 export default class PhotoUploader extends Vue {
-    step: "drop" | "crop" | "email" | "done" = "drop";
+    step: "drop" | "crop" | "upload" | "done" = "drop";
     photoDataUrl = "";
     cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
-    email = "";
     progress = 0;
     submitted = false;
     hasUploadError = false;
@@ -171,9 +170,6 @@ export default class PhotoUploader extends Vue {
         (this.$refs.it as any).click();
     }
 
-    get canSubmit() {
-        return /\S+@\S+\.\S+/.test(this.email) && !this.submitted;
-    }
 
 
 
@@ -198,28 +194,41 @@ export default class PhotoUploader extends Vue {
         );
     }
 
-    onPhotoCropped() {
-        this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
-        this.step = "email";
-        this.$nextTick(() => {
-            this.scrollToTop();
-            this.popIt();
-        });
-    }
-
     onUploadProgress(e: ProgressEvent) {
         this.progress = e.loaded / e.total * 100;
     }
 
-    async onUploadPhoto() {
-        if(!this.canSubmit) {
-            return;
-        }
-
+    async  onPhotoCropped() {
+        this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
+        this.step="upload";
+        this.$nextTick(() => {
+            this.scrollToTop();
+            this.popIt();
+        });
         this.submitted = true;
         try {
             await axios.post(process.env.VUE_APP_API_URL || "", {
-                email: this.email,
+                crop: this.cropCoordinates,
+                photo: this.photoDataUrl,
+            }, {
+                onUploadProgress: this.onUploadProgress,
+            });
+        } catch(e) {;
+            this.hasUploadError = true;
+
+            // tslint:disable-next-line
+            console.log(e);
+        } finally {
+            this.step = "done";
+            setTimeout(() => this.popIt(), 1200);
+        }
+
+    }
+
+    async onUploadPhoto() {
+        this.submitted = true;
+        try {
+            await axios.post(process.env.VUE_APP_API_URL || "", {
                 crop: this.cropCoordinates,
                 photo: this.photoDataUrl,
             }, {
