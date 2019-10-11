@@ -1,0 +1,6 @@
+model_checkpoint_path: "UGATIT.model-1000000"
+all_model_checkpoint_paths: "UGATIT.model-996000"
+all_model_checkpoint_paths: "UGATIT.model-997000"
+all_model_checkpoint_paths: "UGATIT.model-998000"
+all_model_checkpoint_paths: "UGATIT.model-999000"
+all_model_checkpoint_paths: "UGATIT.model-1000000"
