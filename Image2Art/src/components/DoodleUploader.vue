@@ -76,8 +76,7 @@
                                  <div style="font-size: 1.2em; line-height: 1.8em">
                                     正在处理，请稍后
                                     <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
-                                   我们将发送<span class="text-primary font-weight-bold">处理好的图片</span>
-                                    到您的<span class="text-primary font-weight-bold">邮箱</span>中！ </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-row justify-content-center text-center">
@@ -86,7 +85,6 @@
                                        type="email"
                                        class="form-control form-control-lg"
                                          placeholder="Enter your e-mail address…"
-
                                        v-model="email" />
                             </div>
 

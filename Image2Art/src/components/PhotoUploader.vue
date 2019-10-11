@@ -18,7 +18,7 @@
                     <label for="photo-input">
                          <h1 class="d-block text-uppercase mx-3 px-2 mx-lg-5 px-lg-4">
                         上传头像体验 <span class="text-primary font-weight-bold">头像转换</span>
-                            吧！ 
+                            吧！
                         </h1>
                         <i class="fa fa-cloud-upload fa-5x mt-4 mb-2 text-primary"></i>
                         <span class="d-block mb-4 text-primary">
@@ -45,7 +45,7 @@
             <div v-show="step === 'crop'" class="crop-container col-sm">
                 <div class="crop-container-inner text-center">
                       <div class="mt-5 mb-5" style="font-size: 1.2em">
-                    请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小 
+                    请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小
                     </div>
                     <Cropper ref="cropper"
                              class="mb-3"
@@ -68,52 +68,7 @@
                                  <div style="font-size: 1.2em; line-height: 1.8em">
                                     正在处理，请稍后
                                     <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
-                                   我们将发送<span class="text-primary font-weight-bold">处理好的图片</span>
-                                    到您的<span class="text-primary font-weight-bold">邮箱</span>中！ </div>
-                            </div>
-                        </div>
-                        <div class="form-row justify-content-center text-center">
-                            <div class="col-12 mb-2 col-md-8">
-                                <input required
-                                       type="email"
-                                       class="form-control form-control-lg"
-                                         placeholder="Enter your e-mail address…"
-
-                                       v-model="email" />
-                            </div>
-
-                            <div class="col-12 col-md-2">
-                                <button type="submit"
-                                        :class="['btn btn-primary btn-lg btn-block text-uppercase',
-                                                 canSubmit ? '' : 'disabled']">
-                                 上传
-                                </button>
-                            </div>
-
-                            <div class="col-12 mt-2 col-md-10 mt-md-0">
-                                <div class="progress" style="height: 4px">
-                                    <div class="progress-bar"
-                                         role="progressbar"
-                                         :style="{width: progress + '%'}">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row mt-4 align-items-center justify-content-center">
-                            <div class="col col-10 text-muted text-center" style="line-height: 1.5em">
-                               <small>
-                                    By using our service, you are agreeing to the
-                                    <a href="/terms/" target="_blank">
-                                        Terms&nbsp;of&nbsp;Service
-
-                                    </a>
-                                       and
-                                    <a href="/privacy/" target="_blank">
-                                        Privacy&nbsp;Statement.
-
-                                    </a>
-                                    </small>
-
+                                 </div>
                             </div>
                         </div>
                     </form>
@@ -130,7 +85,7 @@
                         </div>
                          <div class="mt-4 mb-5 pt-2">
                             出了一点小问题，<span class="text-primary font-weight-bold">请重试</span>!
-                            
+
                         </div>
 
                         <div class="my-3">
@@ -141,25 +96,21 @@
                             </a>
                         </div>
 
-                        <a href="/"
-                           class="btn btn-primary btn-lg p-3 text-uppercase"
-                           role="button"
-                           aria-pressed="true"
-                           @click="$refs.provider.click()">
-                           再来一次！
 
-                        </a>
-                    </div>
+                    </div> <!-- 失败  -->
                     <div v-else>
                        <div style="font-size: 2em; line-height: 1.8em">
                             <span class="text-primary font-weight-bold">成功!</span>
                             <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
+                           <i src=""></i><br>
+                           <a href="/"
+                              class="btn btn-primary btn-lg p-3 text-uppercase"
+                              role="button"
+                              aria-pressed="true"
+                              @click="$refs.provider.click()" style="background-color: #f06292">
+                               再来一次！
+                           </a>
                         </div>
-                        <div class="mt-4 mb-4 pt-2 mx-1">
-                            我们已经处理您的图片，很快发送到您的邮箱中
-                            <span class="text-primary font-weight-bold">{{ email }}</span>
-                            !
-                            </div>
                         <!--
                             <div class="alert alert-info mt-3 small" role="alert">
                                 <strong>Heads up!</strong> Due to extremely high demand, we are
