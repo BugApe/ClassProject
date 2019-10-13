@@ -3,9 +3,7 @@
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
 
-        <div style="display: none">
-            <a ref="it" href="http://deloplen.com/afu.php?zoneid=2793856" target="_blank">It</a>
-        </div>
+       
         <div class="row">
             <div v-show="step === 'drop'"
                  class="drop-container col-sm">
