@@ -21,7 +21,7 @@
     import Croppr from "croppr";
 
     @Component
-    
+
     export default class Cropper extends Vue {
         @Prop(String) readonly photoUrl: string | undefined;
         cropper!: Croppr;
@@ -29,7 +29,6 @@
         getCropCoordinates() {
             return this.cropper.getValue();
         }
-
         @Watch("photoUrl", {deep: true})
         onPhotoUrlChanged(value: string) {
             this.cropper.destroy();

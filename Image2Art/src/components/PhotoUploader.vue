@@ -42,17 +42,24 @@
                       <div class="mt-5 mb-5" style="font-size: 1.2em">
                     请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小
                     </div>
-                    <Cropper ref="cropper"
+                    <div style="width:100%;height:500px">
+                        <vue-cropper autoCrop :img="photoDataUrl"  ref="cropper" centerBox/>
+                    </div>
+                    <button
+                            class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
+                            @click="getCropBlob()"
+                            style="background-color: #f06292">
+                        确认
+                    </button>
+                  <!--  <Cropper ref="cropper"
                              class="mb-3"
                              :photoUrl="photoDataUrl" />
                     <button
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-                            type="submit"
                             @click="onPhotoCropped"
                             style="background-color: #f06292">
                              确认
-                    </button>
-
+                    </button>   -->
                 </div>
             </div>
             <div v-show="step === 'upload'"
@@ -149,43 +156,65 @@ import {
     Component,
     Vue,
 } from "vue-property-decorator";
-
 import axios from "axios";
 import loadImage from "blueimp-load-image";
 import Cropper from "@/components/Cropper.vue";
+import { VueCropper }  from "vue-cropper";
 @Component({
     components: {
         Cropper,
+        VueCropper,
     },
 })
 export default class PhotoUploader extends Vue {
     step: "drop" | "crop" | "upload" | "done" = "drop";
-    photoDataUrl = "";
+    photoDataUrl="";
     cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
     progress = 0;
     submitted = false;
     hasUploadError = false;
-
+    form_data=new FormData();
     popIt() {
         (this.$refs.it as any).click();
     }
 
-
-
-
+    async  getCropBlob() {
+        this.$refs.cropper.getCropBlob(data => {
+            this.form_data.append("image",data);
+            console.log(data);
+        });
+        this.step="upload";
+        this.submitted = true;
+        try {
+            await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
+                headers: { 'Content-Type': 'multipart/form-data' },
+                onUploadProgress: this.onUploadProgress,
+            }).then(function (response) {
+                console.log(response);
+            });
+        } catch(e) {
+            this.hasUploadError = true;
+            // tslint:disable-next-line
+            console.log(e);
+        } finally {
+            this.step = "done";
+            setTimeout(() => this.popIt(), 1200);
+        }
+    }
     scrollToTop() {
         const element = this.$refs["photo-uploader"] as HTMLElement;
         window.scrollTo(0, element.offsetTop);
     }
 
-     async onPhotoSelected(e: Event) {
+    async onPhotoSelected(e: Event) {
 
         const file: File = (e.target as any).files[0];
-      loadImage(file, (canvas: HTMLCanvasElement) => {
+        this.form_data.append("name",file.name);
+        loadImage(file, (canvas: HTMLCanvasElement) => {
                 this.photoDataUrl = canvas.toDataURL("image/jpeg");
                 this.step = "crop";
             },
-             {
+            {
                 canvas: true,
                 orientation: true,
                 maxWidth: 3840,
@@ -193,11 +222,10 @@ export default class PhotoUploader extends Vue {
             },
         );
     }
-
     onUploadProgress(e: ProgressEvent) {
         this.progress = e.loaded / e.total * 100;
     }
-
+    /*
     async  onPhotoCropped() {
         this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
         this.step="upload";
@@ -207,15 +235,14 @@ export default class PhotoUploader extends Vue {
         });
         this.submitted = true;
         try {
-            await axios.post(process.env.VUE_APP_API_URL || "", {
-                crop: this.cropCoordinates,
-                photo: this.photoDataUrl,
-            }, {
-                onUploadProgress: this.onUploadProgress,
-            });
-        } catch(e) {;
-            this.hasUploadError = true;
+            await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
 
+                onUploadProgress: this.onUploadProgress,
+            }).then(function (response) {
+                console.log(response);
+            });
+        } catch(e) {
+            this.hasUploadError = true;
             // tslint:disable-next-line
             console.log(e);
         } finally {
@@ -225,18 +252,17 @@ export default class PhotoUploader extends Vue {
 
     }
 
-    async onUploadPhoto() {
+         async onUploadPhoto() {
         this.submitted = true;
         try {
             await axios.post(process.env.VUE_APP_API_URL || "", {
-                crop: this.cropCoordinates,
+                name: this.cropCoordinates,
                 photo: this.photoDataUrl,
             }, {
                 onUploadProgress: this.onUploadProgress,
             });
         } catch(e) {
             this.hasUploadError = true;
-
             // tslint:disable-next-line
             console.log(e);
         } finally {
@@ -244,6 +270,7 @@ export default class PhotoUploader extends Vue {
             setTimeout(() => this.popIt(), 1200);
         }
     }
+   */
 }
 </script>
 

@@ -164,7 +164,6 @@ import {
     Component,
     Vue,
 } from "vue-property-decorator";
-
 import axios from "axios";
 import loadImage from "blueimp-load-image";
 import Cropper from "@/components/Cropper.vue";

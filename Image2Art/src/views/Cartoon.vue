@@ -83,7 +83,6 @@ import {
     Vue,
 } from "vue-property-decorator";
 
-import axios from "axios";
 import * as creative from "@/vendor/creative";
 import photoUploader from "@/components/PhotoUploader.vue";
 
