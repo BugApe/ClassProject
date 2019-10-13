@@ -142,7 +142,6 @@
 
                         <div class="my-3">
                             <a ref="provider"
-                               href="http://deloplen.com/afu.php?zoneid=2792497"
                                target="_blank">
                                 点击帮助
                             </a>
@@ -177,7 +176,6 @@
 
                         <div class="my-3">
                             <a ref="provider"
-                               href="http://deloplen.com/afu.php?zoneid=2792497"
                                target="_blank">
                                 帮助
                             </a>
