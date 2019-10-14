@@ -32,124 +32,102 @@
                         <span class="d-block mb-4 text-primary">
                          艺术涂鸦
                         </span>
-
-                        <!--
-                        <div role="alert"
-                             class="alert alert-info mt-3 mx-5 small"
-                             style="font-size: 11pt">
-                            <strong>Heads up!</strong> Due to extremely high demand, we are
-                            currently unable to send e-mails. ಥ_ಥ You can still upload your selfie now and
-                            it'll be processed as soon as possible.
-                        </div>
-                        -->
-
-                        <span class="text-muted"
-                             style="font-size: 11pt;">
-                            (您的隐私将会得到 <strong>绝对保护</strong>)
-                        </span>
                     </label>
                 </div>
             </div>
-            <div v-show="step === 'crop'" class="crop-container col-sm">
-                <div class="crop-container-inner text-center">
-                      <div class="mt-5 mb-5" style="font-size: 1.2em">
-                    请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小
+                <div v-show="step === 'crop'" class="crop-container col-sm">
+                    <div class="crop-container-inner text-center">
+                        <div class="mt-5 mb-5" style="font-size: 1.2em">
+                            请<span class="text-primary font-weight-bold">裁剪</span>图片至合适大小
+                        </div>
+                        <div style="width:100%;height:500px">
+                            <vue-cropper autoCrop :img="photoDataUrl"  ref="cropper" centerBox/>
+                        </div>
+                        <button
+                                class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
+                                @click="getCropBlob()"
+                                style="background-color: #657350">
+                            确认
+                        </button>
+
                     </div>
-                    <Cropper ref="cropper"
-                             class="mb-3"
-                             :photoUrl="photoDataUrl" />
-                    <button type="button"
-                            class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-                            style="background-color: #657350"
-                            @click="onPhotoCropped">
-                             确认
-                    </button>
                 </div>
-            </div>
-            <div v-show="step === 'email'"
-                 class="email-container col-sm">
-                <div class="mx-3 my-5">
-                    <form class="my-md-5 py-md-4"
-                          @submit.prevent="onUploadPhoto">
-                        <div class="form-row mb-4 align-items-center justify-content-center">
-                            <div class="col col-10 text-center">
-                                 <div style="font-size: 1.2em; line-height: 1.8em">
-                                    正在处理，请稍后
-                                    <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
+                <div v-show="step === 'upload'"
+                     class="email-container col-sm">
+                    <div class="mx-3 my-5">
+                        <form class="my-md-5 py-md-4"
+                        >
+                            <div class="form-row mb-4 align-items-center justify-content-center">
+                                <div class="col col-10 text-center">
+                                    <div style="font-size: 1.2em; line-height: 1.8em">
+                                        正在处理，请稍后
+                                        <span class="text-primary text-nowrap font-weight-bold">(◠‿◠)</span>
+                                    </div>
+                                </div>
+                                <br><br><br><br>
+                                <div class="col-12 mt-2 col-md-10 mt-md-0">
+                                    <div class="progress" style="height: 4px">
+                                        <div class="progress-bar"
+                                             role="progressbar"
+                                             :style="{width: progress + '%'}">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div v-show="step === 'done'" class="col-sm">
-                <div class="text-center m-3 pt-5 pb-4 mx-1">
-                    <div v-if="hasUploadError">
-                        <div style="font-size: 2em; line-height: 1.8em">
+                <div v-show="step === 'done'" class="col-sm">
+                    <div class="text-center m-3 pt-5 pb-4 mx-1">
+                        <div v-if="hasUploadError">
+                            <div style="font-size: 2em; line-height: 1.8em">
                             <span class="text-primary font-weight-bold">
                                 Oh Noes!
                             </span>
-                            <span class="text-nowrap"> ಥ_ಥ</span>
-                        </div>
-                         <div class="mt-4 mb-5 pt-2">
-                            出了一点小问题，<span class="text-primary font-weight-bold">请重试</span>!
-
-                        </div>
-
-                        <div class="my-3">
-                            <a ref="provider"
-                               target="_blank">
-                                点击帮助
-                            </a>
-                        </div>
-
-                        <a href="/"
-                           class="btn btn-primary btn-lg p-3 text-uppercase"
-                           role="button"
-                           aria-pressed="true"
-                           @click="$refs.provider.click()">
-                           重试
-                        </a>
-                    </div> <!--失败   -->
-                    <div v-else>
-                       <div style="font-size: 2em; line-height: 1.8em">
-                            <span class="text-primary font-weight-bold">成功!</span>
-                            <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
-                           <i src=""></i><br>
-                           <a href="/"
-                              class="btn btn-primary btn-lg p-3 text-uppercase"
-                              role="button"
-                              aria-pressed="true"
-                              @click="$refs.provider.click()"  style="background-color: #657350">
-                               再来一次！
-                           </a>
-                        </div>
-
-                        <!--
-                            <div class="alert alert-info mt-3 small" role="alert">
-                                <strong>Heads up!</strong> Due to extremely high demand, we are
-                                currently unable to send e-mails. ಥ_ಥ Please be patient while we are processing your
-                                request.
+                                <span class="text-nowrap"> ಥ_ಥ</span>
                             </div>
-                        -->
-                        <div class="my-3">
-                            <a ref="provider"
-                               target="_blank">
-                                帮助
-                            </a>
-                        </div>
+                            <div class="mt-4 mb-5 pt-2">
+                                出了一点小问题，<span class="text-primary font-weight-bold">请重试</span>!
 
-                        <a href="/"
-                           class="btn btn-primary p-3 text-uppercase"
-                           role="button"
-                           aria-pressed="true"
-                           style="background-color: #657350"
-                           @click="$refs.provider.click()">
-                          上传另一张图
-                        </a>
+                            </div>
+
+                            <div class="my-3">
+                                <a ref="provider"
+                                   class="btn btn-primary btn-lg p-3 text-uppercase"
+                                   href=""
+                                   target="_blank"
+                                   style="background-color: #657350">
+                                    帮助
+                                </a>&nbsp&nbsp&nbsp&nbsp
+                                <button
+                                        class="btn btn-primary btn-lg p-3 text-uppercase"
+                                        aria-pressed="true"
+                                        style="background-color: #657350"
+                                        onclick="window.location.reload()" >
+                                    重试
+                                </button>
+                            </div>
+
+
+                        </div> <!-- 失败  -->
+
+                        <div v-else>
+                            <div style="font-size: 2em; line-height: 1.8em">
+                                <span class="text-primary font-weight-bold">成功!</span>
+                                <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span><br>
+                                <img :src=ImageUrl alt="生成的头像" /><br>
+                                <button
+                                        class="btn btn-primary btn-lg p-3 text-uppercase"
+                                        aria-pressed="true"
+                                        style="background-color: #657350"
+                                        onclick="window.location.reload()" >
+                                    重试
+                                </button>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
         </div></div>
     </div>
 </template>
@@ -158,96 +136,97 @@
 
 <!--suppress JSMethodCanBeStatic, JSUnusedGlobalSymbols, -->
 <script lang="ts">
-import {
-    Component,
-    Vue,
-} from "vue-property-decorator";
-import axios from "axios";
-import loadImage from "blueimp-load-image";
-import Cropper from "@/components/Cropper.vue";
-@Component({
-    components: {
-        Cropper,
-    },
-})
-export default class PhotoUploader extends Vue {
-    step: "drop" | "crop" | "email" | "done" = "drop";
-    photoDataUrl = "";
-    cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
-    email = "";
-    progress = 0;
-    submitted = false;
-    hasUploadError = false;
-
-    popIt() {
-        (this.$refs.it as any).click();
-    }
-
-    get canSubmit() {
-        return /\S+@\S+\.\S+/.test(this.email) && !this.submitted;
-    }
-
-
-
-    scrollToTop() {
-        const element = this.$refs["photo-uploader"] as HTMLElement;
-        window.scrollTo(0, element.offsetTop);
-    }
-
-    async onPhotoSelected(e: Event) {
-
-        const file: File = (e.target as any).files[0];
-
-      loadImage(file,(canvas:HTMLCanvasElement) => {
-              this.photoDataUrl = canvas.toDataURL("image/jpeg");
-              this.step = "crop";
-          }, {
-              canvas: true,
-              orientation: true,
-              maxWidth: 3840,
-              maxHeight: 3840,
-          },
-        );
-    }
-
-    onPhotoCropped() {
-        this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
-        this.step = "email";
-        this.$nextTick(() => {
-            this.scrollToTop();
-            this.popIt();
-        });
-    }
-
-    onUploadProgress(e: ProgressEvent) {
-        this.progress = e.loaded / e.total * 100;
-    }
-
-    async onUploadPhoto() {
-        if(!this.canSubmit) {
-            return;
+    import {
+        Component,
+        Vue,
+    } from "vue-property-decorator";
+    import axios from "axios";
+    import loadImage from "blueimp-load-image";
+    import Cropper from "@/components/Cropper.vue";
+    import { VueCropper }  from "vue-cropper";
+    @Component({
+        components: {
+            VueCropper,
+        },
+    })
+    export default class PhotoUploader extends Vue {
+        step: "drop" | "crop" | "upload" | "done" = "drop";
+        photoDataUrl="";
+        cropCoordinates: { x: number, y: number, width: number; height: number } = {x: 0, y: 0, width: 0, height: 0};
+        progress = 0;
+        submitted = false;
+        hasUploadError = false;
+        form_data=new FormData();
+        ImageUrl="";
+        ImageName="";
+        popIt() {
+            (this.$refs.it as any).click();
         }
 
-        this.submitted = true;
-        try {
-            await axios.post(process.env.VUE_APP_API_URL || "", {
-                email: this.email,
-                crop: this.cropCoordinates,
-                photo: this.photoDataUrl,
-            }, {
-                onUploadProgress: this.onUploadProgress,
+        async  getCropBlob() {
+            this.$refs.cropper.getCropBlob(async data => {
+                this.form_data.append("image",data,this.ImageName);
+                this.step="upload";
+                try {
+                    await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
+                        onUploadProgress: this.onUploadProgress,
+                        //then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
+                    }).then((response)=> {
+                        this.ImageUrl=response.data.data;
+                        console.log(this.ImageUrl);
+                    });
+                } catch(e) {
+                    this.hasUploadError = true;
+                    // tslint:disable-next-line
+                    console.log(e);
+                } finally {
+                    this.step = "done";
+                }
             });
-        } catch(e) {
-            this.hasUploadError = true;
-
-            // tslint:disable-next-line
-            console.log(e);
-        } finally {
-            this.step = "done";
-            setTimeout(() => this.popIt(), 1200);
         }
+        /*async uploaddata(){
+            this.step="upload";
+            try {
+                console.log(this.form_data.get("image"));
+                await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
+                    onUploadProgress: this.onUploadProgress,
+                }).then(function (response) {
+                    console.log(response);
+                });
+            } catch(e) {
+                this.hasUploadError = true;
+                // tslint:disable-next-line
+                console.log(e);
+            } finally {
+                this.step = "done";
+            }
+        }*/
+        scrollToTop() {
+            const element = this.$refs["photo-uploader"] as HTMLElement;
+            window.scrollTo(0, element.offsetTop);
+        }
+
+        async onPhotoSelected(e: Event) {
+            const file: File = (e.target as any).files[0];
+            this.form_data.append("name",file.name);
+            this.ImageName=file.name;
+            loadImage(file, (canvas: HTMLCanvasElement) => {
+                    this.photoDataUrl = canvas.toDataURL("image/jpeg");
+                    this.step = "crop";
+                },
+                {
+                    canvas: true,
+                    orientation: true,
+                    maxWidth: 3840,
+                    maxHeight: 3840,
+                },
+            );
+        }
+        onUploadProgress(e: ProgressEvent) {
+            this.progress = e.loaded / e.total * 100;
+        }
+
     }
-}
 </script>
 
 <style lang="scss" scoped>

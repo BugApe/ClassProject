@@ -5,7 +5,7 @@
              class="navbar navbar-expand-lg navbar-light fixed-top py-4">
             <div class="container">
                 <a href="#cartoon" class="navbar-brand js-scroll-trigger" style="position: absolute;left: 6%">
-                    <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art | </span><span class="small text-center navbar-brand-inverted">涂鸦风格化</span>
+                    <span class="navbar-brand-inverted">Image</span>2<span class="navbar-brand-inverted">Art | </span><span class="small text-center navbar-brand-inverted">头像转换</span>
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"

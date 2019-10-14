@@ -22,16 +22,6 @@
                         <span class="d-block mb-4 text-primary">
                          头像转换
                         </span>
-
-                        <!--
-                        <div role="alert"
-                             class="alert alert-info mt-3 mx-5 small"
-                             style="font-size: 11pt">
-                            <strong>Heads up!</strong> Due to extremely high demand, we are
-                            currently unable to send e-mails. ಥ_ಥ You can still upload your selfie now and
-                            it'll be processed as soon as possible.
-                        </div>
-                        -->
                     </label>
                 </div>
             </div>
@@ -49,15 +39,7 @@
                             style="background-color: #f06292">
                         确认
                     </button>
-                  <!--  <Cropper ref="cropper"
-                             class="mb-3"
-                             :photoUrl="photoDataUrl" />
-                    <button
-                            class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-                            @click="onPhotoCropped"
-                            style="background-color: #f06292">
-                             确认
-                    </button>   -->
+
                 </div>
             </div>
             <div v-show="step === 'upload'"
@@ -132,13 +114,7 @@
                                重试
                            </button>
                         </div>
-                        <!--
-                            <div class="alert alert-info mt-3 small" role="alert">
-                                <strong>Heads up!</strong> Due to extremely high demand, we are
-                                currently unable to send e-mails. ಥ_ಥ Please be patient while we are processing your
-                                request.
-                            </div>
-                        -->
+
                     </div>
                 </div>
             </div>
@@ -160,7 +136,6 @@ import Cropper from "@/components/Cropper.vue";
 import { VueCropper }  from "vue-cropper";
 @Component({
     components: {
-        Cropper,
         VueCropper,
     },
 })
@@ -173,13 +148,14 @@ export default class PhotoUploader extends Vue {
     hasUploadError = false;
     form_data=new FormData();
     ImageUrl="";
+    ImageName="";
     popIt() {
         (this.$refs.it as any).click();
     }
 
     async  getCropBlob() {
         this.$refs.cropper.getCropBlob(async data => {
-            this.form_data.append("image",data,this.ImageName);
+            this.form_data.append("image",data);
             this.step="upload";
             try {
                 await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
@@ -239,52 +215,7 @@ export default class PhotoUploader extends Vue {
     onUploadProgress(e: ProgressEvent) {
         this.progress = e.loaded / e.total * 100;
     }
-    /*
-    async  onPhotoCropped() {
-        this.cropCoordinates = (this.$refs.cropper as any).getCropCoordinates();
-        this.step="upload";
-        this.$nextTick(() => {
-            this.scrollToTop();
-            this.popIt();
-        });
-        this.submitted = true;
-        try {
-            await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
 
-                onUploadProgress: this.onUploadProgress,
-            }).then(function (response) {
-                console.log(response);
-            });
-        } catch(e) {
-            this.hasUploadError = true;
-            // tslint:disable-next-line
-            console.log(e);
-        } finally {
-            this.step = "done";
-            setTimeout(() => this.popIt(), 1200);
-        }
-
-    }
-
-         async onUploadPhoto() {
-        this.submitted = true;
-        try {
-            await axios.post(process.env.VUE_APP_API_URL || "", {
-                name: this.cropCoordinates,
-                photo: this.photoDataUrl,
-            }, {
-                onUploadProgress: this.onUploadProgress,
-            });
-        } catch(e) {
-            this.hasUploadError = true;
-            // tslint:disable-next-line
-            console.log(e);
-        } finally {
-            this.step = "done";
-            setTimeout(() => this.popIt(), 1200);
-        }
-    }
-   */
 }
 </script>
 
