@@ -3,7 +3,7 @@
     <div ref="photo-uploader"
          class="photo-uploader shadow-sm">
 
-       
+
         <div class="row">
             <div v-show="step === 'drop'"
                  class="drop-container col-sm">
@@ -122,15 +122,15 @@
                     <div v-else>
                        <div style="font-size: 2em; line-height: 1.8em">
                             <span class="text-primary font-weight-bold">成功!</span>
-                            <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span>
-                           <i src=""></i><br>
-                           <a href="/"
-                              class="btn btn-primary btn-lg p-3 text-uppercase"
-                              role="button"
-                              aria-pressed="true"
-                              @click="$refs.provider.click()" style="background-color: #f06292">
-                               再来一次！
-                           </a>
+                            <span class="text-nowrap"> (づ｡◕‿‿◕｡)づ</span><br>
+                           <img :src=ImageUrl alt="生成的头像" /><br>
+                           <button
+                                   class="btn btn-primary btn-lg p-3 text-uppercase"
+                                   aria-pressed="true"
+                                   style="background-color: #f06292"
+                                   onclick="window.location.reload()" >
+                               重试
+                           </button>
                         </div>
                         <!--
                             <div class="alert alert-info mt-3 small" role="alert">
@@ -172,20 +172,37 @@ export default class PhotoUploader extends Vue {
     submitted = false;
     hasUploadError = false;
     form_data=new FormData();
+    ImageUrl="";
     popIt() {
         (this.$refs.it as any).click();
     }
 
     async  getCropBlob() {
-        this.$refs.cropper.getCropBlob(data => {
-            this.form_data.append("image",data);
-            console.log(this.form_data);
+        this.$refs.cropper.getCropBlob(async data => {
+            this.form_data.append("image",data,this.ImageName);
+            this.step="upload";
+            try {
+                await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
+                    onUploadProgress: this.onUploadProgress,
+                    //then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
+                }).then((response)=> {
+                   this.ImageUrl=response.data.data;
+                   console.log(this.ImageUrl);
+                });
+            } catch(e) {
+                this.hasUploadError = true;
+                // tslint:disable-next-line
+                console.log(e);
+            } finally {
+                this.step = "done";
+            }
         });
+    }
+    /*async uploaddata(){
         this.step="upload";
-        this.submitted = true;
         try {
+            console.log(this.form_data.get("image"));
             await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
-                headers: { 'Content-Type': 'multipart/form-data' },
                 onUploadProgress: this.onUploadProgress,
             }).then(function (response) {
                 console.log(response);
@@ -196,18 +213,17 @@ export default class PhotoUploader extends Vue {
             console.log(e);
         } finally {
             this.step = "done";
-            setTimeout(() => this.popIt(), 1200);
         }
-    }
+    }*/
     scrollToTop() {
         const element = this.$refs["photo-uploader"] as HTMLElement;
         window.scrollTo(0, element.offsetTop);
     }
 
     async onPhotoSelected(e: Event) {
-
         const file: File = (e.target as any).files[0];
         this.form_data.append("name",file.name);
+        this.ImageName=file.name;
         loadImage(file, (canvas: HTMLCanvasElement) => {
                 this.photoDataUrl = canvas.toDataURL("image/jpeg");
                 this.step = "crop";

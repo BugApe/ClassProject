@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -15,13 +16,11 @@ import  Avatar.main as tou
 # Create your views here.
 
 
-
 class ImageViewSet(viewsets.ModelViewSet):
     # 指定结果集并设置排序
     queryset = Image.objects.all().order_by('name')
     # 指定序列化的类
     serializer_class = ImageSerializers
-
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)  # 对上传的图片序列化
         serializer.is_valid(raise_exception=True)
@@ -29,7 +28,9 @@ class ImageViewSet(viewsets.ModelViewSet):
         name_re_photo = serializer.data['name']  # 提取字段name
 
         tou.main()
-
+        #去掉文件名的后缀
+        index=name_re_photo.rindex('.')
+        name_re_photo=name_re_photo[:index]
         return Response({
             "status": status.HTTP_200_OK,
             "message": 'Working right.',
