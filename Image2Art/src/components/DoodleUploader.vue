@@ -49,6 +49,12 @@
                                 style="background-color: #657350">
                             确认
                         </button>
+                        <button
+                                class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
+                                style="background-color: #657350"
+                                onclick="window.location.reload()" >
+                            重新选择图片
+                        </button>
 
                     </div>
                 </div>

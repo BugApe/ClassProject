@@ -53,9 +53,9 @@
                     </button>
                     <button
                             class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
-                            @click="getCropBlob()"
+                            onclick="window.location.reload()"
                             style="background-color:#3498DB">
-                            重新选择
+                            重新选择图片
                     </button>
                 </div>
             </div>
