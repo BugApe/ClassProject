@@ -154,7 +154,8 @@ export default class PhotoUploader extends Vue {
     }
 
     async  getCropBlob() {
-        this.$refs.cropper.getCropBlob(async data => {
+        let cropper:any=this.$refs.cropper;
+        await  cropper.getCropBlob(async data => {
             this.form_data.append("image",data);
             this.step="upload";
             try {
