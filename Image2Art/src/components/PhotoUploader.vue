@@ -132,7 +132,6 @@ import {
 } from "vue-property-decorator";
 import axios from "axios";
 import loadImage from "blueimp-load-image";
-import Cropper from "@/components/Cropper.vue";
 import { VueCropper }  from "vue-cropper";
 @Component({
     components: {
@@ -156,7 +155,7 @@ export default class PhotoUploader extends Vue {
     async  getCropBlob() {
         let cropper:any=this.$refs.cropper;
         await  cropper.getCropBlob(async data => {
-            this.form_data.append("image",data);
+            this.form_data.append("image",data,this.ImageName);
             this.step="upload";
             try {
                 await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
@@ -164,7 +163,6 @@ export default class PhotoUploader extends Vue {
                     //then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
                 }).then((response)=> {
                    this.ImageUrl=response.data.data;
-                   console.log(this.ImageUrl);
                 });
             } catch(e) {
                 this.hasUploadError = true;
@@ -175,23 +173,7 @@ export default class PhotoUploader extends Vue {
             }
         });
     }
-    /*async uploaddata(){
-        this.step="upload";
-        try {
-            console.log(this.form_data.get("image"));
-            await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
-                onUploadProgress: this.onUploadProgress,
-            }).then(function (response) {
-                console.log(response);
-            });
-        } catch(e) {
-            this.hasUploadError = true;
-            // tslint:disable-next-line
-            console.log(e);
-        } finally {
-            this.step = "done";
-        }
-    }*/
+
     scrollToTop() {
         const element = this.$refs["photo-uploader"] as HTMLElement;
         window.scrollTo(0, element.offsetTop);
@@ -216,7 +198,6 @@ export default class PhotoUploader extends Vue {
     onUploadProgress(e: ProgressEvent) {
         this.progress = e.loaded / e.total * 100;
     }
-
 }
 </script>
 

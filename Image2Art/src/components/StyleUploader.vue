@@ -51,6 +51,12 @@
                             style="background-color:#3498DB">
                              确认
                     </button>
+                    <button
+                            class="btn btn-primary btn-lg p-3 mb-4 text-uppercase"
+                            @click="getCropBlob()"
+                            style="background-color:#3498DB">
+                            重新选择
+                    </button>
                 </div>
             </div>
                 <div v-show="step === 'upload'"
