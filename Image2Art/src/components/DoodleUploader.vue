@@ -5,12 +5,14 @@
         <div class="row">
              <div class="left">
                  <div class="row pre-scrollable">
-                     <img src="img/doodle/Gogh.jpg" large="img/doodle/Gogh_sem.jpg" preview="0" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
-                     <img src="img/doodle/Renoir.jpg" large="img/doodle/Renoir_sem.jpg" preview="1" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
-                     <img src="img/doodle/Mia.jpg" large="img/doodle/Mia_sem.jpg" preview="2" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
-                     <img src="img/doodle/Freddie.jpg" large="img/doodle/Freddie_sem.jpg" preview="3" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
-                     <img src="img/doodle/Monet.jpg" large="img/doodle/Monet_sem.jpg" preview="4" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
-                     <img src="img/doodle/Seth.jpg" large="img/doodle/Seth_sem.jpg" preview="5" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                     <form>
+                         <input type="radio"  value="Gogh.jpg" v-model="picked" name="1"><img src="img/doodle/Gogh.jpg" large="img/doodle/Gogh_sem.jpg" preview="0" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                         <input type="radio"  value="Renoir.jpg" v-model="picked" name="1"><img src="img/doodle/Renoir.jpg" large="img/doodle/Renoir_sem.jpg" preview="1" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                         <input type="radio"  value="Mia.jpg" v-model="picked" name="1"><img src="img/doodle/Mia.jpg" large="img/doodle/Mia_sem.jpg" preview="2" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                         <input type="radio"  value="Freddie.jpg" v-model="picked" name="1"> <img src="img/doodle/Freddie.jpg" large="img/doodle/Freddie_sem.jpg" preview="3" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                         <input type="radio"  value="Monet.jpg" v-model="picked" name="1"><img src="img/doodle/Monet.jpg" large="img/doodle/Monet_sem.jpg" preview="4" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                         <input type="radio"  value="Seth.jpg" v-model="picked" name="1"> <img src="img/doodle/Seth.jpg" large="img/doodle/Seth_sem.jpg" preview="5" preview-text="示意图中的色块代表原图对应位置的纹理（图片内容、绘画风格）。按照示意图给出的区域色块，采用相同的颜色绘制出涂鸦，然后上传图片，即可获得您自己的大作"  class="img-thumbnail">
+                     </form>
 
             </div>
             </div>
@@ -165,6 +167,7 @@
         form_data=new FormData();
         ImageUrl="";
         ImageName="";
+        style="";
         popIt() {
             (this.$refs.it as any).click();
         }
@@ -173,8 +176,12 @@
             let cropper:any=this.$refs.cropper;
             await  cropper.getCropBlob(async data => {
                 this.form_data.append("image",data,this.ImageName);
-                this.step="upload";
-                try {
+                if (this.style==""){
+                    alert("请选择样式图片作为风格迁移的范本！")
+                }
+                else{this.form_data.append("style",this.style);
+                    this.step="upload";
+                    try {
                     await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
                         onUploadProgress: this.onUploadProgress,
                         //then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
@@ -184,30 +191,12 @@
                     });
                 } catch(e) {
                     this.hasUploadError = true;
-                    // tslint:disable-next-line
                     console.log(e);
                 } finally {
                     this.step = "done";
-                }
+                }}
             });
         }
-        /*async uploaddata(){
-            this.step="upload";
-            try {
-                console.log(this.form_data.get("image"));
-                await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
-                    onUploadProgress: this.onUploadProgress,
-                }).then(function (response) {
-                    console.log(response);
-                });
-            } catch(e) {
-                this.hasUploadError = true;
-                // tslint:disable-next-line
-                console.log(e);
-            } finally {
-                this.step = "done";
-            }
-        }*/
         scrollToTop() {
             const element = this.$refs["photo-uploader"] as HTMLElement;
             window.scrollTo(0, element.offsetTop);
@@ -244,7 +233,7 @@
             margin-left:50px;
                 position: absolute;
                 box-sizing: border-box;
-                width: 150px;
+                width: 183px;
                 height: 100%;
 
     }

@@ -8,12 +8,14 @@
              <div class="left">
 
                  <div class="row pre-scrollable">
-                    <img src="img/style/the_scream.jpg" preview="0"  class="img-thumbnail" >
-                    <img src="img/style/wave.jpg" preview="0" class="img-thumbnail" >
-                    <img src="img/style/the_shipwreck_of_the_minotaur.jpg" preview="0" class="img-thumbnail" >
-                    <img src="img/style/udnie.jpg" preview="0" class="img-thumbnail" >
-                    <img src="img/style/rain_princess.jpg" preview="0" class="img-thumbnail" >
-                    <img src="img/style/la_muse.jpg" preview="0"  class="img-thumbnail" >
+                     <form> <input type="radio"  value="the_scream.jpg" v-model="picked" name="1"><img src="img/style/the_scream.jpg" for="the_scream.jpg" preview="0"  class="img-thumbnail" ><br/>
+                         <input type="radio" value="wave.jpg" v-model="picked" name="1"><img src="img/style/wave.jpg" preview="0" class="img-thumbnail" ><br/>
+                         <input type="radio"  value="the_shipwreck_of_the_minotaur.jpg" v-model="picked" name="1"><img src="img/style/the_shipwreck_of_the_minotaur.jpg" preview="0" class="img-thumbnail" ><br/>
+                         <input type="radio" value="udnie.jpg" v-model="picked" name="1"><img src="img/style/udnie.jpg" preview="0" class="img-thumbnail" ><br/>
+                         <input type="radio"  value="rain_princess.jpg" v-model="picked" name="1"><img src="img/style/rain_princess.jpg" preview="0" class="img-thumbnail" ><br/>
+                         <input type="radio"  value="la_muse.jpg" v-model="picked" name="1"><img src="img/style/la_muse.jpg" preview="0"  class="img-thumbnail" ><br/>
+                     </form>
+
             </div>
              </div>
             <div  class="tab-content right">
@@ -166,6 +168,7 @@
         form_data=new FormData();
         ImageUrl="";
         ImageName="";
+        style="";
         popIt() {
             (this.$refs.it as any).click();
         }
@@ -174,8 +177,12 @@
             let cropper:any=this.$refs.cropper;
             await  cropper.getCropBlob(async data => {
                 this.form_data.append("image",data,this.ImageName);
-                this.step="upload";
-                try {
+                if (this.style==""){
+                    alert("请选择样式图片作为风格迁移的范本！")
+                }
+                else{this.form_data.append("style",this.style);
+                    this.step="upload";
+                    try {
                     await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
                         onUploadProgress: this.onUploadProgress,
                         //then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
@@ -185,11 +192,10 @@
                     });
                 } catch(e) {
                     this.hasUploadError = true;
-                    // tslint:disable-next-line
                     console.log(e);
                 } finally {
                     this.step = "done";
-                }
+                }}
             });
         }
 
@@ -229,7 +235,7 @@
             margin-left:50px;
                 position: absolute;
                 box-sizing: border-box;
-                width: 150px;
+                width: 183px;
                 height: 100%;
 
     }
