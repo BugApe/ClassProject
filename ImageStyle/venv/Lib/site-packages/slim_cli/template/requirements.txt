@@ -1,0 +1,6 @@
+slim
+aiohttp>=3
+peewee
+wtforms
+msgpack
+psycopg2-binary
