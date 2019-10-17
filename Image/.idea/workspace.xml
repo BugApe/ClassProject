@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1fa2985-eb30-4c25-82b3-993d3a591113" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../FastStyle/examples/results/stata.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image2Art/src/components/StyleUploader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/components/StyleUploader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ImageStyle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ImageStyle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/11_4w6bArs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/11_68ILBjH.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/11_R92Y9o1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/11_SVCrVcD.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/11_j9Qa0lz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/11_vE2HJWw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/Img350129585.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/Img350129585.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/Img350129585_BjJpqxQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/Img350129585_FC4bMNF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/Img350129585_MbJre4w.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/Img350129585_jucRQkm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/Img350129585_p5JRHlH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/selfie2anime/testA/aa21988eff18a96f26e078e9c9f89a2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="323">
               <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
@@ -43,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Image/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+            <state relative-caret-position="19">
+              <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -405,11 +418,12 @@
       <workItem from="1571055741396" duration="2990000" />
       <workItem from="1571066043462" duration="31000" />
       <workItem from="1571314250920" duration="501000" />
+      <workItem from="1571316469996" duration="548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70346000" />
+    <option name="totallyTimeSpent" value="70894000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,9 +436,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15278901" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15521424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -592,6 +605,13 @@
     <entry file="file://$PROJECT_DIR$/rest_framework/urls.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -618,17 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Image/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+        <state relative-caret-position="19">
+          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
         </state>
       </provider>
     </entry>
