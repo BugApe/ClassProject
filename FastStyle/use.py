@@ -1,3 +1,0 @@
-import evaluate
-
-evaluate.main()

@@ -29,13 +29,12 @@ class ImageViewSet(viewsets.ModelViewSet):
         name_photo = serializer.data['name']  # 提取字段name
         style=serializer.data['style']
         main(name_photo,style+'.ckpt')
-        index = name_photo.rindex('.')
-        name_re_photo = name_photo[:index]
+
         return Response({
             "status": status.HTTP_200_OK,
             "message": 'Working right.',
             "tag": 'pass',
-            "data": 'http://127.0.0.1:8000/static/' + name_re_photo + '.jpg'
+            "data": 'http://127.0.0.1:8000/static/' + name_photo
         }
         )  # 返回worker中匹配的图片地址
 
