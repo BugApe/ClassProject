@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: slim
+Version: 0.4.11
+Summary: github: https://github.com/fy0/slim
+Home-page: https://github.com/fy0/slim
+Author: fy
+Author-email: fy0748@gmail.com
+License: zlib
+Keywords: slim web framework model aiohttp asyncpg peewee
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6.0
+Provides-Extra: full
+Provides-Extra: dev
+Provides-Extra: asyncpg
+Provides-Extra: peewee
+Requires-Dist: aiohttp
+Requires-Dist: aiohttp-cors
+Requires-Dist: click
+Provides-Extra: asyncpg
+Requires-Dist: asyncpg; extra == 'asyncpg'
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: pytest-asyncio; extra == 'dev'
+Requires-Dist: peewee; extra == 'dev'
+Requires-Dist: asyncpg; extra == 'dev'
+Requires-Dist: msgpack; extra == 'dev'
+Requires-Dist: psycopg2-binary; extra == 'dev'
+Provides-Extra: full
+Requires-Dist: peewee; extra == 'full'
+Requires-Dist: asyncpg; extra == 'full'
+Requires-Dist: msgpack; extra == 'full'
+Requires-Dist: psycopg2-binary; extra == 'full'
+Provides-Extra: peewee
+Requires-Dist: peewee; extra == 'peewee'
+Requires-Dist: psycopg2-binary; extra == 'peewee'
+
+github: https://github.com/fy0/slim
+
+
