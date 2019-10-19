@@ -20,65 +20,6 @@ import imageio
 import collections
 import matplotlib
 import PIL
-# Configure all options first so we can custom load other libraries (Theano) based on device specified by user.
-# 首先配置所有选项，以便我们可以根据用户指定的设备自定义加载其他库（Theano）。
-parser = argparse.ArgumentParser(description='Generate a new image by applying style onto a content image.',
-                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-add_arg = parser.add_argument
-
-add_arg('--content',        default=None, type=str,         help='Content image path as optimization target.')
-add_arg('--content-weight', default=10.0, type=float,       help='Weight of content relative to style.')
-add_arg('--content-layers', default='4_2', type=str,        help='The layer with which to match content.')
-add_arg('--style',          default='samples/Renoir.jpg', type=str,         help='Style image path to extract patches.')
-add_arg('--style-weight',   default=2.0, type=float,       help='Weight of style relative to content.')
-add_arg('--style-layers',   default='3_1,4_1', type=str,    help='The layers to match style patches.')
-add_arg('--semantic-ext',   default='_sem.png', type=str,   help='File extension for the semantic maps.')
-add_arg('--semantic-weight', default=10.0, type=float,      help='Global weight of semantics vs. features.')
-add_arg('--output',         default='samples/Landscape.png', type=str, help='Output image path to save once done.')
-add_arg('--output-size',    default='512x512', type=str,         help='Size of the output image, e.g. 512x512.')
-add_arg('--phases',         default=4, type=int,            help='Number of image scales to process in phases.')
-add_arg('--slices',         default=2, type=int,            help='Split patches up into this number of batches.')
-add_arg('--cache',          default=0, type=int,            help='Whether to compute matches only once.')
-add_arg('--smoothness',     default=1E+0, type=float,       help='Weight of image smoothing scheme.')
-add_arg('--variety',        default=0.5, type=float,        help='Bias toward selecting diverse patches, e.g. 0.5.')
-add_arg('--seed',           default='noise', type=str,      help='Seed image path, "noise" or "content".')
-add_arg('--seed-range',     default='0:255', type=str,     help='Random colors chosen in range, e.g. 0:255.')
-add_arg('--iterations',     default=40, type=int,          help='Number of iterations to run each resolution.')
-add_arg('--device',         default='cuda*', type=str,        help='Index of the GPU number to use, for theano.')
-add_arg('--print-every',    default=10, type=int,           help='How often to log statistics to stdout.')
-add_arg('--save-every',     default=10, type=int,           help='How frequently to save PNG into `frames`.')
-args = parser.parse_args()
-
-
-#----------------------------------------------------------------------------------------------------------------------
-
-# Color coded output helps visualize the information a little better, plus looks cool!
-# 彩色编码输出有助于更好地显示信息，看起来很酷！
-class ansi:
-    BOLD = '\033[1;97m'
-    WHITE = '\033[0;97m'
-    YELLOW = '\033[0;33m'
-    YELLOW_B = '\033[0;33m'
-    RED = '\033[0;31m'
-    RED_B = '\033[1;31m'
-    BLUE = '\033[0;94m'
-    BLUE_B = '\033[1;94m'
-    CYAN = '\033[0;36m'
-    CYAN_B = '\033[1;36m'
-    ENDC = '\033[0m'
-    
-def error(message, *lines):
-    string = "\n{}ERROR: " + message + "{}\n" + "\n".join(lines) + "{}\n"
-    print(string.format(ansi.RED_B, ansi.RED, ansi.ENDC))
-    sys.exit(-1)
-
-print('{}Neural Doodle for semantic style transfer.{}'.format(ansi.CYAN_B, ansi.ENDC))
-
-# Load the underlying deep learning libraries based on the device specified.  If you specify THEANO_FLAGS manually,
-# the code assumes you know what you are doing and they are not overriden!
-os.environ.setdefault('THEANO_FLAGS', 'floatX=float32,device={},force_device=True,'\
-                                      'print_active_device=False'.format(args.device))
-
 # Scientific & Imaging Libraries
 import numpy as np
 import scipy.optimize, scipy.ndimage, scipy.misc
@@ -97,8 +38,65 @@ if sys.platform == 'win32':
 import lasagne
 from lasagne.layers import Conv2DLayer as ConvLayer, Pool2DLayer as PoolLayer
 from lasagne.layers import InputLayer, ConcatLayer
+# 彩色编码输出有助于更好地显示信息，看起来很酷！
+class ansi:
+    BOLD = '\033[1;97m'
+    WHITE = '\033[0;97m'
+    YELLOW = '\033[0;33m'
+    YELLOW_B = '\033[0;33m'
+    RED = '\033[0;31m'
+    RED_B = '\033[1;31m'
+    BLUE = '\033[0;94m'
+    BLUE_B = '\033[1;94m'
+    CYAN = '\033[0;36m'
+    CYAN_B = '\033[1;36m'
+    ENDC = '\033[0m'
 
-print('{}  - Using device `{}` for processing the images.{}'.format(ansi.CYAN, theano.config.device, ansi.ENDC))
+
+def error(message, *lines):
+    string = "\n{}ERROR: " + message + "{}\n" + "\n".join(lines) + "{}\n"
+    print(string.format(ansi.RED_B, ansi.RED, ansi.ENDC))
+    sys.exit(-1)
+def parse_args(input,style):
+    # Configure all options first so we can custom load other libraries (Theano) based on device specified by user.
+    # 首先配置所有选项，以便我们可以根据用户指定的设备自定义加载其他库（Theano）。
+    parser = argparse.ArgumentParser(description='Generate a new image by applying style onto a content image.',
+                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    add_arg = parser.add_argument
+
+    add_arg('--content', default=None, type=str, help='Content image path as optimization target.')
+    add_arg('--content-weight', default=10.0, type=float, help='Weight of content relative to style.')
+    add_arg('--content-layers', default='4_2', type=str, help='The layer with which to match content.')
+    add_arg('--style', default='doodle/samples/'+style+'.jpg', type=str, help='Style image path to extract patches.')
+    add_arg('--style-weight', default=2.0, type=float, help='Weight of style relative to content.')
+    add_arg('--style-layers', default='3_1,4_1', type=str, help='The layers to match style patches.')
+    add_arg('--semantic-ext', default='_sem.png', type=str, help='File extension for the semantic maps.')
+    add_arg('--semantic-weight', default=10.0, type=float, help='Global weight of semantics vs. features.')
+    add_arg('--output', default='static/static/'+input, type=str, help='Output image path to save once done.')
+    add_arg('--output-size', default='512x512', type=str, help='Size of the output image, e.g. 512x512.')
+    add_arg('--phases', default=4, type=int, help='Number of image scales to process in phases.')
+    add_arg('--slices', default=2, type=int, help='Split patches up into this number of batches.')
+    add_arg('--cache', default=0, type=int, help='Whether to compute matches only once.')
+    add_arg('--smoothness', default=1E+0, type=float, help='Weight of image smoothing scheme.')
+    add_arg('--variety', default=0.5, type=float, help='Bias toward selecting diverse patches, e.g. 0.5.')
+    add_arg('--seed', default='noise', type=str, help='Seed image path, "noise" or "content".')
+    add_arg('--seed-range', default='0:255', type=str, help='Random colors chosen in range, e.g. 0:255.')
+    add_arg('--iterations', default=40, type=int, help='Number of iterations to run each resolution.')
+    add_arg('--device', default='cuda*', type=str, help='Index of the GPU number to use, for theano.')
+    add_arg('--print-every', default=10, type=int, help='How often to log statistics to stdout.')
+    add_arg('--save-every', default=10, type=int, help='How frequently to save PNG into `frames`.')
+    global args
+    args = parser.parse_args()
+
+    print('{}Neural Doodle for semantic style transfer.{}'.format(ansi.CYAN_B, ansi.ENDC))
+
+    # Load the underlying deep learning libraries based on the device specified.  If you specify THEANO_FLAGS manually,
+    # the code assumes you know what you are doing and they are not overriden!
+    os.environ.setdefault('THEANO_FLAGS', 'floatX=float32,device={},force_device=True,' \
+                                          'print_active_device=False'.format(args.device))
+
+    print('{}  - Using device `{}` for processing the images.{}'.format(ansi.CYAN, theano.config.device, ansi.ENDC))
+
 
 
 #----------------------------------------------------------------------------------------------------------------------
@@ -657,6 +655,9 @@ class NeuralGenerator(object):
               .format(ansi.CYAN, status, time.time() - self.start_time, self.error, ansi.ENDC))
 
 
-if __name__ == "__main__":
+def main(input,style):
+    parse_args(input,style)
     generator = NeuralGenerator()
     generator.run()
+
+

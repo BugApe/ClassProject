@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1fa2985-eb30-4c25-82b3-993d3a591113" name="Default Changelist" comment="" />
+    <list default="true" id="a1fa2985-eb30-4c25-82b3-993d3a591113" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/system/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doodle/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doodle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/doodle.py" beforeDir="false" afterPath="$PROJECT_DIR$/doodle/doodle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0010.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0040.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0050.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0060.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0070.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0080.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0090.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0130.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/frames/0160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doodle/samples/Landscape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/10197997_003647426000_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Freddie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Freddie_UbL7d3P.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Freddie_rAzn23t.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Freddie_sem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Gogh_sem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Img350129585.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Img350129585.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Mia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Mia_sem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Mia_sem_rL8QaCa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Monet.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Monet_NRMcfpl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Monet_lVgXCVA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Monet_sem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Monet_sem_gE5hcMd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Monet_sem_mnLQHtf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Monet_sem_sQvxqeQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Renoir_sem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="190">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -28,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="665">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -38,15 +87,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doodle/use.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/wsgiref/handlers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/site-packages/django/contrib/staticfiles/handlers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/site-packages/django/core/handlers/exception.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/site-packages/django/utils/deprecation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doodle/doodle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="632" column="45" selection-start-line="632" selection-start-column="37" selection-end-line="632" selection-end-column="45" />
+            <state relative-caret-position="-171">
+              <caret line="72" column="75" selection-start-line="72" selection-start-column="75" selection-end-line="72" selection-end-column="75" />
               <folding>
                 <element signature="e#221#230#0" expanded="true" />
               </folding>
@@ -55,33 +135,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doodle/samples/Gogh.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doodle/samples/Gogh_sem.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doodle/samples/Coastline_sem.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doodle/samples/Landscape_sem.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doodle/samples/Seth.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doodle/samples/Renoir.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/Image/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -106,20 +165,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Image/urls.py" />
-        <option value="$PROJECT_DIR$/Image/settings.py" />
         <option value="$PROJECT_DIR$/myapp/urls.py" />
-        <option value="$PROJECT_DIR$/myapp/models.py" />
-        <option value="$PROJECT_DIR$/myapp/views.py" />
         <option value="$PROJECT_DIR$/myapp/serializers.py" />
+        <option value="D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/argparse.py" />
+        <option value="$PROJECT_DIR$/system/__init__.py" />
+        <option value="$PROJECT_DIR$/system/storage.py" />
+        <option value="$PROJECT_DIR$/myapp/models.py" />
         <option value="$PROJECT_DIR$/doodle/doodle.py" />
+        <option value="$PROJECT_DIR$/Image/settings.py" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2197" />
-    <option name="y" value="119" />
-    <option name="width" value="654" />
-    <option name="height" value="688" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="240" />
+    <option name="y" value="127" />
+    <option name="width" value="1440" />
+    <option name="height" value="765" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -127,7 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,38 +199,35 @@
             <path>
               <item name="ImageDoodle" type="b2602c69:ProjectViewProjectNode" />
               <item name="ImageDoodle" type="462c0819:PsiDirectoryNode" />
-              <item name="doodle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ImageDoodle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ImageDoodle" type="462c0819:PsiDirectoryNode" />
-              <item name="doodle" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ImageDoodle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ImageDoodle" type="462c0819:PsiDirectoryNode" />
               <item name="Image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ImageDoodle" type="b2602c69:ProjectViewProjectNode" />
               <item name="ImageDoodle" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ImageDoodle" type="b2602c69:ProjectViewProjectNode" />
               <item name="ImageDoodle" type="462c0819:PsiDirectoryNode" />
-              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -187,7 +245,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.doodle">
+  <component name="RunManager" selected="Django server.Image">
     <configuration name="doodle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Image" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -345,11 +403,12 @@
       <workItem from="1571208468371" duration="12000" />
       <workItem from="1571212217814" duration="1258000" />
       <workItem from="1571384331248" duration="3480000" />
+      <workItem from="1571450614214" duration="4958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21203000" />
+    <option name="totallyTimeSpent" value="26161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -361,15 +420,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12686567" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23362975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49717057" weight="0.22125813" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49717057" visible="true" weight="0.4777975" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.497979" weight="0.39893618" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,7 +436,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50282943" side_tool="true" weight="0.45921987" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995958" weight="0.324295" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995958" weight="0.3232682" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -476,13 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -533,39 +584,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doodle/use.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doodle/samples/Gogh.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/doodle/samples/Gogh_sem.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doodle/samples/Seth.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doodle/samples/Renoir.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/doodle/samples/Coastline_sem.png">
@@ -574,10 +599,91 @@
     <entry file="file://$PROJECT_DIR$/doodle/samples/Landscape_sem.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/doodle/samples/Seth.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/wsgiref/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/argparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="1751" column="49" lean-forward="true" selection-start-line="1751" selection-start-column="49" selection-end-line="1751" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+          <folding>
+            <element signature="e#24#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doodle/samples/Renoir.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/site-packages/django/contrib/staticfiles/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/doodle/doodle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="632" column="45" selection-start-line="632" selection-start-column="37" selection-end-line="632" selection-end-column="45" />
+        <state relative-caret-position="-171">
+          <caret line="72" column="75" selection-start-line="72" selection-start-column="75" selection-end-line="72" selection-end-column="75" />
           <folding>
             <element signature="e#221#230#0" expanded="true" />
           </folding>
