@@ -2,54 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1fa2985-eb30-4c25-82b3-993d3a591113" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/system/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Image2Art/src/components/DoodleUploader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/components/DoodleUploader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Image/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doodle/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doodle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doodle/doodle.py" beforeDir="false" afterPath="$PROJECT_DIR$/doodle/doodle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0020.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0030.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0040.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0050.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0060.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0070.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0080.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0110.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/frames/0160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doodle/samples/Landscape.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/10197997_003647426000_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Freddie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Freddie_UbL7d3P.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Freddie_rAzn23t.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Freddie_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Gogh_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Img350129585.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Img350129585.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Mia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Mia_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Mia_sem_rL8QaCa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_NRMcfpl.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_lVgXCVA.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_sem_gE5hcMd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_sem_mnLQHtf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Monet_sem_sQvxqeQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Renoir_sem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/static/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doodle/samples/Mia_sem.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doodle/doodle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="72" column="75" selection-start-line="72" selection-start-column="75" selection-end-line="72" selection-end-column="75" />
+            <state relative-caret-position="76">
+              <caret line="70" column="99" lean-forward="true" selection-start-line="70" selection-start-column="99" selection-end-line="70" selection-end-column="99" />
               <folding>
                 <element signature="e#221#230#0" expanded="true" />
               </folding>
@@ -137,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+            <state relative-caret-position="225">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
@@ -171,13 +129,13 @@
         <option value="$PROJECT_DIR$/system/__init__.py" />
         <option value="$PROJECT_DIR$/system/storage.py" />
         <option value="$PROJECT_DIR$/myapp/models.py" />
-        <option value="$PROJECT_DIR$/doodle/doodle.py" />
-        <option value="$PROJECT_DIR$/Image/settings.py" />
         <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/Image/settings.py" />
+        <option value="$PROJECT_DIR$/doodle/doodle.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="127" />
     <option name="width" value="1440" />
@@ -403,12 +361,12 @@
       <workItem from="1571208468371" duration="12000" />
       <workItem from="1571212217814" duration="1258000" />
       <workItem from="1571384331248" duration="3480000" />
-      <workItem from="1571450614214" duration="4958000" />
+      <workItem from="1571450614214" duration="5906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26161000" />
+    <option name="totallyTimeSpent" value="27109000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,6 +379,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23362975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -639,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/ProgramData/Anaconda3/envs/neural-doodle/Lib/site-packages/django/utils/deprecation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -680,10 +632,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Image/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/doodle/doodle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="72" column="75" selection-start-line="72" selection-start-column="75" selection-end-line="72" selection-end-column="75" />
+        <state relative-caret-position="76">
+          <caret line="70" column="99" lean-forward="true" selection-start-line="70" selection-start-column="99" selection-end-line="70" selection-end-column="99" />
           <folding>
             <element signature="e#221#230#0" expanded="true" />
           </folding>

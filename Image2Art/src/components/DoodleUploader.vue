@@ -167,7 +167,7 @@
         form_data=new FormData();
         ImageUrl="";
         ImageName="";
-        style="";
+        picked="";
         popIt() {
             (this.$refs.it as any).click();
         }
@@ -176,13 +176,13 @@
             let cropper:any=this.$refs.cropper;
             await  cropper.getCropBlob(async data => {
                 this.form_data.append("image",data,this.ImageName);
-                if (this.style==""){
+                if (this.picked==""){
                     alert("请选择样式图片作为风格迁移的范本！")
                 }
-                else{this.form_data.append("style",this.style);
+                else{this.form_data.append("style",this.picked);
                     this.step="upload";
                     try {
-                    await axios.post("http://127.0.0.1:8000/myapp/image/" , this.form_data, {
+                    await axios.post("http://127.0.0.1:8000/myapp/doodleimage/" , this.form_data, {
                         onUploadProgress: this.onUploadProgress,
                         //then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
                     }).then((response)=> {
