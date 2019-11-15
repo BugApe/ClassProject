@@ -43,10 +43,6 @@
           <div class="col-lg-10 align-self-center">
             <PhotoUploader>
             </PhotoUploader>
-
-            <h2 class="mt-0">
-              Here's a <span class="text-primary font-weight-bold">quick</span> overview
-            </h2>
           </div>
         </div>
       </div>
