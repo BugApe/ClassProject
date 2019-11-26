@@ -144,6 +144,8 @@ import axios from "axios";
 import loadImage from "blueimp-load-image";
 import Cropper from "@/components/Cropper.vue";
 import { VueCropper } from "vue-cropper";
+const serveraddress = process.env.VUE_APP_APIURL_File
+
 @Component({
   components: {
     VueCropper,
@@ -180,7 +182,7 @@ export default class PhotoUploader extends Vue {
         this.step = "upload";
         try {
           await axios
-            .post("http://127.0.0.1:8000/myapp/doodleimage/", this.form_data, {
+            .post("http://172.18.28.167:8087/myapp/image/", this.form_data, {
               onUploadProgress: this.onUploadProgress,
               // then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
             })

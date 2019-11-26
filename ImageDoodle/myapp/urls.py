@@ -6,7 +6,7 @@ from myapp import views
 route = routers.DefaultRouter()
 
 # 注册新的路由地址
-route.register(r'doodleimage', views.ImageViewSet)
+route.register(r'image', views.ImageViewSet)
 
 # 注册上一级的路由地址并添加
 urlpatterns = [
