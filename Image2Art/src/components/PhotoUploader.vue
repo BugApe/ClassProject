@@ -128,7 +128,7 @@ export default class PhotoUploader extends Vue {
   progress = 0;
   submitted = false;
   hasUploadError = false;
-  form_data = new FormData();
+  formData = new FormData();
   ImageUrl = "";
   ImageName = "";
   popIt() {
@@ -138,13 +138,14 @@ export default class PhotoUploader extends Vue {
   async getCropBlob() {
     const cropper: any = this.$refs.cropper;
     await cropper.getCropBlob(async (data) => {
-      this.form_data.append("image", data, this.ImageName);
+      this.formData.append("image", data, this.ImageName);
       this.step = "upload";
       try {
         await axios
-          .post("http://172.18.28.167:8086/myapp/image/", this.form_data, {
+          .post("http://172.18.28.167:8086/myapp/image/", this.formData, {
             onUploadProgress: this.onUploadProgress,
-            // then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
+            // then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。
+            // https://blog.csdn.net/weixin_43606809/article/details/101037830
           })
           .then((response) => {
             this.ImageUrl = response.data.data;
@@ -152,7 +153,7 @@ export default class PhotoUploader extends Vue {
       } catch (e) {
         this.hasUploadError = true;
         // tslint:disable-next-line
-        console.log(e);
+        //console.log(e);
       } finally {
         this.step = "done";
       }
@@ -166,7 +167,7 @@ export default class PhotoUploader extends Vue {
 
   async onPhotoSelected(e: Event) {
     const file: File = (e.target as any).files[0];
-    this.form_data.append("name", file.name);
+    this.formData.append("name", file.name);
     this.ImageName = file.name;
     loadImage(
       file,

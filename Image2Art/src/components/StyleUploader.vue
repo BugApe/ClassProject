@@ -148,7 +148,7 @@ export default class PhotoUploader extends Vue {
   progress = 0;
   submitted = false;
   hasUploadError = false;
-  form_data = new FormData();
+  formData = new FormData();
   ImageUrl = "";
   ImageName = "";
   picked = "";
@@ -159,25 +159,26 @@ export default class PhotoUploader extends Vue {
   async getCropBlob() {
     const cropper: any = this.$refs.cropper;
     await cropper.getCropBlob(async (data) => {
-      this.form_data.append("image", data, this.ImageName);
-      if (this.picked == "") {
+      this.formData.append("image", data, this.ImageName);
+      if (this.picked === "") {
         alert("请选择样式图片作为风格迁移的范本！");
       } else {
-        this.form_data.append("style", this.picked);
+        this.formData.append("style", this.picked);
         this.step = "upload";
         try {
           await axios
-            .post("http://172.18.28.167:8085/myapp/styleimage/", this.form_data, {
+            .post("http://172.18.28.167:8085/myapp/styleimage/", this.formData, {
               onUploadProgress: this.onUploadProgress,
-              // then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。 https://blog.csdn.net/weixin_43606809/article/details/101037830
+              // then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。
+              // https://blog.csdn.net/weixin_43606809/article/details/101037830
             })
             .then((response) => {
               this.ImageUrl = response.data.data;
-              console.log(this.ImageUrl);
+              // console.log(this.ImageUrl);
             });
         } catch (e) {
           this.hasUploadError = true;
-          console.log(e);
+         // console.log(e);
         } finally {
           this.step = "done";
         }
@@ -192,7 +193,7 @@ export default class PhotoUploader extends Vue {
 
   async onPhotoSelected(e: Event) {
     const file: File = (e.target as any).files[0];
-    this.form_data.append("name", file.name);
+    this.formData.append("name", file.name);
     this.ImageName = file.name;
     loadImage(
       file,
