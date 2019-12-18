@@ -167,7 +167,7 @@ export default class PhotoUploader extends Vue {
         this.step = "upload";
         try {
           await axios
-            .post("http://172.18.28.167:8085/myapp/styleimage/", this.formData, {
+            .post("http://127.0.0.1:8085/myapp/styleimage/", this.formData, {
               onUploadProgress: this.onUploadProgress,
               // then的内部不能使用Vue的实例化的this, 因为在内部 this 没有被绑定。
               // https://blog.csdn.net/weixin_43606809/article/details/101037830

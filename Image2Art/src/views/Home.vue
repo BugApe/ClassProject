@@ -132,7 +132,7 @@
         <div class="row text-center">
           <div class="col-12 col-sm-6" style="margin: 0 auto">
             <i style="color: #211f1f" class="fa fa-github fa-5x mb-3"></i>
-            <a class="d-block" href="https://github.com/BugApe" target="_blank">@BugApe</a>
+            <a class="d-block" href="https://github.com/BugApe/ClassProject" target="_blank">@BugApe</a>
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@
           Copyright &copy; 2019 by
           <a href="https://github.com/BugApe">BugApe</a>&amp;<a href="https://github.com/longyunyun">longyunyun</a>
           &amp;<a href="https://github.com/tcheng02">tcheng02</a>&amp;<a
-            href="https://github.com/longyunyun">longyunyun</a>
+            href="https://github.com/zxw110111">zxw110111</a>
         </div>
       </div>
     </footer>

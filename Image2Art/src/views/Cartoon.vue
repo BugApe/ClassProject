@@ -49,14 +49,6 @@
       </div>
     </header>
 
-    <!-- 简介 -->
-    <section id="about" class="page-section">
-      <div class="container carousel-container text-center">
-        <h2 class="mt-0">
-          Here's a <span class="text-primary font-weight-bold">quick</span> overview
-        </h2>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-light py-5">
@@ -66,7 +58,7 @@
           Copyright &copy; 2019 by
           <a href="https://github.com/BugApe">BugApe</a>&amp;<a href="https://github.com/longyunyun">longyunyun</a>
           &amp;<a href="https://github.com/tcheng02">tcheng02</a>&amp;<a
-            href="https://github.com/longyunyun">longyunyun</a>
+            href="https://github.com/zxw110111">zxw110111</a>
         </div>
       </div>
     </footer>

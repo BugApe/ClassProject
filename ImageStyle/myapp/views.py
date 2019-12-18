@@ -34,7 +34,7 @@ class ImageViewSet(viewsets.ModelViewSet):
             "status": status.HTTP_200_OK,
             "message": 'Working right.',
             "tag": 'pass',
-            "data": 'http://172.18.28.167:8085/static/' + name_photo
+            "data": 'http://127.0.0.1:8085/static/' + name_photo
         }
         )  # 返回worker中匹配的图片地址
 
