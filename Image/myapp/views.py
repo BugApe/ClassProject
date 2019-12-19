@@ -1,20 +1,12 @@
 
-from django.shortcuts import render
-
 # Create your views here.
 
 from rest_framework import  mixins,viewsets
 from myapp.models import Image
 from myapp.serializers import ImageSerializers
-
 from rest_framework import status
-from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import  Avatar.main as tou
-
-
-# Create your views here.
-
 
 class ImageViewSet(viewsets.ModelViewSet):
     # 指定结果集并设置排序
@@ -27,14 +19,13 @@ class ImageViewSet(viewsets.ModelViewSet):
         self.perform_create(serializer)
         name_re_photo = serializer.data['name']  # 提取字段name
 
-        tou.main()
-        #去掉文件名的后缀
+        tou.main() #调用算法
 
         return Response({
             "status": status.HTTP_200_OK,
             "message": 'Working right.',
             "tag": 'pass',
-            "data": 'http://172.18.28.167:8086/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/'+name_re_photo
+            "data": 'http://127.0.0.1:8086/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/'+name_re_photo
         }
         )  # 返回worker中匹配的图片地址
 

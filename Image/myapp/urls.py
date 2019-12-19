@@ -2,6 +2,7 @@ from django.conf.urls import include, url
 from rest_framework import routers
 from myapp import views
 
+
 # 定义路由地址
 route = routers.DefaultRouter()
 
