@@ -29,13 +29,12 @@ class ImageViewSet(viewsets.ModelViewSet):
 
         tou.main()
         #去掉文件名的后缀
-        index=name_re_photo.rindex('.')
-        name_re_photo=name_re_photo[:index]
+
         return Response({
             "status": status.HTTP_200_OK,
             "message": 'Working right.',
             "tag": 'pass',
-            "data": 'http://127.0.0.1:8000/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/'+name_re_photo +'.jpg'
+            "data": 'http://172.18.28.167:8086/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/'+name_re_photo
         }
         )  # 返回worker中匹配的图片地址
 

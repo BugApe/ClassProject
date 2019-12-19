@@ -10,6 +10,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from doodle import main
 
 
 # Create your views here.
@@ -26,11 +27,14 @@ class ImageViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(data=request.data)  # 对上传的图片序列化
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
+        name_photo = serializer.data['name']  # 提取字段name
+        style = serializer.data['style']
+        main(name_photo,style)
         return Response({
             "status": status.HTTP_200_OK,
             "message": 'Working right.',
             "tag": 'pass',
-            #"data": serializer2.data
+            "data": 'http://127.0.0.1:8000/static/static/'+name_photo
         }
         )  # 返回worker中匹配的图片地址
 
