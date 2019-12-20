@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1fa2985-eb30-4c25-82b3-993d3a591113" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Image2Art/public/img/bg-masthead_D.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/public/img/bg-masthead_D.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image2Art/src/components/StyleUploader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/components/StyleUploader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image2Art/src/views/Avatar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/views/Avatar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image2Art/src/views/Cartoon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/views/Cartoon.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image2Art/src/views/Doodle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/views/Doodle.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image2Art/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image2Art/src/views/TransferStyle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/views/TransferStyle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ImageDoodle/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Image/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Image/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Image/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../Image/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Image/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Image/myapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Image/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Image/static/UGATIT_selfie2anime_lsgan_4resblock_6dis_1_1_10_10_1000_sn_smoothing/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Image2Art/src/components/PhotoUploader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Image2Art/src/components/PhotoUploader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImageDoodle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ImageDoodle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../软件开发设计文档模板.doc" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="266">
               <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -38,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
+            <state relative-caret-position="1387">
               <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
             </state>
           </provider>
@@ -59,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state relative-caret-position="390">
+              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -106,10 +108,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="660" />
-    <option name="y" value="15" />
-    <option name="width" value="985" />
-    <option name="height" value="1035" />
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -254,7 +255,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8085" />
-      <option name="host" value="" />
+      <option name="host" value="192.168.43.154" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
@@ -309,12 +310,16 @@
       <workItem from="1574778500367" duration="21000" />
       <workItem from="1574778544902" duration="23000" />
       <workItem from="1574779332856" duration="528000" />
-      <workItem from="1576652199547" duration="429000" />
+      <workItem from="1576652199547" duration="943000" />
+      <workItem from="1576726747408" duration="612000" />
+      <workItem from="1576747709583" duration="508000" />
+      <workItem from="1576829682469" duration="639000" />
+      <workItem from="1576834882193" duration="635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28782000" />
+    <option name="totallyTimeSpent" value="31690000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,12 +334,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18565683" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20308311" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49717057" visible="true" weight="0.5042493" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49717057" weight="0.509915" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.497979" weight="0.39893618" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -467,6 +472,23 @@
     <entry file="file://$PROJECT_DIR$/static/11.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -487,27 +509,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        <state relative-caret-position="390">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
