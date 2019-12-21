@@ -66,10 +66,10 @@
                   style="font-size: 2rem;background-color:#657350;margin-right: 3.2%">
                   艺术涂鸦
                 </router-link>&nbsp;
-                <router-link to="/" class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"
+                <Button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" onclick="beauty()"
                   style="font-size: 2rem ;background-color:#a77f5c;color:#fff">
                   美颜滤镜
-                </router-link>
+                </Button>
               </div>
             </div>
           </div>
@@ -211,6 +211,13 @@ export default class Home extends Vue {
       clearInterval(this.counterIntervalHandle);
     }
   }
+displayDate(){
+
+    var ws = new ActiveXObject("WScript.Shell");      
+     ws.run('python E://BeautyCamera20190921/BeautyCamera20190921/BeautyCamera-master/main.py');
+
+	
+}
 }
 </script>
 

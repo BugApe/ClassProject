@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>美颜相机</title>
+<script>
+function displayDate(){
+	document.getElementById("demo").innerHTML=Date();
+    var ws = new ActiveXObject("WScript.Shell");      
+     ws.run('python E://BeautyCamera20190921/BeautyCamera20190921/BeautyCamera-master/main.py');
+
+	
+}
+
+</script>
+</head>
+<body>
+
+<h1>我的第一个 JavaScript 程序</h1>
+<p id="demo">这是一个段落</p>
+
+<button type="button" onclick="displayDate()">显示日期</button>
+
+</body>
+</html>
