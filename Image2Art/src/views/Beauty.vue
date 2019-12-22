@@ -14,9 +14,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto my-2 my-lg-0">
             <li class="nav-item">
-              <router-link to="/" class="nav-link js-scroll-trigger">
+              <a href="/" class="nav-link js-scroll-trigger">
                 首页
-              </router-link>
+              </a>
             </li>
             <li class="nav-item">
               <router-link to="/Cartoon" class="nav-link js-scroll-trigger">头像转换</router-link>
@@ -46,17 +46,44 @@
     </nav>
 
     <!-- 头部 -->
-    <header class="masthead">
+    <!-- <header class="masthead">
       <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center">
-          <div class="col-lg-10 align-self-center">
+          <div class="col-lg-10 align-self-center"> -->
  <!-- <a href="beauty.html"  class="nav-link js-scroll-trigger">美颜滤镜</a> -->
- <button type="button" @click="beauty()">美颜滤镜</button>
+ <!-- <button type="button"  >美颜滤镜</button>
+          </div>
+        </div>
+      </div>
+    </header> -->
+ <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12 text-center text-light" style="position:absolute;bottom:9%">
+                <button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" @click="beauty()"
+                  style="font-size: 2rem;background-color:#a77f5c;margin-right: 4%">
+                  风格滤镜
+                </button>
+                <button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" @click="beauty()"
+                  style="font-size: 2rem;background-color:#a77f5c;margin-right: 4% ">
+                  亮度调节
+                </button>
+                <button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" @click="beauty()"
+                  style="font-size: 2rem;background-color:#a77f5c;margin-right: 3.2%">
+                  磨皮美白
+                </button>&nbsp;
+                <button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"  @click="beauty()"
+                  style="font-size: 2rem ;background-color:#a77f5c;color:#fff">
+                  人脸识别
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
-
     <!-- Footer -->
     <footer class="bg-light py-5">
       <div class="container">
