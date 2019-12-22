@@ -69,7 +69,7 @@
                   style="font-size: 2rem;background-color:#657350;margin-right: 3.2%">
                   艺术涂鸦
                 </router-link>&nbsp;
-                <router-link to="/Beauty" class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" onclick="beauty()"
+                <router-link to="/Beauty" class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" 
                   style="font-size: 2rem ;background-color:#a77f5c;color:#fff">
                   美颜滤镜
                 </router-link>

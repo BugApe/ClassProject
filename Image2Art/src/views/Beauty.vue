@@ -19,7 +19,7 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/Avatar " class="nav-link js-scroll-trigger">头像转换</router-link>
+              <router-link to="/Cartoon" class="nav-link js-scroll-trigger">头像转换</router-link>
             </li>
             <li class="nav-item">
               <router-link to="/TransferStyle" class="nav-link js-scroll-trigger">风格融合</router-link>
@@ -28,7 +28,7 @@
               <router-link to="/Doodle" class="nav-link js-scroll-trigger">艺术涂鸦</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/" class="nav-link js-scroll-trigger">美颜滤镜</router-link>
+              <router-link to="/Beauty" class="nav-link js-scroll-trigger">美颜滤镜</router-link>
             </li>
             <li class="nav-item">
               <router-link to="/#about" class="nav-link js-scroll-trigger">
@@ -87,8 +87,6 @@ export default class Beauty extends Vue {
 beauty(){
     var ws = new ActiveXObject("WScript.Shell");      
      ws.run('python E://BeautyCamera20190921/BeautyCamera20190921/BeautyCamera-master/main.py');
-
-	
 }
 
 }
@@ -116,13 +114,29 @@ section h2,
   font-size: 1.2rem !important;
 }
 
+header.masthead {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(167,127,92, 0.6)),
+      to(rgba(175, 140, 110, 0.4))
+    ),
+    url("../../public/img/bg-masthead_Do.jpg");
+  background: linear-gradient(
+      to bottom,
+      rgba(167,127,92, 0.6) 0,
+      rgba(179, 147, 119, 0.4) 100%
+    ),
+    url("../../public/img/bg-masthead_Do.jpg");
+}
 #mainNav .navbar-brand {
   font-size: 1.7rem !important;
   color: rgba(255, 255, 255, 0.7);
 }
 
 #mainNav .navbar-brand-inverted {
-  color: #f06292;
+  color: #a77f5c;
 }
 
 #mainNav {
@@ -133,7 +147,7 @@ section h2,
   background: #fff;
 
   .navbar-brand {
-    color: #f06292;
+    color: #a77f5c;
   }
 
   .navbar-brand-inverted {
