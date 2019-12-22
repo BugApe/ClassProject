@@ -30,6 +30,10 @@ export default new Router(
                 path: "/Doodle",
                 name: "Doodle",
                 component: () => import("@/views/Doodle.vue"),
+            },{
+                path: "/Beauty",
+                name: "Beauty",
+                component: () => import("@/views/Beauty.vue"),
             },
 
         ],
