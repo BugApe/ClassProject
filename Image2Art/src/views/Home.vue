@@ -31,8 +31,11 @@
             <li class="nav-item">
               <router-link to="/Doodle" class="nav-link js-scroll-trigger">艺术涂鸦</router-link>
             </li>
-            <li class="nav-item">
-              <router-link to="/" class="nav-link js-scroll-trigger">美颜滤镜</router-link>
+            <!-- <li class="nav-item">
+              <a href="beauty.html"  class="nav-link js-scroll-trigger">美颜滤镜</a>
+            </li> -->
+             <li class="nav-item">
+              <router-link to="/Beauty"  class="nav-link js-scroll-trigger">美颜滤镜</router-link>
             </li>
             <li class="nav-item">
               <a href="#about" class="nav-link js-scroll-trigger">
@@ -66,10 +69,10 @@
                   style="font-size: 2rem;background-color:#657350;margin-right: 3.2%">
                   艺术涂鸦
                 </router-link>&nbsp;
-                <Button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" onclick="beauty()"
+                <router-link to="/Beauty" class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" 
                   style="font-size: 2rem ;background-color:#a77f5c;color:#fff">
                   美颜滤镜
-                </Button>
+                </router-link>
               </div>
             </div>
           </div>
@@ -211,13 +214,6 @@ export default class Home extends Vue {
       clearInterval(this.counterIntervalHandle);
     }
   }
-displayDate(){
-
-    var ws = new ActiveXObject("WScript.Shell");      
-     ws.run('python E://BeautyCamera20190921/BeautyCamera20190921/BeautyCamera-master/main.py');
-
-	
-}
 }
 </script>
 

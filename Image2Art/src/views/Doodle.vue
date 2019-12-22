@@ -29,7 +29,7 @@
               <router-link to="/Doodle" class="nav-link js-scroll-trigger">艺术涂鸦</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/" class="nav-link js-scroll-trigger">美颜滤镜</router-link>
+              <router-link to="/Beauty"  class="nav-link js-scroll-trigger">美颜滤镜</router-link>
             </li>
 
           </ul>
