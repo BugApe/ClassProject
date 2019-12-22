@@ -57,31 +57,29 @@
       </div>
     </header> -->
  <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-center">
+    
           <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-12 text-center text-light" style="position:absolute;bottom:9%">
+            
+              <div class="col-lg-8 text-center text-light" style="position:absolute;bottom:20%">
                 <button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" @click="beauty()"
-                  style="font-size: 2rem;background-color:#a77f5c;margin-right: 4%">
+                  style="font-size: 2rem;background-color:#a77f5c">
                   风格滤镜
-                </button>
+                </button>&nbsp;
                 <button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" @click="beauty()"
-                  style="font-size: 2rem;background-color:#a77f5c;margin-right: 4% ">
+                  style="font-size: 2rem;background-color:#a77f5c">
                   亮度调节
-                </button>
+                </button>&nbsp;
                 <button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger" @click="beauty()"
-                  style="font-size: 2rem;background-color:#a77f5c;margin-right: 3.2%">
+                  style="font-size: 2rem;background-color:#a77f5c">
                   磨皮美白
                 </button>&nbsp;
                 <button class="mt-5 btn btn-primary px-5 btn-xl js-scroll-trigger"  @click="beauty()"
                   style="font-size: 2rem ;background-color:#a77f5c;color:#fff">
                   人脸识别
                 </button>
-              </div>
+            
             </div>
-          </div>
-        </div>
+        
       </div>
     </header>
     <!-- Footer -->
